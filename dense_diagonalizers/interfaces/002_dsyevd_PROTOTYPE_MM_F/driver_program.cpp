@@ -27,7 +27,7 @@ std::vector<double> built_a_matrix(int32_t dimension) {
     return matrix_loc;
 }
 
-std::vector<std::vector<double>> diagonalize_matrix(const std::vector<double> &matrix) {
+std::vector<std::vector<double>> diagonalize(const std::vector<double> &matrix) {
 
     // local parameters
 
@@ -37,17 +37,14 @@ std::vector<std::vector<double>> diagonalize_matrix(const std::vector<double> &m
     // local variables
 
     int32_t info = 0;
-
-    std::vector<double> eigenvalues;
-    eigenvalues.resize(static_cast<uint64_t>(dimension));
-
+    std::vector<double> eigenvalues(static_cast<uint64_t>(dimension));
     std::vector<double> eigenvectors(matrix);
 
     // diagonalize here
 
     info = LAPACKE_dsyevd(LAPACK_ROW_MAJOR, 'V', 'U', dimension, &eigenvectors[0], lda, &eigenvalues[0]);
 
-    // build the eigensystem and info for the success of the process
+    // build the eigensystem and add some info for the success of the process
 
     std::vector<std::vector<double>> eigensystem;
 
@@ -117,14 +114,13 @@ int main() {
 
     // container for the eigenvectors
 
-    std::vector<double> eigenvalues;
-    eigenvalues.resize(static_cast<uint64_t>(dimension));
+    std::vector<double> eigenvalues(static_cast<uint64_t>(dimension));
 
     // build a matrix
 
     auto t1 = std::chrono::high_resolution_clock::now();
 
-    std::vector<double> matrix(built_a_matrix(dimension));
+    auto matrix(built_a_matrix(dimension));
 
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -137,7 +133,7 @@ int main() {
 
     t1 = std::chrono::high_resolution_clock::now();
 
-    auto eigensystem = diagonalize_matrix(matrix);
+    auto eigensystem = diagonalize(matrix);
 
     t2 = std::chrono::high_resolution_clock::now();
 
