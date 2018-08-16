@@ -3,8 +3,8 @@
 #include <cmath>
 #include <chrono>
 #include <vector>
-#include "../dense_diagonalizers/dense_diagonalizers.h"
-#include "../aux_functions/aux_functions.h"
+#include "../../dense_diagonalizers/dense_diagonalizers.h"
+#include "../../aux_functions/aux_functions.h"
 
 // main program
 
@@ -14,7 +14,7 @@ int main() {
         // eigensystem example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEV_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem_and_status = eigensystem(matrix);
+        auto eigensystem_and_status = eigensystem(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -67,7 +67,7 @@ int main() {
         // eigenvectors example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEV_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -88,7 +88,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors_and_status = eigenvectors(matrix);
+        auto eigenvectors_and_status = eigenvectors(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -115,7 +115,7 @@ int main() {
         // eigenvalues example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEV_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -136,7 +136,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues_and_status = eigenvalues(matrix);
+        auto eigenvalues_and_status = eigenvalues(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
