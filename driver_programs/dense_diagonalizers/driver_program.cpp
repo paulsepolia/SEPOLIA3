@@ -3,8 +3,8 @@
 #include <cmath>
 #include <chrono>
 #include <vector>
-#include "dense_diagonalizers.h"
-#include "aux_functions.h"
+#include "../dense_diagonalizers/dense_diagonalizers.h"
+#include "../aux_functions/aux_functions.h"
 
 // main program
 
