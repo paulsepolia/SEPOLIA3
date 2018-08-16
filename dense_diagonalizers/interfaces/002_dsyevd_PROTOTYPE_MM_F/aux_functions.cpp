@@ -40,13 +40,13 @@ void print_eigenvalues(const std::vector<double> &eigenvectors,
     std::cout << std::endl;
 }
 
-void print_eigenvectors(const std::vector<double> &matrix,
+void print_eigenvectors(const std::vector<double> &eigenvectors,
                         int32_t eigenvector_start,
                         int32_t eigenvector_end) {
 
     std::cout << std::setprecision(10);
 
-    const auto dimension = static_cast<int32_t>(std::sqrt(static_cast<double>(matrix.size())));
+    const auto dimension = static_cast<int32_t>(std::sqrt(static_cast<double>(eigenvectors.size())));
 
     int32_t counter = eigenvector_start;
     uint64_t line_loc = 0;
@@ -59,7 +59,7 @@ void print_eigenvectors(const std::vector<double> &matrix,
 
             std::cout << std::right << std::fixed << std::setw(10) << line_loc
                       << std::right << std::fixed << std::setw(20) << counter
-                      << std::right << std::fixed << std::setw(30) << matrix[j * dimension + i] << std::endl;
+                      << std::right << std::fixed << std::setw(30) << eigenvectors[j * dimension + i] << std::endl;
         }
 
         counter++;

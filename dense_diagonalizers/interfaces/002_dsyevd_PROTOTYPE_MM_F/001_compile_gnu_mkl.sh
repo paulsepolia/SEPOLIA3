@@ -5,6 +5,7 @@
              -Wall                    \
              -O3                      \
              -fopenmp                 \
+             aux_functions.cpp        \
              dense_diagonalizers.cpp  \
              driver_program.cpp       \
              -L/opt/_intel/mkl/lib/intel64                                     \
