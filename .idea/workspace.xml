@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
-    <generated />
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="sepolia3" targetName="sepolia3" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -10,81 +12,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/001_dsyevd_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/001_dsyevd_example_original_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/001_dsyevd_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/001_dsyevd_example_original_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/001_dsyevd_example_original_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/001_dsyevd_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/001_dsyevd_example_original_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/002_dsyevd_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/002_dsyevd_PROTOTYPE_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/002_dsyevd_PROTOTYPE_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/002_dsyevd_PROTOTYPE_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/003_dsyevx_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/003_dsyevx_example_original_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/003_dsyevx_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/003_dsyevx_example_original_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/003_dsyevx_example_original_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/003_dsyevx_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/003_dsyevx_example_original_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/004_dsyevx_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/004_dsyevx_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/004_dsyevx_PROTOTYPE_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/004_dsyevx_PROTOTYPE_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/004_dsyevx_PROTOTYPE_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/004_dsyevx_PROTOTYPE_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/004_dsyevx_PROTOTYPE_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/005_dsyevr_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/005_dsyevr_example_original_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/005_dsyevr_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/005_dsyevr_example_original_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/005_dsyevr_example_original_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/005_dsyevr_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/005_dsyevr_example_original_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/006_dsyevr_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/006_dsyevr_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/006_dsyevr_PROTOTYPE_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/006_dsyevr_PROTOTYPE_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/006_dsyevr_PROTOTYPE_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/006_dsyevr_PROTOTYPE_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/006_dsyevr_PROTOTYPE_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/007_dsyev_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/007_dsyev_example_original_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/007_dsyev_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/007_dsyev_example_original_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/007_dsyev_example_original_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/007_dsyev_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/007_dsyev_example_original_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/008_dsyev_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/008_dsyev_PROTOTYPE_MM_F/001_compile_gnu_mkl.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/008_dsyev_PROTOTYPE_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/008_dsyev_PROTOTYPE_MM_F/0xx_clean.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/008_dsyev_PROTOTYPE_MM_F/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/008_dsyev_PROTOTYPE_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/008_dsyev_PROTOTYPE_MM_F/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/008_dsyev_PROTOTYPE_MM_F/x_gnu_mkl" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/interfaces/008_dsyev_PROTOTYPE_MM_F/x_gnu_mkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/interfaces/027_cpp_dense_diagonalizers/README.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sepolia3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sepolia3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FUSProjectUsageTrigger">
     <session id="-1239702204">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="1" />
+          <entry key="cpp" value="2" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="1" />
+          <entry key="CMakeLists.txt" value="1" />
+          <entry key="ObjectiveC" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="34" />
+          <entry key="txt" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="20" />
+          <entry key="ObjectiveC" value="34" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dense_diagonalizers/interfaces/001_dsyevd_example_original_MM_F/driver_program.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -109,24 +107,6 @@
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-              <item name="001_dsyevd_example_original_MM_F" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -136,7 +116,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -158,6 +138,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.sepolia3">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sepolia3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sepolia3" TARGET_NAME="sepolia3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sepolia3" RUN_TARGET_NAME="sepolia3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.sepolia3" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -169,23 +165,21 @@
       <option name="presentableId" value="Default" />
       <updated>1534421380864</updated>
       <workItem from="1534421382162" duration="191000" />
+      <workItem from="1534421683456" duration="474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191000" />
+    <option name="totallyTimeSpent" value="665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="2562" height="1379" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25403225" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" visible="true" weight="0.32931036" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -193,10 +187,14 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,8 +204,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dense_diagonalizers/interfaces/001_dsyevd_example_original_MM_F/driver_program.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
