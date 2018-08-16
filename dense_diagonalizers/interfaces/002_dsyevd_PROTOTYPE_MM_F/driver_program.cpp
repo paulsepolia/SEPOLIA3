@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem_info = eigensystem(matrix);
+        auto eigensystem_and_status = eigensystem(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -46,7 +46,7 @@ int main() {
 
         // check for convergence
 
-        if (eigensystem_info[2][0] > 0) {
+        if (eigensystem_and_status[2][0] > 0) {
             std::cout << std::endl;
             std::cout << " --> The algorithm failed to compute eigenvalues." << std::endl;
             exit(1);
@@ -55,12 +55,12 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigensystem_info[0], 1, 20);
+        print_eigenvalues(eigensystem_and_status[0], 1, 20);
 
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigensystem_info[1], 1, 2);
+        print_eigenvectors(eigensystem_and_status[1], 1, 2);
     }
 
     {
@@ -88,7 +88,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors_info = eigenvectors(matrix);
+        auto eigenvectors_and_status = eigenvectors(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -99,7 +99,7 @@ int main() {
 
         // check for convergence
 
-        if (eigenvectors_info[1][0] > 0) {
+        if (eigenvectors_and_status[1][0] > 0) {
             std::cout << std::endl;
             std::cout << " --> The algorithm failed to compute eigenvalues." << std::endl;
             exit(1);
@@ -108,7 +108,7 @@ int main() {
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigenvectors_info[0], 1, 2);
+        print_eigenvectors(eigenvectors_and_status[0], 1, 2);
     }
 
     {
@@ -136,7 +136,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues_info = eigenvalues(matrix);
+        auto eigenvalues_and_status = eigenvalues(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -147,7 +147,7 @@ int main() {
 
         // check for convergence
 
-        if (eigenvalues_info[1][0] > 0) {
+        if (eigenvalues_and_status[1][0] > 0) {
             std::cout << std::endl;
             std::cout << " --> The algorithm failed to compute eigenvalues." << std::endl;
             exit(1);
@@ -156,6 +156,6 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigenvalues_info[0], 1, 20);
+        print_eigenvalues(eigenvalues_and_status[0], 1, 20);
     }
 }
