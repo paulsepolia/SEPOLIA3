@@ -2,11 +2,14 @@
   <dictionary name="fotech">
     <words>
       <w>diagonalization</w>
+      <w>diagonalizer</w>
       <w>dimen</w>
+      <w>dsyev</w>
       <w>dsyevd</w>
       <w>eigensystem</w>
       <w>eigenvector</w>
       <w>eigenvectors</w>
+      <w>lapacke</w>
     </words>
   </dictionary>
 </component>
