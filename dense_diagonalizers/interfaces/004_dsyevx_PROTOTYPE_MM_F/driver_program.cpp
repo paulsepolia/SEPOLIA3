@@ -32,7 +32,7 @@ int32_t diagonalize_matrix(std::vector<double> &matrix,
                            std::vector<double> &eigenvalues,
                            std::vector<double> &eigenvectors,
                            int32_t &num_eigenvalues_found,
-                           std::vector<int32_t> failed) {
+                           std::vector<int32_t> & failed) {
 
     const auto dimen = static_cast<int32_t>(eigenvalues.size());
     const auto lda = dimen;
@@ -110,7 +110,7 @@ int main() {
     std::cout << std::endl;
     std::cout << " --> LAPACKE_dsyevx (row-major, high-level)" << std::endl;
 
-    const auto DIMEN = static_cast<int32_t>(2 * std::pow(10.0, 3.0));
+    const auto DIMEN = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
     const auto NSELECT = DIMEN;
 
     // container for the eigenvalues

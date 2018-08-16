@@ -7,19 +7,19 @@
 
 // help functions
 
-std::vector<double> built_matrix(int32_t dimen) {
+std::vector<double> built_a_matrix(int32_t dimension) {
 
     std::vector<double> matrix_loc;
-    matrix_loc.resize(static_cast<uint64_t>(std::pow(dimen, 2.0)));
+    matrix_loc.resize(static_cast<uint64_t>(std::pow(dimension, 2.0)));
 
     // build matrix here
 
-    for (int32_t i = 0; i != dimen; i++) {
-        for (int32_t j = 0; j != dimen; j++) {
+    for (int32_t i = 0; i != dimension; i++) {
+        for (int32_t j = 0; j != dimension; j++) {
             if (std::abs(i - j) < 5) {
-                matrix_loc[i * dimen + j] = static_cast<double>(i + j);
+                matrix_loc[i * dimension + j] = static_cast<double>(i + j);
             } else if (std::abs(i - j) >= 5) {
-                matrix_loc[i * dimen + j] = 0.0;
+                matrix_loc[i * dimension + j] = 0.0;
             }
         }
     }
@@ -27,25 +27,46 @@ std::vector<double> built_matrix(int32_t dimen) {
     return matrix_loc;
 }
 
-int32_t diagonalize_matrix(std::vector<double> &matrix, std::vector<double> &eigenvalues) {
+std::vector<std::vector<double>> diagonalize_matrix(const std::vector<double> &matrix) {
 
-    const auto dimen = static_cast<int32_t>(eigenvalues.size());
-    const auto lda = dimen;
+    // local parameters
 
-    int32_t info = LAPACKE_dsyevd(LAPACK_ROW_MAJOR, 'V', 'U', dimen, &matrix[0], lda, &eigenvalues[0]);
+    const auto dimension = static_cast<int32_t>(std::sqrt(matrix.size()));
+    const auto lda = dimension;
 
-    return info;
+    // local variables
+
+    int32_t info = 0;
+
+    std::vector<double> eigenvalues;
+    eigenvalues.resize(static_cast<uint64_t>(dimension));
+
+    std::vector<double> eigenvectors(matrix);
+
+    // diagonalize here
+
+    info = LAPACKE_dsyevd(LAPACK_ROW_MAJOR, 'V', 'U', dimension, &eigenvectors[0], lda, &eigenvalues[0]);
+
+    // build the eigensystem and info for the success of the process
+
+    std::vector<std::vector<double>> eigensystem;
+
+    eigensystem.push_back(std::move(eigenvalues));
+    eigensystem.push_back(std::move(eigenvectors));
+    eigensystem.push_back(std::vector<double>{static_cast<double>(info)});
+
+    return eigensystem;
 }
 
 void print_eigenvalues(const std::vector<double> &eigenvectors,
-                       int32_t eigenval_start,
-                       int32_t eigenval_end) {
+                       int32_t eigenvalue_start,
+                       int32_t eigenvalue_end) {
 
     std::cout << std::setprecision(10);
 
-    int32_t counter = eigenval_start;
+    int32_t counter = eigenvalue_start;
 
-    for (int32_t i = eigenval_start - 1; i < eigenval_end; i++) {
+    for (int32_t i = eigenvalue_start - 1; i < eigenvalue_end; i++) {
 
         std::cout << std::right << std::fixed << std::setw(10) << counter
                   << std::right << std::fixed << std::setw(30) << eigenvectors[i] << std::endl;
@@ -55,26 +76,26 @@ void print_eigenvalues(const std::vector<double> &eigenvectors,
     std::cout << std::endl;
 }
 
-void print_eigenvectors(const std::vector<double> & matrix,
-                        int32_t eigenvec_start,
-                        int32_t eigenvec_end) {
+void print_eigenvectors(const std::vector<double> &matrix,
+                        int32_t eigenvector_start,
+                        int32_t eigenvector_end) {
 
     std::cout << std::setprecision(10);
 
-    const auto dimen = static_cast<int32_t>(std::sqrt(static_cast<double>(matrix.size())));
+    const auto dimension = static_cast<int32_t>(std::sqrt(static_cast<double>(matrix.size())));
 
-    int32_t counter = eigenvec_start;
+    int32_t counter = eigenvector_start;
     uint64_t line_loc = 0;
 
-    for (int32_t i = eigenvec_start - 1; i < eigenvec_end; i++) {
+    for (int32_t i = eigenvector_start - 1; i < eigenvector_end; i++) {
 
-        for (int32_t j = 0; j < dimen; j++) {
+        for (int32_t j = 0; j < dimension; j++) {
 
             line_loc++;
 
             std::cout << std::right << std::fixed << std::setw(10) << line_loc
                       << std::right << std::fixed << std::setw(20) << counter
-                      << std::right << std::fixed << std::setw(30) << matrix[j * dimen + i] << std::endl;
+                      << std::right << std::fixed << std::setw(30) << matrix[j * dimension + i] << std::endl;
         }
 
         counter++;
@@ -92,18 +113,18 @@ int main() {
     std::cout << std::endl;
     std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
 
-    const auto DIMEN = static_cast<int32_t>(2 * std::pow(10.0, 3.0));
+    const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
     // container for the eigenvectors
 
     std::vector<double> eigenvalues;
-    eigenvalues.resize(static_cast<uint64_t>(DIMEN));
+    eigenvalues.resize(static_cast<uint64_t>(dimension));
 
-    // build the matrix
+    // build a matrix
 
     auto t1 = std::chrono::high_resolution_clock::now();
 
-    std::vector<double> matrix(built_matrix(DIMEN));
+    std::vector<double> matrix(built_a_matrix(dimension));
 
     auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -116,7 +137,7 @@ int main() {
 
     t1 = std::chrono::high_resolution_clock::now();
 
-    auto info = diagonalize_matrix(matrix, eigenvalues);
+    auto eigensystem = diagonalize_matrix(matrix);
 
     t2 = std::chrono::high_resolution_clock::now();
 
@@ -127,7 +148,7 @@ int main() {
 
     // check for convergence
 
-    if (info > 0) {
+    if (eigensystem[2][0] > 0) {
         std::cout << std::endl;
         std::cout << " --> The algorithm failed to compute eigenvalues." << std::endl;
         exit(1);
@@ -136,10 +157,10 @@ int main() {
     // print eigenvalues
 
     std::cout << std::endl;
-    print_eigenvalues(eigenvalues, 1, 20);
+    print_eigenvalues(eigensystem[0], 1, 20);
 
     // print eigenvectors
 
     std::cout << std::endl;
-    print_eigenvectors(matrix, 1, 2);
+    print_eigenvectors(eigensystem[1], 1, 2);
 }

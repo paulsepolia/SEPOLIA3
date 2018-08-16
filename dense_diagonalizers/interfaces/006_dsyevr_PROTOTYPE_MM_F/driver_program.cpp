@@ -32,11 +32,11 @@ int32_t diagonalize_matrix(std::vector<double> &matrix,
                            std::vector<double> &eigenvectors,
                            int32_t &num_eigenvalues_found) {
 
-    const auto dimen = static_cast<int32_t>(eigenvalues.size());
-    const auto lda = dimen;
-    const auto nselect = static_cast<int32_t>(eigenvectors.size() / dimen);
+     auto dimen = static_cast<int32_t>(eigenvalues.size());
+     auto lda = dimen;
+     auto nselect = static_cast<int32_t>(eigenvectors.size() / dimen);
     int32_t info = 0;
-    const auto ldz = nselect;
+     auto ldz = nselect;
     int32_t il = 1;
     int32_t iu = nselect;
     int32_t m = 0;
@@ -110,7 +110,7 @@ int main() {
     std::cout << std::endl;
     std::cout << " --> LAPACKE_dsyevr (row-major, high-level)" << std::endl;
 
-    const auto DIMEN = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+    const auto DIMEN = 5;//static_cast<int32_t>(2 * std::pow(10.0, 1.0));
     const auto NSELECT = DIMEN;
 
     // container for the eigenvalues
@@ -131,7 +131,13 @@ int main() {
 
     auto t1 = std::chrono::high_resolution_clock::now();
 
-    std::vector<double> matrix(built_a_matrix(DIMEN));
+    //std::vector<double> matrix(built_a_matrix(DIMEN));
+
+    std::vector<double> matrix{0.67, -0.20, 0.19, -1.06, 0.46,
+                               0.00, 3.82, -0.13, 1.06, -0.48,
+                               0.00, 0.00, 3.27, 0.11, 1.10,
+                               0.00, 0.00, 0.00, 5.86, -0.98,
+                               0.00, 0.00, 0.00, 0.00, 3.54};
 
     auto t2 = std::chrono::high_resolution_clock::now();
 
