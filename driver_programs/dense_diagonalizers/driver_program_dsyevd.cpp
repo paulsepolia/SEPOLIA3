@@ -14,7 +14,7 @@ int main() {
         // eigensystem example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem_local = eigensystem(matrix);
+        auto eigensystem = Eigensystem(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -47,19 +47,19 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigensystem_local[0], 1, 20);
+        print_eigenvalues(eigensystem[0], 1, 20);
 
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigensystem_local[1], 1, 2);
+        print_eigenvectors(eigensystem[1], 1, 2);
     }
 
     {
         // eigenvectors example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -80,7 +80,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors_local = eigenvectors(matrix);
+        auto eigenvectors = Eigenvectors(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -92,14 +92,14 @@ int main() {
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigenvectors_local, 1, 2);
+        print_eigenvectors(eigenvectors, 1, 2);
     }
 
     {
         // eigenvalues example
 
         std::cout << std::endl;
-        std::cout << " --> LAPACKE_dsyevd (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -120,7 +120,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues_local = eigenvalues(matrix);
+        auto eigenvalues = Eigenvalues(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -132,6 +132,6 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigenvalues_local, 1, 20);
+        print_eigenvalues(eigenvalues, 1, 20);
     }
 }

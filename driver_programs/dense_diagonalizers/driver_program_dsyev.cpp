@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem_local = eigensystem(matrix, DSYEV_LAPACKE);
+        auto eigensystem = Eigensystem(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -47,12 +47,12 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigensystem_local[0], 1, 20);
+        print_eigenvalues(eigensystem[0], 1, 20);
 
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigensystem_local[1], 1, 2);
+        print_eigenvectors(eigensystem[1], 1, 2);
     }
 
     {
@@ -80,7 +80,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors_local = eigenvectors(matrix, DSYEV_LAPACKE);
+        auto eigenvectors = Eigenvectors(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -92,7 +92,7 @@ int main() {
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigenvectors_local, 1, 2);
+        print_eigenvectors(eigenvectors, 1, 2);
     }
 
     {
@@ -120,7 +120,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues_local = eigenvalues(matrix, DSYEV_LAPACKE);
+        auto eigenvalues = Eigenvalues(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -132,6 +132,6 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigenvalues_local, 1, 20);
+        print_eigenvalues(eigenvalues, 1, 20);
     }
 }
