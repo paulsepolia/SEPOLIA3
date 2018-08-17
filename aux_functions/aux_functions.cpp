@@ -8,7 +8,7 @@
 
 std::vector<double> built_a_matrix(int32_t dimension) {
 
-    std::vector<double> matrix(static_cast<uint64_t>(std::pow(dimension, 2.0)));
+    decltype(containers::vector) matrix(static_cast<uint64_t>(std::pow(dimension, 2.0)));
 
     for (int32_t i = 0; i != dimension; i++) {
         for (int32_t j = 0; j != dimension; j++) {
