@@ -1,3 +1,3 @@
-/home/fotech/sources/personal/git_projects/sepolia3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fotech/sources/personal/git_projects/sepolia3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fotech/sources/personal/git_projects/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir
+/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir

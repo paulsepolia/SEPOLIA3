@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-  g++-8.2.0  -std=gnu++17 \
+  g++.8.2.0  -std=gnu++17 \
              -Wall \
              -O3 \
              -fopenmp \
@@ -16,7 +16,7 @@
              -o x_gnu_dsyevd
 
 
-  g++-8.2.0  -std=gnu++17 \
+  g++.8.2.0  -std=gnu++17 \
              -Wall \
              -O3 \
              -fopenmp \

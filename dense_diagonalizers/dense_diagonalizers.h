@@ -1,10 +1,10 @@
 #pragma once
 
-#include <vector>
 #include <string>
+#include "eigensystem_dense.h"
 #include "parameters.h"
 #include "../containers/containers.h"
-#include "eigensystem_dense.h"
+
 
 
 eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,

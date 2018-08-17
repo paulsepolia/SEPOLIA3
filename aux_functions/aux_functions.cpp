@@ -1,7 +1,6 @@
 #include <cstdint>
 #include <cmath>
 #include <iostream>
-#include <vector>
 #include <iomanip>
 #include "aux_functions.h"
 #include "../dense_diagonalizers/dense_diagonalizers.h"

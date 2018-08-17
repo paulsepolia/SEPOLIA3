@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/fotech/sources/personal/git_projects/sepolia3/main.cpp" "/home/fotech/sources/personal/git_projects/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/main.cpp.o"
+  "/home/pgg/pgg/git_projects/not_finished/sepolia3/main.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
