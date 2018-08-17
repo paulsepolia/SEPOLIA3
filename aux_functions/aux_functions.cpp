@@ -4,6 +4,7 @@
 #include <vector>
 #include <iomanip>
 #include "aux_functions.h"
+#include "../dense_diagonalizers/dense_diagonalizers.h"
 
 std::vector<double> built_a_matrix(int32_t dimension) {
 
@@ -22,7 +23,7 @@ std::vector<double> built_a_matrix(int32_t dimension) {
     return matrix;
 }
 
-void print_eigenvalues(const std::vector<double> &eigenvalues,
+void print_eigenvalues(const decltype(containers::vector) &eigenvalues,
                        int32_t eigenvalue_start,
                        int32_t eigenvalue_end) {
 
@@ -40,7 +41,7 @@ void print_eigenvalues(const std::vector<double> &eigenvalues,
     std::cout << std::endl;
 }
 
-void print_eigenvectors(const std::vector<std::vector<double>> &eigenvectors,
+void print_eigenvectors(const decltype(containers::matrix) &eigenvectors,
                         int32_t eigenvector_start,
                         int32_t eigenvector_end) {
 
