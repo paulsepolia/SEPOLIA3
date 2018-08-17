@@ -3,11 +3,11 @@
 #include <cmath>
 #include <iostream>
 #include "dense_diagonalizers.h"
-#include "/opt/_intel/mkl/include/mkl_lapacke.h"
+#include "../headers/sepolia_headers.h"
+#include "../containers/containers.h"
 
-
-eigensystem Eigensystem(const decltype(containers::vector) &matrix,
-                        std::string diagonalizer) {
+eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,
+                              std::string diagonalizer) {
 
     // local parameters
 
@@ -52,7 +52,7 @@ eigensystem Eigensystem(const decltype(containers::vector) &matrix,
 
     // make space for the the eigensystem
 
-    eigensystem eig_system;
+    eigensystem_dense eig_system;
 
     eig_system.eigenvalues = std::move(eigenvalues);
 
@@ -74,8 +74,8 @@ eigensystem Eigensystem(const decltype(containers::vector) &matrix,
     return eig_system;
 }
 
-decltype(eigensystem::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
-                                               std::string diagonalizer) {
+decltype(eigensystem_dense::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
+                                                     std::string diagonalizer) {
 
     // local parameters
 
@@ -118,15 +118,15 @@ decltype(eigensystem::eigenvalues) Eigenvalues(const decltype(containers::vector
         exit(1);
     }
 
-    eigensystem eig_system;
+    eigensystem_dense eig_system;
 
     eig_system.eigenvalues = std::move(eigenvalues);
 
     return eig_system.eigenvalues;
 }
 
-decltype(eigensystem::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
-                                                 std::string diagonalizer) {
+decltype(eigensystem_dense::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
+                                                       std::string diagonalizer) {
 
     // local parameters
 
@@ -171,7 +171,7 @@ decltype(eigensystem::eigenvectors) Eigenvectors(const decltype(containers::vect
 
     // make space for the the eigensystem
 
-    eigensystem eig_system;
+    eigensystem_dense eig_system;
 
     eig_system.eigenvectors.resize(static_cast<uint64_t>(dimension));
 
