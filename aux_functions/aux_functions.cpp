@@ -6,7 +6,7 @@
 #include "aux_functions.h"
 #include "../dense_diagonalizers/dense_diagonalizers.h"
 
-std::vector<double> built_a_matrix(int32_t dimension) {
+decltype(containers::vector) built_a_matrix(int32_t dimension) {
 
     decltype(containers::vector) matrix(static_cast<uint64_t>(std::pow(dimension, 2.0)));
 
