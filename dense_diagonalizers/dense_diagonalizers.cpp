@@ -6,14 +6,7 @@
 #include "/opt/_intel/mkl/include/mkl_lapacke.h"
 
 
-eigensystem::eigensystem() : eigenvalues{}, eigenvectors{} {}
-
-eigensystem::~eigensystem() {
-    eigenvalues.clear();
-    eigenvectors.clear();
-}
-
-eigensystem Eigensystem(const std::vector<double> &matrix,
+eigensystem Eigensystem(const decltype(containers::vector) &matrix,
                         std::string diagonalizer) {
 
     // local parameters
@@ -23,8 +16,8 @@ eigensystem Eigensystem(const std::vector<double> &matrix,
     // local variables
 
     int32_t info = 0;
-    std::vector<double> eigenvalues(static_cast<uint64_t>(dimension));
-    std::vector<double> eigenvectors(matrix);
+    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
+    decltype(containers::vector) eigenvectors(matrix);
 
     // diagonalize here
 
@@ -81,8 +74,8 @@ eigensystem Eigensystem(const std::vector<double> &matrix,
     return eig_system;
 }
 
-std::vector<double> Eigenvalues(const std::vector<double> &matrix,
-                                std::string diagonalizer) {
+decltype(eigensystem::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
+                                               std::string diagonalizer) {
 
     // local parameters
 
@@ -91,8 +84,8 @@ std::vector<double> Eigenvalues(const std::vector<double> &matrix,
     // local variables
 
     int32_t info = 0;
-    std::vector<double> eigenvalues(static_cast<uint64_t>(dimension));
-    std::vector<double> eigenvectors(matrix);
+    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
+    decltype(containers::vector) eigenvectors(matrix);
 
     // diagonalize here
 
@@ -132,8 +125,8 @@ std::vector<double> Eigenvalues(const std::vector<double> &matrix,
     return eig_system.eigenvalues;
 }
 
-std::vector<std::vector<double>> Eigenvectors(const std::vector<double> &matrix,
-                                              std::string diagonalizer) {
+decltype(eigensystem::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
+                                                 std::string diagonalizer) {
 
     // local parameters
 
@@ -142,8 +135,8 @@ std::vector<std::vector<double>> Eigenvectors(const std::vector<double> &matrix,
     // local variables
 
     int32_t info = 0;
-    std::vector<double> eigenvalues(static_cast<uint64_t>(dimension));
-    std::vector<double> eigenvectors(matrix);
+    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
+    decltype(containers::vector) eigenvectors(matrix);
 
     // diagonalize here
 

@@ -5,21 +5,31 @@
 #include "parameters.h"
 
 
+struct containers {
+
+    containers() = default;
+
+    ~containers() = default;
+
+    std::vector<double> vector;
+    std::vector<std::vector<double>> matrix;
+};
+
 struct eigensystem {
 
-    eigensystem();
+    eigensystem() = default;
 
-    ~eigensystem();
+    ~eigensystem() = default;
 
     std::vector<double> eigenvalues;
     std::vector<std::vector<double>> eigenvectors;
 };
 
-eigensystem Eigensystem(const std::vector<double> &matrix,
+eigensystem Eigensystem(const decltype(containers::vector) &matrix,
                         std::string diagonalizer = DSYEVD_LAPACKE);
 
-std::vector<double> Eigenvalues(const std::vector<double> &matrix,
-                                std::string diagonalizer = DSYEVD_LAPACKE);
+decltype(eigensystem::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
+                                               std::string diagonalizer = DSYEVD_LAPACKE);
 
-std::vector<std::vector<double>> Eigenvectors(const std::vector<double> &matrix,
-                                              std::string diagonalizer = DSYEVD_LAPACKE);
+decltype(eigensystem::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
+                                                 std::string diagonalizer = DSYEVD_LAPACKE);
