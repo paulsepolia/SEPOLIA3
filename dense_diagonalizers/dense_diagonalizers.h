@@ -4,11 +4,14 @@
 #include <string>
 #include "parameters.h"
 
-std::vector<std::vector<double>> Eigensystem(const std::vector<double> &matrix,
-                                             std::string diagonalizer = DSYEVD_LAPACKE);
+namespace diagonalizers {
 
-std::vector<double> Eigenvalues(const std::vector<double> &matrix,
-                                std::string diagonalizer = DSYEVD_LAPACKE);
+    std::vector<std::vector<double>> Eigensystem(const std::vector<double> &matrix,
+                                                 std::string diagonalizer = DSYEVD_LAPACKE);
 
-std::vector<double> Eigenvectors(const std::vector<double> &matrix,
-                                 std::string diagonalizer = DSYEVD_LAPACKE);
+    std::vector<double> Eigenvalues(const std::vector<double> &matrix,
+                                    std::string diagonalizer = DSYEVD_LAPACKE);
+
+    std::vector<double> Eigenvectors(const std::vector<double> &matrix,
+                                     std::string diagonalizer = DSYEVD_LAPACKE);
+}

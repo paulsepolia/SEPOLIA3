@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem = Eigensystem(matrix, DSYEV_LAPACKE);
+        auto eigensystem = diagonalizers::Eigensystem(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -80,7 +80,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors = Eigenvectors(matrix, DSYEV_LAPACKE);
+        auto eigenvectors = diagonalizers::Eigenvectors(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -120,7 +120,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues = Eigenvalues(matrix, DSYEV_LAPACKE);
+        auto eigenvalues = diagonalizers::Eigenvalues(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 
