@@ -1,6 +1,7 @@
 #include <vector>
 #include <cstdint>
 #include <cmath>
+#include <iostream>
 #include "dense_diagonalizers.h"
 #include "/opt/_intel/mkl/include/mkl_lapacke.h"
 
@@ -40,19 +41,26 @@ std::vector<std::vector<double>> eigensystem(const std::vector<double> &matrix,
                              &eigenvalues[0]);
     }
 
+    // check for convergence
+
+    if (info > 0) {
+        std::cout << std::endl;
+        std::cout << "ERROR: The algorithm failed to compute the eigensystem." << std::endl;
+        exit(1);
+    }
+
     // build the eigensystem and add some info for the success of the process
 
     std::vector<std::vector<double>> eigensystem;
 
     eigensystem.push_back(std::move(eigenvalues));
     eigensystem.push_back(std::move(eigenvectors));
-    eigensystem.push_back(std::vector<double>{static_cast<double>(info)});
 
     return eigensystem;
 }
 
-std::vector<std::vector<double>> eigenvalues(const std::vector<double> &matrix,
-                                             std::string diagonalizer) {
+std::vector<double> eigenvalues(const std::vector<double> &matrix,
+                                std::string diagonalizer) {
 
     // local parameters
 
@@ -87,18 +95,19 @@ std::vector<std::vector<double>> eigenvalues(const std::vector<double> &matrix,
                              &eigenvalues[0]);
     }
 
-    // build the eigensystem and add some info for the success of the process
+    // check for convergence
 
-    std::vector<std::vector<double>> eigenvalues_plus_info;
+    if (info > 0) {
+        std::cout << std::endl;
+        std::cout << "ERROR: The algorithm failed to compute the eigenvalues." << std::endl;
+        exit(1);
+    }
 
-    eigenvalues_plus_info.push_back(std::move(eigenvalues));
-    eigenvalues_plus_info.push_back(std::vector<double>{static_cast<double>(info)});
-
-    return eigenvalues_plus_info;
+    return eigenvalues;
 }
 
-std::vector<std::vector<double>> eigenvectors(const std::vector<double> &matrix,
-                                              std::string diagonalizer) {
+std::vector<double> eigenvectors(const std::vector<double> &matrix,
+                                 std::string diagonalizer) {
 
     // local parameters
 
@@ -133,12 +142,13 @@ std::vector<std::vector<double>> eigenvectors(const std::vector<double> &matrix,
                              &eigenvalues[0]);
     }
 
-    // build the eigensystem and add some info for the success of the process
+    // check for convergence
 
-    std::vector<std::vector<double>> eigenvectors_plus_info;
+    if (info > 0) {
+        std::cout << std::endl;
+        std::cout << "ERROR: The algorithm failed to compute the eigenvectors." << std::endl;
+        exit(1);
+    }
 
-    eigenvectors_plus_info.push_back(std::move(eigenvectors));
-    eigenvectors_plus_info.push_back(std::vector<double>{static_cast<double>(info)});
-
-    return eigenvectors_plus_info;
+    return eigenvectors;
 }
