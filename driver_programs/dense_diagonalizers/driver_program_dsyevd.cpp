@@ -14,7 +14,7 @@ int main() {
         // eigensystem example
 
         std::cout << std::endl;
-        std::cout << diagonalizers::DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -35,7 +35,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem = diagonalizers::Eigensystem(matrix);
+        auto eigensystem = Eigensystem(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -59,7 +59,7 @@ int main() {
         // eigenvectors example
 
         std::cout << std::endl;
-        std::cout << diagonalizers::DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -80,7 +80,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvectors = diagonalizers::Eigenvectors(matrix);
+        auto eigenvectors = Eigenvectors(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
@@ -99,7 +99,7 @@ int main() {
         // eigenvalues example
 
         std::cout << std::endl;
-        std::cout << diagonalizers::DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
+        std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
         const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
@@ -120,7 +120,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigenvalues = diagonalizers::Eigenvalues(matrix);
+        auto eigenvalues = Eigenvalues(matrix);
 
         t2 = std::chrono::high_resolution_clock::now();
 
