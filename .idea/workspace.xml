@@ -11,12 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyev.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyev.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyevd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyevd.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +24,7 @@
     <session id="-1239702204">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="3" />
@@ -69,7 +64,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
@@ -96,20 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyev.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="1440">
               <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dense_diagonalizers/parameters.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -261,16 +247,15 @@
       <updated>1534421380864</updated>
       <workItem from="1534421382162" duration="191000" />
       <workItem from="1534421683456" duration="12207000" />
-      <workItem from="1534496514323" duration="3616000" />
+      <workItem from="1534496514323" duration="3910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16014000" />
+    <option name="totallyTimeSpent" value="16308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="2562" height="1379" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2580645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -356,13 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/parameters.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aux_functions/aux_functions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -374,13 +352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="917">
           <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -398,10 +369,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/parameters.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/driver_programs/dense_diagonalizers/driver_program_dsyev.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="1440">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
