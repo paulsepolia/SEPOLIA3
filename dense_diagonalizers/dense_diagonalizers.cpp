@@ -7,8 +7,15 @@
 
 namespace diagonalizers {
 
-    std::vector<std::vector<double>> Eigensystem(const std::vector<double> &matrix,
-                                                 std::string diagonalizer) {
+    eigensystem::eigensystem() : eigenvalues{}, eigenvectors{} {}
+
+    eigensystem::~eigensystem() {
+        eigenvalues.clear();
+        eigenvectors.clear();
+    }
+
+    eigensystem Eigensystem(const std::vector<double> &matrix,
+                            std::string diagonalizer) {
 
         // local parameters
 
@@ -53,12 +60,12 @@ namespace diagonalizers {
 
         // build the eigensystem and add some info for the success of the process
 
-        std::vector<std::vector<double>> eigensystem;
+        eigensystem eig_system;
 
-        eigensystem.push_back(std::move(eigenvalues));
-        eigensystem.push_back(std::move(eigenvectors));
+        eig_system.eigenvalues = std::move(eigenvalues);
+        eig_system.eigenvectors = std::move(eigenvectors);
 
-        return eigensystem;
+        return eig_system;
     }
 
     std::vector<double> Eigenvalues(const std::vector<double> &matrix,
@@ -105,7 +112,11 @@ namespace diagonalizers {
             exit(1);
         }
 
-        return eigenvalues;
+        eigensystem eig_system;
+
+        eig_system.eigenvalues = std::move(eigenvalues);
+
+        return eig_system.eigenvalues;
     }
 
     std::vector<double> Eigenvectors(const std::vector<double> &matrix,
@@ -152,6 +163,9 @@ namespace diagonalizers {
             exit(1);
         }
 
-        return eigenvectors;
+        eigensystem eig_system;
+        eig_system.eigenvectors = std::move(eigenvectors);
+
+        return eig_system.eigenvectors;
     }
 }

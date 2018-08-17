@@ -6,8 +6,18 @@
 
 namespace diagonalizers {
 
-    std::vector<std::vector<double>> Eigensystem(const std::vector<double> &matrix,
-                                                 std::string diagonalizer = DSYEVD_LAPACKE);
+    struct eigensystem {
+
+        eigensystem();
+
+        ~eigensystem();
+
+        std::vector<double> eigenvalues;
+        std::vector<double> eigenvectors;
+    };
+
+    eigensystem Eigensystem(const std::vector<double> &matrix,
+                            std::string diagonalizer = DSYEVD_LAPACKE);
 
     std::vector<double> Eigenvalues(const std::vector<double> &matrix,
                                     std::string diagonalizer = DSYEVD_LAPACKE);

@@ -47,12 +47,12 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigensystem[0], 1, 20);
+        print_eigenvalues(eigensystem.eigenvalues, 1, 20);
 
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigensystem[1], 1, 2);
+        print_eigenvectors(eigensystem.eigenvectors, 1, 2);
     }
 
     {
