@@ -1,7 +1,14 @@
 <component name="ProjectDictionaryState">
   <dictionary name="pgg">
     <words>
+      <w>abstol</w>
       <w>deallocated</w>
+      <w>dsyevr</w>
+      <w>dsyevx</w>
+      <w>eigenproblem</w>
+      <w>ifail</w>
+      <w>isuppz</w>
+      <w>nselect</w>
       <w>sepolia</w>
       <w>vdsp</w>
     </words>

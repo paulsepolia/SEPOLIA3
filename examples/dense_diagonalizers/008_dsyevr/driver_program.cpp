@@ -32,24 +32,23 @@ int32_t diagonalize_matrix(std::vector<double> &matrix,
                            std::vector<double> &eigenvectors,
                            int32_t &num_eigenvalues_found) {
 
-     auto dimen = static_cast<int32_t>(eigenvalues.size());
-     auto lda = dimen;
-     auto nselect = static_cast<int32_t>(eigenvectors.size() / dimen);
+    auto dimen = static_cast<int32_t>(eigenvalues.size());
+    auto lda = dimen;
+    auto nselect = static_cast<int32_t>(eigenvectors.size() / dimen);
     int32_t info = 0;
-     auto ldz = nselect;
+    auto ldz = nselect;
     int32_t il = 1;
     int32_t iu = nselect;
     int32_t m = 0;
     double abstol = -1.0;
     double vl = 0.0;
     double vu = 0.0;
-    std::vector<int32_t> isuppz;
-    isuppz.resize(static_cast<uint64_t>(dimen));
+    int32_t isuppz[dimen];
 
     info = LAPACKE_dsyevr(LAPACK_ROW_MAJOR, 'V', 'I', 'U',
                           dimen, &matrix[0], lda,
                           vl, vu, il, iu, abstol, &m,
-                          &eigenvalues[0], &eigenvectors[0], ldz, &isuppz[0]);
+                          &eigenvalues[0], &eigenvectors[0], ldz, isuppz);
 
     num_eigenvalues_found = m;
 
@@ -57,14 +56,14 @@ int32_t diagonalize_matrix(std::vector<double> &matrix,
 }
 
 void print_eigenvalues(const std::vector<double> &eigenvectors,
-                       int32_t eigenval_start,
-                       int32_t eigenval_end) {
+                       int32_t eigenvalue_start,
+                       int32_t eigenvalue_end) {
 
     std::cout << std::setprecision(10);
 
-    int32_t counter = eigenval_start;
+    int32_t counter = eigenvalue_start;
 
-    for (int32_t i = eigenval_start - 1; i < eigenval_end; i++) {
+    for (int32_t i = eigenvalue_start - 1; i < eigenvalue_end; i++) {
 
         std::cout << std::right << std::fixed << std::setw(10) << counter
                   << std::right << std::fixed << std::setw(30) << eigenvectors[i] << std::endl;
@@ -75,17 +74,17 @@ void print_eigenvalues(const std::vector<double> &eigenvectors,
 }
 
 void print_eigenvectors(const std::vector<double> &eigenvectors,
-                        int32_t eigenvec_start,
-                        int32_t eigenvec_end) {
+                        int32_t eigenvector_start,
+                        int32_t eigenvector_end) {
 
     std::cout << std::setprecision(10);
 
     const auto dimen = static_cast<int32_t>(std::sqrt(static_cast<double>(eigenvectors.size())));
 
-    int32_t counter = eigenvec_start;
+    int32_t counter = eigenvector_start;
     uint64_t line_loc = 0;
 
-    for (int32_t i = eigenvec_start - 1; i < eigenvec_end; i++) {
+    for (int32_t i = eigenvector_start - 1; i < eigenvector_end; i++) {
 
         for (int32_t j = 0; j < dimen; j++) {
 
@@ -110,7 +109,7 @@ int main() {
     std::cout << std::endl;
     std::cout << " --> LAPACKE_dsyevr (row-major, high-level)" << std::endl;
 
-    const auto DIMEN = 5;//static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+    const auto DIMEN = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
     const auto NSELECT = DIMEN;
 
     // container for the eigenvalues
@@ -131,13 +130,7 @@ int main() {
 
     auto t1 = std::chrono::high_resolution_clock::now();
 
-    //std::vector<double> matrix(built_a_matrix(DIMEN));
-
-    std::vector<double> matrix{0.67, -0.20, 0.19, -1.06, 0.46,
-                               0.00, 3.82, -0.13, 1.06, -0.48,
-                               0.00, 0.00, 3.27, 0.11, 1.10,
-                               0.00, 0.00, 0.00, 5.86, -0.98,
-                               0.00, 0.00, 0.00, 0.00, 3.54};
+    std::vector<double> matrix(built_a_matrix(DIMEN));
 
     auto t2 = std::chrono::high_resolution_clock::now();
 
