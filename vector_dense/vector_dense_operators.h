@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm>
 #include "vector_dense_declaration.h"
 
 using sepolia::vector_dense;

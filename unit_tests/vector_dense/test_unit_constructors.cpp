@@ -3,12 +3,14 @@
 #include <cstdint>
 #include "../../vector_dense/vector_dense.h"
 
+using sepolia::vector_dense;
+
 const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
 
 TEST(constructor_with_no_arguments, constructors)
 {
-    sepolia::vector_dense<double> vd;
+    vector_dense<double> vd;
 
     EXPECT_EQ(false, vd.allocated());
     EXPECT_EQ(true, vd.deallocated());
@@ -16,7 +18,7 @@ TEST(constructor_with_no_arguments, constructors)
 
 TEST(constructor_with_one_argument, constructors)
 {
-    sepolia::vector_dense<double> vd(dimension);
+    vector_dense<double> vd(dimension);
 
     EXPECT_EQ(true, vd.allocated());
     EXPECT_EQ(false, vd.deallocated());
@@ -25,7 +27,7 @@ TEST(constructor_with_one_argument, constructors)
 
 TEST(constructor_with_two_arguments, constructors)
 {
-    sepolia::vector_dense<double> vd(dimension, value);
+    vector_dense<double> vd(dimension, value);
 
     EXPECT_EQ(true, vd.allocated());
     EXPECT_EQ(false, vd.deallocated());

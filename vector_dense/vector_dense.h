@@ -6,4 +6,4 @@
 #include "vector_dense_operators.h"
 #include "vector_dense_algebra.h"
 #include "vector_dense_parameters.h"
-#include "vector_dense_functions.h"
+#include "vector_dense_stl.h"

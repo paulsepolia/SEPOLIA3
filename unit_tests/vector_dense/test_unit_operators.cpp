@@ -3,6 +3,8 @@
 #include <cstdint>
 #include "../../vector_dense/vector_dense.h"
 
+using sepolia::vector_dense;
+
 const uint64_t dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
 const double value1 = 765.432;
 const double value2 = 234.567;
@@ -12,8 +14,6 @@ const uint64_t index2 = 12;
 const double ERROR_M10 = std::pow(10.0, -10.0);
 const double ERROR_M11 = std::pow(10.0, -11.0);
 const double ERROR_M12 = std::pow(10.0, -12.0);
-
-using sepolia::vector_dense;
 
 TEST(vd_test_operator_curved_brackets, operators)
 {
