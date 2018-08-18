@@ -1,10 +1,8 @@
 
-task 1: to make dense_vector unit tests more strict
+Task 2: to write some examples for vector_dense
 
-task 2: to write some examples for vector_dense
+Task 3: to finish the implementation of the DSYEVX and DSYEVR
 
-task 3: to finish the implementation of the DSYEVX and DSYEVR
+Task 4: to start the implementation of the matrix_dense
 
-task 4: to start the implementation of the matrix_dense
-
-task 5: to get rid of old tmp stuff
+Task 5: to get rid of old tmp stuff
