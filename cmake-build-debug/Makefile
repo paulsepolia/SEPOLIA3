@@ -123,32 +123,32 @@ sepolia3/fast:
 	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/build
 .PHONY : sepolia3/fast
 
-main.o: main.cpp.o
+fake_main.o: fake_main.cpp.o
 
-.PHONY : main.o
+.PHONY : fake_main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/main.cpp.o
-.PHONY : main.cpp.o
+fake_main.cpp.o:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/fake_main.cpp.o
+.PHONY : fake_main.cpp.o
 
-main.i: main.cpp.i
+fake_main.i: fake_main.cpp.i
 
-.PHONY : main.i
+.PHONY : fake_main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/main.cpp.i
-.PHONY : main.cpp.i
+fake_main.cpp.i:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/fake_main.cpp.i
+.PHONY : fake_main.cpp.i
 
-main.s: main.cpp.s
+fake_main.s: fake_main.cpp.s
 
-.PHONY : main.s
+.PHONY : fake_main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/main.cpp.s
-.PHONY : main.cpp.s
+fake_main.cpp.s:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/fake_main.cpp.s
+.PHONY : fake_main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sepolia3"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... fake_main.o"
+	@echo "... fake_main.i"
+	@echo "... fake_main.s"
 .PHONY : help
 
 

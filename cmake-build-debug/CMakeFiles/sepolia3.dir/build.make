@@ -57,27 +57,27 @@ include CMakeFiles/sepolia3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sepolia3.dir/flags.make
 
-CMakeFiles/sepolia3.dir/main.cpp.o: CMakeFiles/sepolia3.dir/flags.make
-CMakeFiles/sepolia3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sepolia3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/main.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/main.cpp
+CMakeFiles/sepolia3.dir/fake_main.cpp.o: CMakeFiles/sepolia3.dir/flags.make
+CMakeFiles/sepolia3.dir/fake_main.cpp.o: ../fake_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sepolia3.dir/fake_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/fake_main.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp
 
-CMakeFiles/sepolia3.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/main.cpp > CMakeFiles/sepolia3.dir/main.cpp.i
+CMakeFiles/sepolia3.dir/fake_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/fake_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp > CMakeFiles/sepolia3.dir/fake_main.cpp.i
 
-CMakeFiles/sepolia3.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/main.cpp -o CMakeFiles/sepolia3.dir/main.cpp.s
+CMakeFiles/sepolia3.dir/fake_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/fake_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp -o CMakeFiles/sepolia3.dir/fake_main.cpp.s
 
 # Object files for target sepolia3
 sepolia3_OBJECTS = \
-"CMakeFiles/sepolia3.dir/main.cpp.o"
+"CMakeFiles/sepolia3.dir/fake_main.cpp.o"
 
 # External object files for target sepolia3
 sepolia3_EXTERNAL_OBJECTS =
 
-sepolia3: CMakeFiles/sepolia3.dir/main.cpp.o
+sepolia3: CMakeFiles/sepolia3.dir/fake_main.cpp.o
 sepolia3: CMakeFiles/sepolia3.dir/build.make
 sepolia3: CMakeFiles/sepolia3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sepolia3"

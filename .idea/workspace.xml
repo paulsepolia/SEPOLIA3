@@ -12,24 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sepolia3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sepolia3.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_memory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_memory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dence_constructors.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_constructors.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_set.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_set.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fake_main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +68,7 @@
     <session id="-1154034703">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -108,15 +92,16 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="32" />
-          <entry key="h" value="52" />
+          <entry key="h" value="53" />
           <entry key="placeholder" value="1" />
           <entry key="sh" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="84" />
+          <entry key="CMakeLists.txt" value="1" />
+          <entry key="ObjectiveC" value="85" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -126,17 +111,7 @@
     <favorites_list name="sepolia3" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/unit_tests/dense_diagonalizers/placeholder.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -239,22 +214,6 @@
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -328,12 +287,12 @@
       <workItem from="1534528329063" duration="846000" />
       <workItem from="1534544535830" duration="6504000" />
       <workItem from="1534579001097" duration="2173000" />
-      <workItem from="1534581231513" duration="5310000" />
+      <workItem from="1534581231513" duration="5591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36823000" />
+    <option name="totallyTimeSpent" value="37104000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -347,7 +306,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49829933" visible="true" weight="0.24935065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -377,14 +335,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/fake_main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
@@ -561,13 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_functions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_constructors.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -638,6 +582,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_functions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
