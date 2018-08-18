@@ -46,69 +46,69 @@ namespace sepolia {
 
         T &operator[](const uint64_t &) const;
 
-//        vector_dense<T> operator+(const vector_dense<T> &) const;
-//
-//        vector_dense<T> operator+(const T &) const;
-//
-//        template<typename T2>
-//        friend vector_dense<T2> operator+(const T2 &,
-//                                          const vector_dense<T2> &);
-//
-//        vector_dense<T> operator-(const vector_dense<T> &) const;
-//
-//        vector_dense<T> operator-(const T &) const;
-//
-//        template<typename T2>
-//        friend vector_dense<T2> operator-(const T2 &,
-//                                          const vector_dense<T2> &);
-//
-//        vector_dense<T> operator*(const vector_dense<T> &) const;
-//
-//        vector_dense<T> operator*(const T &) const;
-//
-//        template<typename T2>
-//        friend vector_dense<T2> operator*(const T2 &,
-//                                          const vector_dense<T2> &);
-//
-//        vector_dense<T> operator/(const vector_dense<T> &) const;
-//
-//        vector_dense<T> operator/(const T &) const;
-//
-//        template<typename T2>
-//        friend vector_dense<T2> operator/(const T2 &,
-//                                          const vector_dense<T2> &);
-//
-//        vector_dense<T> operator+=(const vector_dense<T> &);
-//
-//        vector_dense<T> operator+=(const T &);
-//
-//        vector_dense<T> operator-=(const vector_dense<T> &);
-//
-//        vector_dense<T> operator-=(const T &);
-//
-//        vector_dense<T> operator*=(const vector_dense<T> &);
-//
-//        vector_dense<T> operator*=(const T &);
-//
-//        vector_dense<T> operator/=(const vector_dense<T> &);
-//
-//        vector_dense<T> operator/=(const T &);
-//
-//        vector_dense<T> operator++();
-//
-//        const vector_dense<T> operator++(int);
-//
-//        vector_dense<T> operator--();
-//
-//        const vector_dense<T> operator--(int);
-//
-//        bool operator==(const vector_dense<T> &) const;
-//
-//        bool operator==(const T &) const;
-//
-//        bool operator!=(const vector_dense<T> &) const;
-//
-//        bool operator!=(const T &) const;
+        vector_dense<T> operator+(const vector_dense<T> &) const;
+
+        vector_dense<T> operator+(const T &) const;
+
+        template<typename T2>
+        friend vector_dense<T2> operator+(const T2 &,
+                                          const vector_dense<T2> &);
+
+        vector_dense<T> operator-(const vector_dense<T> &) const;
+
+        vector_dense<T> operator-(const T &) const;
+
+        template<typename T2>
+        friend vector_dense<T2> operator-(const T2 &,
+                                          const vector_dense<T2> &);
+
+        vector_dense<T> operator*(const vector_dense<T> &) const;
+
+        vector_dense<T> operator*(const T &) const;
+
+        template<typename T2>
+        friend vector_dense<T2> operator*(const T2 &,
+                                          const vector_dense<T2> &);
+
+        vector_dense<T> operator/(const vector_dense<T> &) const;
+
+        vector_dense<T> operator/(const T &) const;
+
+        template<typename T2>
+        friend vector_dense<T2> operator/(const T2 &,
+                                          const vector_dense<T2> &);
+
+        vector_dense<T> operator+=(const vector_dense<T> &);
+
+        vector_dense<T> operator+=(const T &);
+
+        vector_dense<T> operator-=(const vector_dense<T> &);
+
+        vector_dense<T> operator-=(const T &);
+
+        vector_dense<T> operator*=(const vector_dense<T> &);
+
+        vector_dense<T> operator*=(const T &);
+
+        vector_dense<T> operator/=(const vector_dense<T> &);
+
+        vector_dense<T> operator/=(const T &);
+
+        vector_dense<T> operator++();
+
+        const vector_dense<T> operator++(int);
+
+        vector_dense<T> operator--();
+
+        const vector_dense<T> operator--(int);
+
+        bool operator==(const vector_dense<T> &) const;
+
+        bool operator==(const T &) const;
+
+        bool operator!=(const vector_dense<T> &) const;
+
+        bool operator!=(const T &) const;
 
         T *begin();
 
@@ -132,24 +132,24 @@ namespace sepolia {
 
         void set(const vector_dense<T> &);
 
-//        vector_dense<T> plus(const vector_dense<T> &) const;
-//
-//        vector_dense<T> plus(const T &) const;
-//
-//        vector_dense<T> times(const vector_dense<T> &) const;
-//
-//        vector_dense<T> times(const T &) const;
-//
-//        vector_dense<T> subtract(const vector_dense<T> &) const;
-//
-//        vector_dense<T> subtract(const T &) const;
-//
-//        vector_dense<T> divide(const vector_dense<T> &) const;
-//
-//        vector_dense<T> divide(const T &) const;
-//
-//        bool equal_exact(const vector_dense<T> &) const;
-//
-//        bool equal_exact(const T &) const;
+        vector_dense<T> plus(const vector_dense<T> &) const;
+
+        vector_dense<T> plus(const T &) const;
+
+        vector_dense<T> subtract(const vector_dense<T> &) const;
+
+        vector_dense<T> subtract(const T &) const;
+
+        vector_dense<T> times(const vector_dense<T> &) const;
+
+        vector_dense<T> times(const T &) const;
+
+        vector_dense<T> divide(const vector_dense<T> &) const;
+
+        vector_dense<T> divide(const T &) const;
+
+        bool equal(const vector_dense<T> &) const;
+
+        bool equal(const T &) const;
     };
 }
