@@ -1,5 +1,6 @@
 out_*
 OUT_*
 x_*
-.idea/*
+.idea/
+.idea/workspace.xml
 cmake-build-debug

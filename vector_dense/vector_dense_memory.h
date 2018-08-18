@@ -2,8 +2,10 @@
 
 #include "vector_dense_declaration.h"
 
+using sepolia::vector_dense;
+
 template<typename T>
-void sepolia::vector_dense<T>::allocate(const uint64_t &dimension) {
+void vector_dense<T>::allocate(const uint64_t &dimension) {
 
     _dimension = dimension;
     _vdsp.reset(new T[dimension]);
@@ -11,13 +13,13 @@ void sepolia::vector_dense<T>::allocate(const uint64_t &dimension) {
 }
 
 template<typename T>
-bool sepolia::vector_dense<T>::allocated() const {
+bool vector_dense<T>::allocated() const {
 
     return _allocated;
 }
 
 template<typename T>
-void sepolia::vector_dense<T>::deallocate() {
+void vector_dense<T>::deallocate() {
 
     _dimension = 0;
     _vdsp.reset();
@@ -25,7 +27,7 @@ void sepolia::vector_dense<T>::deallocate() {
 }
 
 template<typename T>
-bool sepolia::vector_dense<T>::deallocated() const {
+bool vector_dense<T>::deallocated() const {
 
     return !_allocated;
 }
