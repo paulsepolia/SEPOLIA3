@@ -2,7 +2,6 @@
 
 #include <vector>
 #include <memory>
-#include <functional>
 
 namespace sepolia {
 
@@ -45,11 +44,17 @@ namespace sepolia {
 
         T &operator[](const uint64_t &) const;
 
-    private:
-
         void set(const T &);
 
         void set(const vector_dense<T> &);
+
+        T *begin();
+
+        const T *begin() const;
+
+        T *end();
+
+        const T *end() const;
 
     private:
 

@@ -1,36 +1,37 @@
+#include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "/opt/gtest/1.7.0/include/gtest/gtest.h"
 #include "../../vector_dense/vector_dense.h"
 
-// local parameters
-
-const uint64_t DIM(static_cast<uint64_t>(std::pow(10.0, 4.0)));
-const double VAL(123.456);
+const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
+const double value = 123.456;
 
 TEST(constructor_with_no_arguments, constructors)
 {
-
     sepolia::vector_dense<double> vd;
 
-    EXPECT_EQ(vd.allocated(), false);
-    EXPECT_EQ(vd.deallocated(), true);
+    EXPECT_EQ(false, vd.allocated());
+    EXPECT_EQ(true, vd.deallocated());
 }
 
 TEST(constructor_with_one_argument, constructors)
 {
+    sepolia::vector_dense<double> vd(dimension);
 
-    sepolia::vector_dense<double> vd(DIM);
-
-    EXPECT_EQ(vd.allocated(), true);
-    EXPECT_EQ(vd.deallocated(), false);
+    EXPECT_EQ(true, vd.allocated());
+    EXPECT_EQ(false, vd.deallocated());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(constructor_with_two_arguments, constructors)
 {
+    sepolia::vector_dense<double> vd(dimension, value);
 
-    sepolia::vector_dense<double> vd(DIM, VAL);
+    EXPECT_EQ(true, vd.allocated());
+    EXPECT_EQ(false, vd.deallocated());
+    EXPECT_EQ(dimension, vd.size());
 
-    EXPECT_EQ(vd.allocated(), true);
-    EXPECT_EQ(vd.deallocated(), false);
+    for(const auto & el: vd) {
+        EXPECT_EQ(value, el);
+    }
 }

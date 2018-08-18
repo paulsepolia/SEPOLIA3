@@ -2,16 +2,11 @@
 
 #include "vector_dense_declaration.h"
 
-template<typename T>
-uint64_t sepolia::vector_dense<T>::size() const {
-
-    return _dimension;
-}
 
 template<typename T>
 sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(const std::vector<T> &vec_std) {
 
-    const auto dimension(vec_std.size());
+    const auto dimension = vec_std.size();
 
     deallocate();
     allocate(dimension);
@@ -24,7 +19,7 @@ sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(const std::vector<
 template<typename T>
 sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(std::vector<T> &&vec_std) {
 
-    const auto dimension(vec_std.size());
+    const auto dimension = vec_std.size();
 
     this->deallocate();
     this->allocate(dimension);
@@ -44,7 +39,6 @@ sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(const sepolia::vec
 
 template<typename T>
 sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(const T &val) {
-
 
     set(val);
 
@@ -67,13 +61,13 @@ sepolia::vector_dense<T> &sepolia::vector_dense<T>::operator=(sepolia::vector_de
 }
 
 template<typename T>
-inline T &sepolia::vector_dense<T>::operator()(const uint64_t &index) const {
+T &sepolia::vector_dense<T>::operator()(const uint64_t &index) const {
 
     return _vdsp.get()[index];
 }
 
 template<typename T>
-inline T &sepolia::vector_dense<T>::operator[](const uint64_t &index) const {
+T &sepolia::vector_dense<T>::operator[](const uint64_t &index) const {
 
     return _vdsp.get()[index];
 }

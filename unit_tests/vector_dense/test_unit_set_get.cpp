@@ -1,108 +1,100 @@
-#include "/opt/gtest/1.7.0/include/gtest/gtest.h"
+#include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
 #include "../../vector_dense/vector_dense.h"
 
-// local parameters
-
-const auto DIM_COMM(static_cast<uint64_t>(std::pow(10.0, 4.0)));
-const double VAL_TEST1(123.456);
-const uint64_t VAL_TEST2(123456);
-const int64_t VAL_TEST3(123456);
+const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
+const double value1 = 123.456;
+const uint64_t value2 = 123456;
+const int64_t value3 = 456789;
 
 TEST(vd_set_element_via_constructor_and_get_it_double, set_get)
 {
-    sepolia::vector_dense<double> vd(DIM_COMM, VAL_TEST1);
+    sepolia::vector_dense<double> vd(dimension, value1);
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd) {
 
-        EXPECT_EQ(VAL_TEST1, vd(i));
+        EXPECT_EQ(value1, el);
     }
 }
 
 TEST(vd_set_element_via_constructor_and_get_it_uint64_t, set_get)
 {
-    sepolia::vector_dense<uint64_t> vd(DIM_COMM, VAL_TEST2);
+    sepolia::vector_dense<uint64_t> vd(dimension, value2);
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd) {
 
-        EXPECT_EQ(VAL_TEST2, vd(i));
+        EXPECT_EQ(value2, el);
     }
 }
 
 TEST(vd_set_element_via_constructor_and_get_it_int64_t, set_get)
 {
-    sepolia::vector_dense<int64_t> vd(DIM_COMM, VAL_TEST3);
+    sepolia::vector_dense<int64_t> vd(dimension, value3);
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd) {
 
-        EXPECT_EQ(VAL_TEST3, vd(i));
+        EXPECT_EQ(value3, el);
     }
 }
 
 TEST(vd_set_dimension_via_constructor_and_get_it_double, set_get)
 {
-    sepolia::vector_dense<double> vd(DIM_COMM);
+    sepolia::vector_dense<double> vd(dimension);
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_dimension_via_constructor_and_get_it_uint64_t, set_get)
 {
+    sepolia::vector_dense<uint64_t> vd(dimension);
 
-    sepolia::vector_dense<uint64_t> vd(DIM_COMM);
-
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_dimension_via_constructor_and_get_it_int64_t, set_get)
 {
+    sepolia::vector_dense<int64_t> vd(dimension);
 
-    sepolia::vector_dense<int64_t> vd(DIM_COMM);
-
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_dimension_via_allocate_and_get_it_double, set_get)
 {
-
     sepolia::vector_dense<double> vd;
-    vd.allocate(DIM_COMM);
+    vd.allocate(dimension);
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_dimension_via_allocate_and_get_it_uint64_t, set_get)
 {
-
     sepolia::vector_dense<uint64_t> vd;
-    vd.allocate(DIM_COMM);
+    vd.allocate(dimension);
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_dimension_via_allocate_and_get_it_int64_t, set_get)
 {
-
     sepolia::vector_dense<int64_t> vd;
-    vd.allocate(DIM_COMM);
+    vd.allocate(dimension);
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    EXPECT_EQ(dimension, vd.size());
 }
 
 TEST(vd_set_element_and_get_it_double, set_get)
 {
+    sepolia::vector_dense<double> vd(dimension);
 
-    sepolia::vector_dense<double> vd(DIM_COMM);
+    EXPECT_EQ(dimension, vd.size());
 
-    EXPECT_EQ(DIM_COMM, vd.size());
-
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
         vd(i) = static_cast<double>(i);
     }
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
         EXPECT_EQ(vd(i), static_cast<double>(i));
     }
@@ -110,238 +102,276 @@ TEST(vd_set_element_and_get_it_double, set_get)
 
 TEST(vd_set_element_and_get_it_uint64_t, set_get)
 {
+    sepolia::vector_dense<uint64_t> vd(dimension);
 
-    sepolia::vector_dense<uint64_t> vd(DIM_COMM);
+    EXPECT_EQ(dimension, vd.size());
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    // curved brackets
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
         vd(i) = i;
     }
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
-        EXPECT_EQ(vd(i), i);
+        EXPECT_EQ(i, vd(i));
+    }
+
+    // square brackets
+
+    for (uint64_t i = 0; i < dimension; i++) {
+
+        vd[i] = i;
+    }
+
+    for (uint64_t i = 0; i < dimension; i++) {
+
+        EXPECT_EQ(i, vd[i]);
     }
 }
 
 TEST(vd_set_element_and_get_it_int64_t, set_get)
 {
+    sepolia::vector_dense<int64_t> vd(dimension);
 
-    sepolia::vector_dense<int64_t> vd(DIM_COMM);
+    EXPECT_EQ(dimension, vd.size());
 
-    EXPECT_EQ(DIM_COMM, vd.size());
+    // curved brackets
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
         vd(i) = static_cast<int64_t>(i);
     }
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (uint64_t i = 0; i < dimension; i++) {
 
-        EXPECT_EQ(vd(i), static_cast<int64_t>(i));
+        EXPECT_EQ(static_cast<int64_t>(i), vd(i));
+    }
+
+    // square brackets
+
+    for (uint64_t i = 0; i < dimension; i++) {
+
+        vd[i] = static_cast<int64_t>(i);
+    }
+
+    for (uint64_t i = 0; i < dimension; i++) {
+
+        EXPECT_EQ(static_cast<int64_t>(i), vd[i]);
     }
 }
 
 TEST(vd_set_vector_to_another_using_assignment_operator_double, set_get)
 {
-
-    sepolia::vector_dense<double> vd1(DIM_COMM, VAL_TEST1);
+    sepolia::vector_dense<double> vd1(dimension, value1);
     sepolia::vector_dense<double> vd2;
 
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
+
+    for (const auto & el: vd1) {
+
+        EXPECT_EQ(value1, el);
+    }
 
     vd2 = vd1;
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    EXPECT_EQ(dimension, vd2.size());
 
-        EXPECT_EQ(vd1(i), VAL_TEST1);
-        EXPECT_EQ(vd2(i), VAL_TEST1);
+    for (const auto & el: vd2) {
+
+        EXPECT_EQ(value1, el);
     }
-
-    EXPECT_EQ(vd1.size(), DIM_COMM);
 }
 
 TEST(vd_set_vector_via_copy_constructor_double, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value1);
 
-    sepolia::vector_dense<double> vd1(DIM_COMM, VAL_TEST1);
-
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
 
     sepolia::vector_dense<double> vd2(vd1);
 
-    EXPECT_EQ(vd1.size(), DIM_COMM);
+    EXPECT_EQ(dimension, vd1.size());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd1) {
 
-        EXPECT_EQ(vd1(i), VAL_TEST1);
-        EXPECT_EQ(vd2(i), VAL_TEST1);
+        EXPECT_EQ(value1, el);
+    }
+
+    EXPECT_EQ(dimension, vd2.size());
+
+    for (const auto & el: vd2) {
+
+        EXPECT_EQ(value1, el);
     }
 }
 
 TEST(vd_set_vector_via_copy_constructor_uint64_t, set_get)
 {
+    sepolia::vector_dense<uint64_t> vd1(dimension, value2);
 
-    sepolia::vector_dense<uint64_t> vd1(DIM_COMM, VAL_TEST2);
-
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
 
     sepolia::vector_dense<uint64_t> vd2(vd1);
 
-    EXPECT_EQ(vd1.size(), DIM_COMM);
+    EXPECT_EQ(dimension, vd1.size());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd1) {
 
-        EXPECT_EQ(vd1(i), VAL_TEST2);
-        EXPECT_EQ(vd2(i), VAL_TEST2);
+        EXPECT_EQ(value2, el);
+    }
+
+    EXPECT_EQ(dimension, vd2.size());
+
+    for (const auto & el: vd2) {
+
+        EXPECT_EQ(value2, el);
     }
 }
 
 TEST(vd_set_vector_via_copy_constructor_int64_t, set_get)
 {
+    sepolia::vector_dense<int64_t> vd1(dimension, value3);
 
-    sepolia::vector_dense<int64_t> vd1(DIM_COMM, VAL_TEST3);
-
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
 
     sepolia::vector_dense<int64_t> vd2(vd1);
 
-    EXPECT_EQ(vd1.size(), DIM_COMM);
+    EXPECT_EQ(dimension, vd1.size());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd1) {
 
-        EXPECT_EQ(vd1(i), VAL_TEST3);
-        EXPECT_EQ(vd2(i), VAL_TEST3);
+        EXPECT_EQ(value3, el);
+    }
+
+    EXPECT_EQ(dimension, vd2.size());
+
+    for (const auto & el: vd2) {
+
+        EXPECT_EQ(value3, el);
     }
 }
 
 TEST(vd_set_vector_via_move_constructor_double, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value1);
 
-    sepolia::vector_dense<double> vd1(DIM_COMM, VAL_TEST1);
-
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
 
     sepolia::vector_dense<double> vd2(std::move(vd1));
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for(const auto & el: vd2) {
 
-        EXPECT_EQ(vd2(i), VAL_TEST1);
+        EXPECT_EQ(value1, el);
     }
 }
 
 TEST(vd_set_vector_via_move_constructor_uint64_t, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value2);
 
-    sepolia::vector_dense<uint64_t> vd1(DIM_COMM, VAL_TEST2);
+    EXPECT_EQ(dimension, vd1.size());
 
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    sepolia::vector_dense<double> vd2(std::move(vd1));
 
-    sepolia::vector_dense<uint64_t> vd2(std::move(vd1));
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    for(const auto & el: vd2) {
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
-
-        EXPECT_EQ(vd2(i), VAL_TEST2);
+        EXPECT_EQ(value2, el);
     }
 }
 
 TEST(vd_set_vector_via_move_constructor_int64_t, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value3);
 
-    sepolia::vector_dense<int64_t> vd1(DIM_COMM, VAL_TEST3);
+    EXPECT_EQ(dimension, vd1.size());
 
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    sepolia::vector_dense<double> vd2(std::move(vd1));
 
-    sepolia::vector_dense<int64_t> vd2(std::move(vd1));
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    for(const auto & el: vd2) {
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
-
-        EXPECT_EQ(vd2(i), VAL_TEST3);
+        EXPECT_EQ(value3, el);
     }
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_double, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value1);
 
-    sepolia::vector_dense<double> vd1(DIM_COMM, VAL_TEST1);
-
-    EXPECT_EQ(DIM_COMM, vd1.size());
+    EXPECT_EQ(dimension, vd1.size());
 
     sepolia::vector_dense<double> vd2;
     vd2 = std::move(vd1);
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd2) {
 
-        EXPECT_EQ(vd2(i), VAL_TEST1);
+        EXPECT_EQ(value1, el);
     }
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_uint64_t, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value2);
 
-    sepolia::vector_dense<uint64_t> vd1(DIM_COMM, VAL_TEST2);
+    EXPECT_EQ(dimension, vd1.size());
 
-    EXPECT_EQ(DIM_COMM, vd1.size());
-
-    sepolia::vector_dense<uint64_t> vd2;
+    sepolia::vector_dense<double> vd2;
     vd2 = std::move(vd1);
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd2) {
 
-        EXPECT_EQ(vd2(i), VAL_TEST2);
+        EXPECT_EQ(value2, el);
     }
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_int64_t, set_get)
 {
+    sepolia::vector_dense<double> vd1(dimension, value3);
 
-    sepolia::vector_dense<int64_t> vd1(DIM_COMM, VAL_TEST3);
+    EXPECT_EQ(dimension, vd1.size());
 
-    EXPECT_EQ(DIM_COMM, vd1.size());
-
-    sepolia::vector_dense<int64_t> vd2;
+    sepolia::vector_dense<double> vd2;
     vd2 = std::move(vd1);
 
-    EXPECT_EQ(vd1.allocated(), false);
-    EXPECT_EQ(vd1.deallocated(), true);
-    EXPECT_EQ(vd1.size(), 0UL);
-    EXPECT_EQ(vd2.allocated(), true);
-    EXPECT_EQ(vd2.deallocated(), false);
+    EXPECT_EQ(false, vd1.allocated());
+    EXPECT_EQ(true, vd1.deallocated());
+    EXPECT_EQ(static_cast<uint64_t>(0), vd1.size());
+    EXPECT_EQ(true, vd2.allocated());
+    EXPECT_EQ(false, vd2.deallocated());
 
-    for (uint64_t i = 0; i < DIM_COMM; i++) {
+    for (const auto & el: vd2) {
 
-        EXPECT_EQ(vd2(i), VAL_TEST3);
+        EXPECT_EQ(value3, el);
     }
 }

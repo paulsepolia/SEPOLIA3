@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include "vector_dense_declaration.h"
 
 
@@ -19,10 +18,10 @@ sepolia::vector_dense<T>::vector_dense(const uint64_t &dim, const T &val):
 
     _vdsp.reset(new T[dim]);
 
-    const auto tmp = _vdsp.get();
+    const auto vector = _vdsp.get();
 
     for (uint64_t i = 0; i < dim; i++) {
-        tmp[i] = static_cast<T>(val);
+        vector[i] = static_cast<T>(val);
     }
 
     _allocated = true;
@@ -35,11 +34,11 @@ sepolia::vector_dense<T>::vector_dense(const sepolia::vector_dense<T> &vec):
 
     _vdsp.reset(new T[vec._dimension]);
 
-    const auto tmp1 = _vdsp.get();
-    const auto tmp2 = vec._vdsp.get();
+    const auto vector_out = _vdsp.get();
+    const auto vector_in = vec._vdsp.get();
 
     for (uint64_t i = 0; i < _dimension; i++) {
-        tmp1[i] = tmp2[i];
+        vector_out[i] = vector_in[i];
     }
 }
 

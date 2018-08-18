@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#tests_all="algop constructors exceptions memory oper set_get speed stl_algos stl_members utils"
-
 tests_all="constructors memory operators speed set_get"
 
 if [ $1 = 'all' ]; then

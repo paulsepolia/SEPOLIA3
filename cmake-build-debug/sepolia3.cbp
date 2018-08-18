@@ -99,6 +99,12 @@
 		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/main.cpp">
 			<Option target="sepolia3"/>
 		</Unit>
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/vector_dense/vector_dense_functions.h">
+			<Option target="sepolia3"/>
+		</Unit>
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/vector_dense/vector_dense_parameters.h">
+			<Option target="sepolia3"/>
+		</Unit>
 		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
