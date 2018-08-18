@@ -2,6 +2,7 @@
   <dictionary name="pgg">
     <words>
       <w>abstol</w>
+      <w>coeff</w>
       <w>deallocated</w>
       <w>dsyevr</w>
       <w>dsyevx</w>

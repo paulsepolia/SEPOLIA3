@@ -12,8 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_constructors.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_constructors.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,8 +82,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3474" />
-          <entry key="h" value="1821" />
+          <entry key="cpp" value="4078" />
+          <entry key="h" value="1855" />
           <entry key="sh" value="120" />
           <entry key="txt" value="491" />
         </counts>
@@ -89,24 +91,24 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="120" />
-          <entry key="ObjectiveC" value="5295" />
+          <entry key="ObjectiveC" value="5933" />
           <entry key="PLAIN_TEXT" value="491" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="72" />
-          <entry key="h" value="105" />
+          <entry key="cpp" value="80" />
+          <entry key="h" value="106" />
           <entry key="placeholder" value="1" />
-          <entry key="sh" value="19" />
+          <entry key="sh" value="21" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="18" />
+          <entry key="Bash" value="20" />
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="177" />
+          <entry key="ObjectiveC" value="186" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -117,20 +119,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+            <state relative-caret-position="24">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -167,9 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dense_diagonalizers/eigensystem_dense.h" />
-        <option value="$PROJECT_DIR$/driver_programs/dense_diagonalizers/001_compile_gnu_mkl.sh" />
-        <option value="$PROJECT_DIR$/aux_functions/aux_functions.cpp" />
         <option value="$PROJECT_DIR$/headers/sepolia_headers.h" />
         <option value="$PROJECT_DIR$/aux_functions/aux_functions.h" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_oper.cpp" />
@@ -185,8 +175,6 @@
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_set.h" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_functions.h" />
         <option value="$PROJECT_DIR$/matrix_dense/placeholder.txt" />
-        <option value="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" />
-        <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" />
@@ -216,8 +204,13 @@
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" />
         <option value="$PROJECT_DIR$/examples/vector_dense/002_vector_dense_example/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/driver_program.cpp" />
-        <option value="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" />
+        <option value="$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/TODO.txt" />
       </list>
     </option>
   </component>
@@ -257,20 +250,6 @@
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-              <item name="005_vector_dense_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-              <item name="006_vector_dense_example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
@@ -357,12 +336,12 @@
       <workItem from="1534595326747" duration="7780000" />
       <workItem from="1534606609245" duration="163000" />
       <workItem from="1534606914222" duration="5069000" />
-      <workItem from="1534617344496" duration="6323000" />
+      <workItem from="1534617344496" duration="8785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56681000" />
+    <option name="totallyTimeSpent" value="59143000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -406,41 +385,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/matrix_dense/placeholder.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/dense_diagonalizers/placeholder.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matrix_dense/placeholder.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -720,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -734,24 +671,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/0xx_clean.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_algebra.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="360">
+          <caret line="174" column="21" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/0xx_clean.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret lean-forward="true" />
+        <state relative-caret-position="605">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="341">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

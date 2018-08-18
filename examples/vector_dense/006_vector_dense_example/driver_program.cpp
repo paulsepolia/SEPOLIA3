@@ -11,7 +11,7 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 123.456789;
 
-        vector_dense<double> vd1(dimension, value);
+        const vector_dense<double> vd1(dimension, value);
         vector_dense<double> vd2(dimension);
 
         vd2 = vd1;

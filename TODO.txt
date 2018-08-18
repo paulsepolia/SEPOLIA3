@@ -1,6 +1,4 @@
 
-Task 2: to write some examples for vector_dense
-
 Task 3: to finish the implementation of the DSYEVX and DSYEVR
 
 Task 4: to start the implementation of the matrix_dense

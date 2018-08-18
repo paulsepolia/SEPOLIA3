@@ -171,6 +171,8 @@ vector_dense<T> vector_dense<T>::times(const T &elem) const {
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
+        shared(vector_out)\
+        shared(elem)\
         private(i)
     {
 #pragma omp for
