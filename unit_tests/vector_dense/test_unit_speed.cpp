@@ -8,8 +8,8 @@ using sepolia::vector_dense;
 const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
 
-TEST(vd_test_speed_move_copy_constructor, declare_vectors)
-{
+TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
+
     auto t1 = std::chrono::system_clock::now();
 
     for (uint64_t i = 0; i != dimension; i++) {
@@ -47,8 +47,8 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors)
     EXPECT_GE(time_span_copy.count(), time_span_move.count());
 }
 
-TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector)
-{
+TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
+
     auto t1 = std::chrono::system_clock::now();
 
     for (uint64_t i = 0; i != dimension; i++) {

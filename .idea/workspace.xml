@@ -12,13 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_memory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_memory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +79,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2205" />
+          <entry key="cpp" value="2207" />
           <entry key="h" value="1609" />
           <entry key="sh" value="24" />
           <entry key="txt" value="298" />
@@ -94,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="24" />
-          <entry key="ObjectiveC" value="3814" />
+          <entry key="ObjectiveC" value="3816" />
           <entry key="PLAIN_TEXT" value="298" />
         </counts>
       </usages-collector>
@@ -125,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TODO.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            <state relative-caret-position="192">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -134,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="491">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -351,12 +345,12 @@
       <workItem from="1534595076723" duration="242000" />
       <workItem from="1534595326747" duration="7780000" />
       <workItem from="1534606609245" duration="163000" />
-      <workItem from="1534606914222" duration="3923000" />
+      <workItem from="1534606914222" duration="4068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49212000" />
+    <option name="totallyTimeSpent" value="49357000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -667,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -681,10 +668,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="491">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
