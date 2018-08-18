@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" beforeDir="false" afterPath="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,19 +68,19 @@
     <session id="-1154034703">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="4078" />
+          <entry key="cpp" value="4436" />
           <entry key="h" value="1855" />
           <entry key="sh" value="120" />
           <entry key="txt" value="491" />
@@ -91,13 +89,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="120" />
-          <entry key="ObjectiveC" value="5933" />
+          <entry key="ObjectiveC" value="6291" />
           <entry key="PLAIN_TEXT" value="491" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="80" />
+          <entry key="cpp" value="81" />
           <entry key="h" value="106" />
           <entry key="placeholder" value="1" />
           <entry key="sh" value="21" />
@@ -108,7 +106,7 @@
         <counts>
           <entry key="Bash" value="20" />
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="186" />
+          <entry key="ObjectiveC" value="187" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -119,11 +117,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TODO.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algebra.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -136,22 +143,24 @@
       <find>diagonalizers::</find>
       <find>_is</find>
       <find>DIM</find>
-      <find>DIM_COMM</find>
       <find>value_c</find>
       <find>value_b</find>
       <find>VAL_COMM</find>
       <find>VAL_TEST3</find>
-      <find>sep::</find>
       <find>sepolia::</find>
       <find>value</find>
+      <find>sep::</find>
+      <find>DIM_COMM</find>
+      <find>algop</find>
     </findStrings>
     <replaceStrings>
       <replace>value_a</replace>
       <replace>value2</replace>
       <replace>value</replace>
       <replace>value3</replace>
-      <replace>dimension</replace>
       <replace>value0</replace>
+      <replace>dimension</replace>
+      <replace>algebra</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/headers/sepolia_headers.h" />
         <option value="$PROJECT_DIR$/aux_functions/aux_functions.h" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_oper.cpp" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dence_constructors.h" />
@@ -211,6 +219,7 @@
         <option value="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp" />
         <option value="$PROJECT_DIR$/TODO.txt" />
+        <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algebra.cpp" />
       </list>
     </option>
   </component>
@@ -243,17 +252,12 @@
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
               <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -336,12 +340,13 @@
       <workItem from="1534595326747" duration="7780000" />
       <workItem from="1534606609245" duration="163000" />
       <workItem from="1534606914222" duration="5069000" />
-      <workItem from="1534617344496" duration="8785000" />
+      <workItem from="1534617344496" duration="8939000" />
+      <workItem from="1534632084796" duration="2145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59143000" />
+    <option name="totallyTimeSpent" value="61442000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -354,10 +359,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1602" height="912" extended-state="6" />
+    <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49829933" visible="true" weight="0.22402598" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49829933" visible="true" weight="0.22792208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5017007" side_tool="true" weight="0.27532467" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -385,13 +390,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_parameters.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -420,13 +418,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/containers/containers.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/containers/containers.cpp" />
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -723,6 +715,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algebra.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

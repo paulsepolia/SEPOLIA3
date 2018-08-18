@@ -150,6 +150,33 @@ fake_main.cpp.s:
 	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/fake_main.cpp.s
 .PHONY : fake_main.cpp.s
 
+unit_tests/vector_dense/test_unit_algebra.o: unit_tests/vector_dense/test_unit_algebra.cpp.o
+
+.PHONY : unit_tests/vector_dense/test_unit_algebra.o
+
+# target to build an object file
+unit_tests/vector_dense/test_unit_algebra.cpp.o:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o
+.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.o
+
+unit_tests/vector_dense/test_unit_algebra.i: unit_tests/vector_dense/test_unit_algebra.cpp.i
+
+.PHONY : unit_tests/vector_dense/test_unit_algebra.i
+
+# target to preprocess a source file
+unit_tests/vector_dense/test_unit_algebra.cpp.i:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.i
+.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.i
+
+unit_tests/vector_dense/test_unit_algebra.s: unit_tests/vector_dense/test_unit_algebra.cpp.s
+
+.PHONY : unit_tests/vector_dense/test_unit_algebra.s
+
+# target to generate assembly for a file
+unit_tests/vector_dense/test_unit_algebra.cpp.s:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.s
+.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... fake_main.o"
 	@echo "... fake_main.i"
 	@echo "... fake_main.s"
+	@echo "... unit_tests/vector_dense/test_unit_algebra.o"
+	@echo "... unit_tests/vector_dense/test_unit_algebra.i"
+	@echo "... unit_tests/vector_dense/test_unit_algebra.s"
 .PHONY : help
 
 

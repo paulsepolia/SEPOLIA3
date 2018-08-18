@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tests_all="constructors memory operators speed set_get"
+tests_all="constructors memory operators speed set_get algebra"
 
 if [ $1 = 'all' ]; then
     tests=$tests_all

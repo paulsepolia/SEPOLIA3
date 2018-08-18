@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sepolia3.dir/fake_main.cpp.o"
+  "CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o"
   "sepolia3.pdb"
   "sepolia3"
 )
