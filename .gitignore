@@ -1,5 +1,5 @@
 out_*
 OUT_*
 x_*
-.idea
+.idea/*
 cmake-build-debug
