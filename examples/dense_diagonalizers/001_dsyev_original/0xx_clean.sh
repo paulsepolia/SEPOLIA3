@@ -1,5 +1,5 @@
 #!/bin/bash
 
-#  1.
-
    rm x_*
+   rm OUT*
+   rm out* 
