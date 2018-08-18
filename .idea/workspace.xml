@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/005_dsyevx_original/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/005_dsyevx_original/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/007_dsyevr_original/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/007_dsyevr_original/driver_program.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/containers/containers.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/containers/containers.h" beforeDir="false" afterPath="$PROJECT_DIR$/containers/containers.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +81,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpp" value="2465" />
-          <entry key="h" value="1609" />
+          <entry key="h" value="1787" />
           <entry key="sh" value="112" />
           <entry key="txt" value="298" />
         </counts>
@@ -91,14 +89,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="112" />
-          <entry key="ObjectiveC" value="4074" />
+          <entry key="ObjectiveC" value="4252" />
           <entry key="PLAIN_TEXT" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="61" />
-          <entry key="h" value="95" />
+          <entry key="h" value="98" />
           <entry key="placeholder" value="1" />
           <entry key="sh" value="14" />
           <entry key="txt" value="5" />
@@ -108,7 +106,7 @@
         <counts>
           <entry key="Bash" value="13" />
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="156" />
+          <entry key="ObjectiveC" value="159" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -128,11 +126,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="120">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/containers/containers.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -185,7 +192,6 @@
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_oper.cpp" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dence_constructors.h" />
         <option value="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h" />
-        <option value="$PROJECT_DIR$/containers/containers.h" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_parameters.h" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense.h" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp" />
@@ -220,6 +226,7 @@
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/005_dsyevx_original/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/007_dsyevr_original/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/containers/containers.h" />
       </list>
     </option>
   </component>
@@ -252,34 +259,17 @@
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-              <item name="005_dsyevx_original" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-              <item name="007_dsyevr_original" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
-              <item name="008_dsyevr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,12 +350,12 @@
       <workItem from="1534595326747" duration="7780000" />
       <workItem from="1534606609245" duration="163000" />
       <workItem from="1534606914222" duration="5069000" />
-      <workItem from="1534617344496" duration="1872000" />
+      <workItem from="1534617344496" duration="2208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52230000" />
+    <option name="totallyTimeSpent" value="52566000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -451,13 +441,6 @@
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_exceptions.cpp" />
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_stl_algos.cpp" />
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algop.cpp" />
-    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -553,13 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/containers/containers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -703,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/005_dsyevx_original/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -719,8 +688,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="605">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/containers/containers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>

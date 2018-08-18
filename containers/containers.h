@@ -7,10 +7,13 @@ class containers {
 
 public:
 
-    containers();
+    // NOTE:
+    // Dense diagonalizers can get as input for eigenvalues
+    // either a std::vector<double> or a sepolia::vector_dense<double>
+    // container type
 
-    ~containers();
 
+    //std::vector<double> vector;
     sepolia::vector_dense<double> vector;
     std::vector<std::vector<double>> matrix;
 };
