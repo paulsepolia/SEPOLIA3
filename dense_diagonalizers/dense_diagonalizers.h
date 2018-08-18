@@ -6,7 +6,6 @@
 #include "../containers/containers.h"
 
 
-
 eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,
                         std::string diagonalizer = DSYEVD_LAPACKE);
 

@@ -71,3 +71,9 @@ inline T &sepolia::vector_dense<T>::operator()(const uint64_t &index) const {
 
     return _vdsp.get()[index];
 }
+
+template<typename T>
+inline T &sepolia::vector_dense<T>::operator[](const uint64_t &index) const {
+
+    return _vdsp.get()[index];
+}

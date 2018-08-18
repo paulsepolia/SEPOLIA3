@@ -43,6 +43,8 @@ namespace sepolia {
 
         T &operator()(const uint64_t &) const;
 
+        T &operator[](const uint64_t &) const;
+
     private:
 
         void set(const T &);
