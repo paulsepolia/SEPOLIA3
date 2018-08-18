@@ -300,15 +300,36 @@ bool vector_dense<T1>::operator==(const vector_dense<T1> &vec) const {
 
 template<typename T>
 bool vector_dense<T>::operator==(const T &val) const {
+
     return equal(val);
+}
+
+namespace sepolia {
+
+    template<typename T>
+    bool operator==(const T &val, const vector_dense<T> &vec) {
+
+        return vec.equal(val);
+    }
 }
 
 template<typename T>
 bool vector_dense<T>::operator!=(const vector_dense<T> &vec) const {
+
     return !equal(vec);
 }
 
 template<typename T>
 bool vector_dense<T>::operator!=(const T &val) const {
+
     return !equal(val);
+}
+
+namespace sepolia {
+
+    template<typename T>
+    bool operator!=(const T &val, const vector_dense<T> &vec) {
+
+        return !vec.equal(val);
+    }
 }

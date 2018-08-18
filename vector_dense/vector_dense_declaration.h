@@ -106,9 +106,15 @@ namespace sepolia {
 
         bool operator==(const T &) const;
 
+        template<typename T2>
+        friend bool operator==(const T2 &, const vector_dense<T2> &);
+
         bool operator!=(const vector_dense<T> &) const;
 
         bool operator!=(const T &) const;
+
+        template<typename T2>
+        friend bool operator!=(const T2 &, const vector_dense<T2> &);
 
         T *begin();
 
@@ -123,10 +129,6 @@ namespace sepolia {
         uint64_t _dimension;
         bool _allocated;
         std::shared_ptr<T> _vdsp;
-
-    private:
-
-        // help functions
 
         void set(const T &);
 

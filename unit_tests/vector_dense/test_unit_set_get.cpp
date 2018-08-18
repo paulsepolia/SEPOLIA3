@@ -184,6 +184,9 @@ TEST(vd_set_vector_to_another_using_assignment_operator_double, set_get)
 
         EXPECT_EQ(value1, el);
     }
+
+    EXPECT_EQ(vd1, vd2);
+
 }
 
 TEST(vd_set_vector_via_copy_constructor_double, set_get)
@@ -230,6 +233,8 @@ TEST(vd_set_vector_via_copy_constructor_uint64_t, set_get)
 
         EXPECT_EQ(value2, el);
     }
+
+    EXPECT_EQ(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_copy_constructor_int64_t, set_get)
@@ -253,6 +258,8 @@ TEST(vd_set_vector_via_copy_constructor_int64_t, set_get)
 
         EXPECT_EQ(value3, el);
     }
+
+    EXPECT_EQ(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_constructor_double, set_get)
@@ -273,6 +280,8 @@ TEST(vd_set_vector_via_move_constructor_double, set_get)
 
         EXPECT_EQ(value1, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_constructor_uint64_t, set_get)
@@ -293,6 +302,8 @@ TEST(vd_set_vector_via_move_constructor_uint64_t, set_get)
 
         EXPECT_EQ(value2, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_constructor_int64_t, set_get)
@@ -313,6 +324,8 @@ TEST(vd_set_vector_via_move_constructor_int64_t, set_get)
 
         EXPECT_EQ(value3, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_double, set_get)
@@ -334,6 +347,8 @@ TEST(vd_set_vector_via_move_assignment_operator_double, set_get)
 
         EXPECT_EQ(value1, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_uint64_t, set_get)
@@ -355,6 +370,8 @@ TEST(vd_set_vector_via_move_assignment_operator_uint64_t, set_get)
 
         EXPECT_EQ(value2, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }
 
 TEST(vd_set_vector_via_move_assignment_operator_int64_t, set_get)
@@ -376,4 +393,6 @@ TEST(vd_set_vector_via_move_assignment_operator_int64_t, set_get)
 
         EXPECT_EQ(value3, el);
     }
+
+    EXPECT_NE(vd1, vd2);
 }

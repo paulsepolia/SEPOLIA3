@@ -5,7 +5,7 @@
 
 using sepolia::vector_dense;
 
-const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
+const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
 
 TEST(vd_test_speed_move_copy_constructor, declare_vectors)

@@ -5,51 +5,49 @@
 
 using sepolia::vector_dense;
 
-const uint64_t dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
+const auto dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
 const double value1 = 765.432;
 const double value2 = 234.567;
-const uint64_t index1 = 11;
-const uint64_t index2 = 12;
-
 const double ERROR_M10 = std::pow(10.0, -10.0);
 const double ERROR_M11 = std::pow(10.0, -11.0);
 const double ERROR_M12 = std::pow(10.0, -12.0);
 
-TEST(vd_test_operator_curved_brackets, operators)
-{
-    vector_dense<double> vd(dimension, value2);
+TEST(vd_test_operator_curved_brackets, operators) {
 
-    EXPECT_EQ(value2, vd(index1));
-    EXPECT_EQ(value2, vd(index2));
+    vector_dense<double> vd(dimension, value1);
 
-    for (const auto & el: vd) {
-        EXPECT_EQ(value2, el);
+    for (const auto &el: vd) {
+        EXPECT_EQ(value1, el);
     }
 }
 
-TEST(vd_test_set_operator_square_brackets, operators)
-{
+TEST(vd_test_set_operator_square_brackets, operators) {
+
     vector_dense<double> vd(dimension, value1);
 
-    for (const auto & el: vd) {
+    EXPECT_EQ(dimension, vd.size());
+
+    for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
+
         vd[i] = static_cast<double>(i);
         EXPECT_EQ(static_cast<double>(i), vd[i]);
     }
 }
 
-TEST(vd_test_set_operator_curved_brackets, operators)
-{
+TEST(vd_test_set_operator_curved_brackets, operators) {
+
     vector_dense<double> vd(dimension, value1);
 
-    for (const auto & el: vd) {
+    for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
+
         vd(i) = static_cast<double>(i);
         EXPECT_EQ(static_cast<double>(i), vd(i));
     }
@@ -148,6 +146,9 @@ TEST(vd_test_operator_plus_equal, operators) {
         EXPECT_EQ(value1, v1(i));
     }
 
+    EXPECT_EQ(value1 + value2, v2);
+    EXPECT_EQ(value1, v1);
+
     v1.deallocate();
     v1.allocate(dimension);
     v1 = value1;
@@ -157,6 +158,8 @@ TEST(vd_test_operator_plus_equal, operators) {
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_EQ(value1 + value1, v1(i));
     }
+
+    EXPECT_EQ(value1 + value1, v1);
 
     v1.deallocate();
     v2.deallocate();
@@ -193,6 +196,9 @@ TEST(vd_test_operator_minus_equal, operators) {
         EXPECT_EQ(value1, v1(i));
     }
 
+    EXPECT_EQ(value2 - value1, v2);
+    EXPECT_EQ(value1, v1);
+
     v1.deallocate();
     v1.allocate(dimension);
     v1 = value1;
@@ -202,6 +208,12 @@ TEST(vd_test_operator_minus_equal, operators) {
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_EQ(value1 - value1, v1(i));
     }
+
+    EXPECT_EQ(value1 - value1, v1);
+    EXPECT_EQ(0.0, v1);
+
+    EXPECT_EQ(v1, value1 - value1);
+    EXPECT_EQ(v1, 0);
 
     v1.deallocate();
     v2.deallocate();
@@ -230,6 +242,9 @@ TEST(vd_test_operator_minus_equal, operators) {
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_EQ(0, v2(i));
     }
+
+    EXPECT_EQ(0.0, v2);
+    EXPECT_EQ(v2, 0.0);
 }
 
 TEST(vd_test_operator_times_equal, operators) {
@@ -244,6 +259,12 @@ TEST(vd_test_operator_times_equal, operators) {
         EXPECT_EQ(value1, v1(i));
     }
 
+    EXPECT_EQ(value1 * value2, v2);
+    EXPECT_EQ(value1, v1);
+
+    EXPECT_EQ(v2, value1 * value2);
+    EXPECT_EQ(v1, value1);
+
     v1.deallocate();
     v1.allocate(dimension);
     v1 = value1;
@@ -253,6 +274,9 @@ TEST(vd_test_operator_times_equal, operators) {
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_EQ(value1 * value1, v1(i));
     }
+
+    EXPECT_EQ(value1 * value1, v1);
+    EXPECT_EQ(v1, value1 * value1);
 
     v1.deallocate();
     v2.deallocate();
@@ -298,6 +322,12 @@ TEST(vd_test_operator_divide_equal, operators) {
         EXPECT_EQ(value1, v1(i));
     }
 
+    EXPECT_EQ(value2 / value1, v2);
+    EXPECT_EQ(value1, v1);
+
+    EXPECT_EQ(v2, value2 / value1);
+    EXPECT_EQ(v1, value1);
+
     v1.deallocate();
     v1.allocate(dimension);
     v1 = value1;
@@ -307,6 +337,9 @@ TEST(vd_test_operator_divide_equal, operators) {
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_EQ(value1 / value1, v1(i));
     }
+
+    EXPECT_EQ(v1, value1 / value1);
+    EXPECT_EQ(value1 / value1, v1);
 
     v1.deallocate();
     v2.deallocate();
@@ -353,6 +386,10 @@ TEST(vd_test_operator_equal, operators) {
 
     EXPECT_EQ(v1, value1);
     EXPECT_EQ(v2, value2);
+
+    EXPECT_EQ(value1, v1);
+    EXPECT_EQ(value2, v2);
+
 }
 
 TEST(vd_test_operator_not_equal, operators) {
@@ -368,4 +405,7 @@ TEST(vd_test_operator_not_equal, operators) {
 
     EXPECT_NE(v2, value1);
     EXPECT_NE(v1, value2);
+
+    EXPECT_NE(value1, v2);
+    EXPECT_NE(value2, v1);
 }
