@@ -9,7 +9,7 @@ void vector_dense<T>::allocate(const uint64_t &dimension) {
 
     _dimension = dimension;
     _vdsp.reset(new T[dimension]);
-    _allocated = true;
+    _allocated = (dimension != 0);
 }
 
 template<typename T>

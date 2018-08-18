@@ -25,7 +25,7 @@ vector_dense<T>::vector_dense(const uint64_t &dim, const T &val):
         vector[i] = static_cast<T>(val);
     }
 
-    _allocated = true;
+    _allocated = (dim != 0);
 }
 
 template<typename T>
