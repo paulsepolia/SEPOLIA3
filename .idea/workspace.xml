@@ -12,7 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07eb1e6a-bb6d-4e19-9041-f92138f6cedd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack/driver_program_dsyev.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/driver_program_dsyev.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack/driver_program_dsyevd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/driver_program_dsyevd.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/001_dsyevd_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/001_dsyevd_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/001_dsyevd_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/007_dsyev_example_original_MM_F/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/007_dsyev_example_original_MM_F/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp2/007_dsyev_example_original_MM_F/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/driver_program.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,33 +90,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2207" />
+          <entry key="cpp" value="2265" />
           <entry key="h" value="1609" />
-          <entry key="sh" value="24" />
+          <entry key="sh" value="52" />
           <entry key="txt" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="24" />
-          <entry key="ObjectiveC" value="3816" />
+          <entry key="Bash" value="52" />
+          <entry key="ObjectiveC" value="3874" />
           <entry key="PLAIN_TEXT" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="46" />
+          <entry key="cpp" value="50" />
           <entry key="h" value="95" />
           <entry key="placeholder" value="1" />
-          <entry key="sh" value="5" />
+          <entry key="sh" value="10" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="4" />
+          <entry key="Bash" value="9" />
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="141" />
+          <entry key="ObjectiveC" value="145" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -117,19 +128,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TODO.txt">
+        <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/001_compile_gnu_mkl.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="48">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/001_compile_gnu_mkl.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp">
+        <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/001_compile_gnu_mkl.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="48">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -166,12 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/004_dsyevx_PROTOTYPE_MM_F/driver_program.cpp" />
-        <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/006_dsyevr_PROTOTYPE_MM_F/driver_program.cpp" />
-        <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/aux_functions.h" />
-        <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/aux_functions.cpp" />
         <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/driver_program.cpp" />
         <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/parameters.h" />
         <option value="$PROJECT_DIR$/dense_diagonalizers/interfaces/002_dsyevd_PROTOTYPE_MM_F/dense_diagonalizers.h" />
@@ -217,6 +231,12 @@
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/001_compile_gnu_mkl.sh" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/001_compile_gnu_mkl.sh" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/001_compile_gnu_mkl.sh" />
+        <option value="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/001_compile_gnu_mkl.sh" />
       </list>
     </option>
   </component>
@@ -249,23 +269,51 @@
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
+              <item name="001_dsyev_lapack_original" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
+              <item name="002_dsyev_lapack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
+              <item name="003_dsyevd_lapack_original" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_diagonalizers" type="462c0819:PsiDirectoryNode" />
+              <item name="004_dsyevd_lapack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
               <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,15 +330,15 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack" />
-      <recent name="$PROJECT_DIR$/driver_programs/dense_diagonalizers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original" />
+      <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original" />
+      <recent name="$PROJECT_DIR$/examples/dense_diagonalizers" />
       <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack" />
       <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack" />
-      <recent name="$PROJECT_DIR$/common_headers" />
-      <recent name="$PROJECT_DIR$/containers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack" />
       <recent name="$PROJECT_DIR$/driver_programs/dense_diagonalizers" />
     </key>
   </component>
@@ -345,12 +393,12 @@
       <workItem from="1534595076723" duration="242000" />
       <workItem from="1534595326747" duration="7780000" />
       <workItem from="1534606609245" duration="163000" />
-      <workItem from="1534606914222" duration="4068000" />
+      <workItem from="1534606914222" duration="4504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49357000" />
+    <option name="totallyTimeSpent" value="49793000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -401,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp2/001_dsyevd_example_original_MM_F/driver_program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2202">
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmp2/005_dsyevr_example_original_MM_F/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -437,13 +478,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/placeholder.txt" />
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack/driver_program_dsyevd.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aux_functions/aux_functions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -525,27 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack/driver_program_dsyev.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="126" column="87" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/dsyevd_lapack/001_compile_gnu_mkl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/dsyev_lapack/001_compile_gnu_mkl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -668,6 +681,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -675,10 +695,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/driver_program_dsyevd.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/driver_program_dsyev.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_lapack_original/001_compile_gnu_mkl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev_lapack/001_compile_gnu_mkl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_lapack_original/001_compile_gnu_mkl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd_lapack/001_compile_gnu_mkl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
