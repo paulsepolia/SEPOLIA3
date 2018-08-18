@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tests_all="constructors memory operators speed set_get algebra"
+tests_all="constructors memory operators speed set_get algebra stl_compatibility"
 
 if [ $1 = 'all' ]; then
     tests=$tests_all
@@ -25,7 +25,7 @@ do
                 -isystem                        \
                 /opt/gtest/1.7.0/include        \
                 -pthread                        \
-                test_unit_$var.cpp              \
+                test_$var.cpp                   \
                 driver_program.cpp              \
                 /opt/gtest/1.7.0/lib/libgtest.a \
                 -o x_gnu_$var

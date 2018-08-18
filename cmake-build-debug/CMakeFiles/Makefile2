@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-
 CMakeFiles/sepolia3.dir/all:
 	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/depend
 	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target sepolia3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target sepolia3"
 .PHONY : CMakeFiles/sepolia3.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/sepolia3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sepolia3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sepolia3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sepolia3.dir/rule
