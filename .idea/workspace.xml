@@ -15,22 +15,58 @@
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/pgg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sepolia3.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sepolia3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sepolia3.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algebra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_algebra.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_constructors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_constructors.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_memory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_memory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_operators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_operators.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_set_get.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_set_get.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_speed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/vector_dense/test_speed.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/containers/containers.h" beforeDir="false" afterPath="$PROJECT_DIR$/containers/containers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd/001_compile_gnu_mkl.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd/001_compile_gnu_mkl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/001_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/009_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/001_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/009_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/001_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/002_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/008_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/002_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/008_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/002_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/002_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/007_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/007_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/003_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/004_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/006_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/004_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/006_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/004_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/004_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/005_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/005_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/005_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/004_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/004_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/006_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/003_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/003_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/007_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/002_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/002_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/008_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/009_vector_dense_example/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/vector_dense/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/dense_vector/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix_dense/placeholder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_matrix/placeholder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/dense_diagonalizers/placeholder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_diagonalizers/placeholder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/matrix_dense/placeholder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dense_matrix/placeholder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/001_compile_gnu.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/001_compile_gnu.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/0xx_clean.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/0xx_clean.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/driver_program.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_algebra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_algebra.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_constructors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_constructors.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_memory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_memory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_operators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_operators.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_set_get.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_set_get.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_speed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_speed.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/vector_dense/test_stl_compatibility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests_unit/dense_vector/test_stl_compatibility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_algebra.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_algebra.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_constructors.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_constructors.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_declaration.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_declaration.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_operators.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_operators.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_parameters.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_parameters.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_dense/vector_dense_stl.h" beforeDir="false" afterPath="$PROJECT_DIR$/dense_vector/vector_dense_stl.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,34 +147,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="4481" />
-          <entry key="h" value="1855" />
+          <entry key="cpp" value="4546" />
+          <entry key="h" value="1871" />
           <entry key="sh" value="120" />
-          <entry key="txt" value="491" />
+          <entry key="txt" value="506" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="120" />
-          <entry key="ObjectiveC" value="6336" />
-          <entry key="PLAIN_TEXT" value="491" />
+          <entry key="ObjectiveC" value="6417" />
+          <entry key="PLAIN_TEXT" value="506" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="82" />
-          <entry key="h" value="106" />
+          <entry key="cpp" value="87" />
+          <entry key="h" value="110" />
           <entry key="placeholder" value="1" />
-          <entry key="sh" value="21" />
-          <entry key="txt" value="6" />
+          <entry key="sh" value="23" />
+          <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="20" />
+          <entry key="Bash" value="22" />
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="188" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="ObjectiveC" value="197" />
+          <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -148,20 +184,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TODO.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_stl_compatibility.cpp">
+        <entry file="file://$PROJECT_DIR$/tests_valgrind/dense_vector/driver_program.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="380" lean-forward="true" selection-start-line="380" selection-end-line="380" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -180,11 +207,13 @@
       <find>VAL_TEST3</find>
       <find>sepolia::</find>
       <find>value</find>
-      <find>sep::</find>
       <find>DIM_COMM</find>
       <find>algop</find>
       <find>DIM2</find>
       <find>STL_algorithms</find>
+      <find>#include &quot;../../../vector_dense/vector_dense.h&quot;</find>
+      <find>#include &quot;../../vector_dense/vector_dense.h&quot;</find>
+      <find>sep::</find>
     </findStrings>
     <replaceStrings>
       <replace>value_a</replace>
@@ -196,7 +225,13 @@
       <replace>algebra</replace>
       <replace>dim2</replace>
       <replace>stl_compatibility</replace>
+      <replace>#include &quot;../../../dense_vector/vector_dense.h&quot;</replace>
+      <replace>#include &quot;../../dense_vector/vector_dense.h&quot;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/examples/dense_vector</dir>
+      <dir>$PROJECT_DIR$/tests_unit</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -204,11 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_oper.cpp" />
-        <option value="$PROJECT_DIR$/vector_dense/vector_dence_constructors.h" />
-        <option value="$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h" />
-        <option value="$PROJECT_DIR$/vector_dense/vector_dense_parameters.h" />
-        <option value="$PROJECT_DIR$/vector_dense/vector_dense.h" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp" />
         <option value="$PROJECT_DIR$/unit_tests/matrix_dense/placeholder.txt" />
         <option value="$PROJECT_DIR$/unit_tests/dense_diagonalizers/placeholder.txt" />
@@ -237,7 +267,6 @@
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/005_dsyevx_original/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/007_dsyevr_original/driver_program.cpp" />
         <option value="$PROJECT_DIR$/examples/dense_diagonalizers/008_dsyevr/driver_program.cpp" />
-        <option value="$PROJECT_DIR$/containers/containers.h" />
         <option value="$PROJECT_DIR$/examples/vector_dense/0xx_clean.sh" />
         <option value="$PROJECT_DIR$/examples/vector_dense/driver_program.cpp" />
         <option value="$PROJECT_DIR$/vector_dense/vector_dense_constructors.h" />
@@ -255,6 +284,12 @@
         <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_unit_algebra.cpp" />
         <option value="$PROJECT_DIR$/unit_tests/vector_dense/test_stl_compatibility.cpp" />
+        <option value="$PROJECT_DIR$/tests_valgrind/matrix_dense/placeholder.txt" />
+        <option value="$PROJECT_DIR$/containers/containers.h" />
+        <option value="$PROJECT_DIR$/examples/dense_matrix/placeholder.txt" />
+        <option value="$PROJECT_DIR$/tests_valgrind/dense_diagonalizers/placeholder.txt" />
+        <option value="$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/driver_program.cpp" />
+        <option value="$PROJECT_DIR$/tests_valgrind/dense_vector/driver_program.cpp" />
       </list>
     </option>
   </component>
@@ -287,13 +322,18 @@
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
               <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
-              <item name="unit_tests" type="462c0819:PsiDirectoryNode" />
-              <item name="vector_dense" type="462c0819:PsiDirectoryNode" />
+              <item name="tests_valgrind" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sepolia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sepolia3" type="462c0819:PsiDirectoryNode" />
+              <item name="tests_valgrind" type="462c0819:PsiDirectoryNode" />
+              <item name="dense_vector" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,12 +416,12 @@
       <workItem from="1534606609245" duration="163000" />
       <workItem from="1534606914222" duration="5069000" />
       <workItem from="1534617344496" duration="8939000" />
-      <workItem from="1534632084796" duration="3177000" />
+      <workItem from="1534632084796" duration="5411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62474000" />
+    <option name="totallyTimeSpent" value="64708000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -397,11 +437,11 @@
     <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49829933" visible="true" weight="0.22792208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49829933" visible="true" weight="0.22792208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5017007" side_tool="true" weight="0.27532467" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4852547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -409,7 +449,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.21179625" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297587" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.030831099" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.030831099" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.11930295" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -425,84 +465,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_stl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/driver_program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/headers/sepolia_headers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/containers/containers.cpp" />
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_constructors.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_memory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_operators.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="407" lean-forward="true" selection-start-line="407" selection-end-line="407" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_set_get.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="396" column="24" selection-start-line="396" selection-start-column="24" selection-end-line="396" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_speed.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_original/001_compile_gnu_mkl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev/001_compile_gnu_mkl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/003_dsyevd_original/001_compile_gnu_mkl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/004_dsyevd/001_compile_gnu_mkl.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -535,13 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_original/driver_program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -587,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/containers/containers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -601,148 +549,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/001_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_constructors.h">
+    <entry file="file://$PROJECT_DIR$/dense_vector/vector_dense_constructors.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/README.txt">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/001_vector_dense_example/driver_program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/003_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/002_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/002_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/004_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/004_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_operators.h">
+    <entry file="file://$PROJECT_DIR$/dense_vector/vector_dense_operators.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="303" column="13" selection-start-line="303" selection-start-column="11" selection-end-line="303" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_declaration.h">
+    <entry file="file://$PROJECT_DIR$/dense_vector/vector_dense_declaration.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="154" column="16" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_memory.h">
+    <entry file="file://$PROJECT_DIR$/dense_vector/vector_dense_memory.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/004_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/004_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/003_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/003_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/005_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/006_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/007_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_dense/vector_dense_algebra.h">
+    <entry file="file://$PROJECT_DIR$/dense_vector/vector_dense_algebra.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="174" column="21" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/0xx_clean.sh">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/009_vector_dense_example/0xx_clean.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/009_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/009_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/008_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/008_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/007_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/007_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/006_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/006_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/vector_dense/005_vector_dense_example/driver_program.cpp">
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/005_vector_dense_example/driver_program.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
           <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_algebra.cpp">
+    <entry file="file://$PROJECT_DIR$/tests_unit/dense_vector/test_algebra.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests_unit/dense_vector/test_stl_compatibility.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="380" lean-forward="true" selection-start-line="380" selection-end-line="380" />
         </state>
       </provider>
     </entry>
@@ -753,10 +701,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit_tests/vector_dense/test_stl_compatibility.cpp">
+    <entry file="file://$PROJECT_DIR$/aux_functions/aux_functions.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aux_functions/aux_functions.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="380" lean-forward="true" selection-start-line="380" selection-end-line="380" />
+        <state relative-caret-position="72">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/001_dsyev_original/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_diagonalizers/002_dsyev/001_compile_gnu_mkl.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dense_diagonalizers/dense_diagonalizers.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/containers/containers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/headers/sepolia_headers.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_matrix/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dense_matrix/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests_unit/dense_diagonalizers/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests_valgrind/dense_diagonalizers/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests_valgrind/dense_matrix/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dense_vector/001_vector_dense_example/001_compile_gnu.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests_valgrind/dense_vector/driver_program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

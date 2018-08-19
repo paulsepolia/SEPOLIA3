@@ -4,6 +4,7 @@
       <w>abstol</w>
       <w>coeff</w>
       <w>deallocated</w>
+      <w>deallocations</w>
       <w>dsyevr</w>
       <w>dsyevx</w>
       <w>eigenproblem</w>
