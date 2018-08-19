@@ -26,17 +26,17 @@ void vector_dense<T>::set(const T &value) {
 }
 
 template<typename T>
-void vector_dense<T>::set(const vector_dense<T> &vec) {
+void vector_dense<T>::set(const vector_dense<T> &vector) {
 
-    if(*this == vec) {
+    if(*this == vector) {
         return;
     }
 
-    const uint64_t dimension = vec._dimension;
+    const uint64_t dimension = vector._dimension;
     deallocate();
     allocate(dimension);
     const auto vector_out = _vdsp.get();
-    const auto vector_in = vec._vdsp.get();
+    const auto vector_in = vector._vdsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -51,11 +51,11 @@ void vector_dense<T>::set(const vector_dense<T> &vec) {
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::plus(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::plus(const vector_dense<T> &vector) const {
 
-    const uint64_t dimension = vec._dimension;
+    const uint64_t dimension = vector._dimension;
     const auto vector_member = _vdsp.get();
-    const auto vector_in = vec._vdsp.get();
+    const auto vector_in = vector._vdsp.get();
     vector_dense<T> vector_out(dimension);
     uint64_t i = 0;
 
@@ -97,11 +97,11 @@ vector_dense<T> vector_dense<T>::plus(const T &elem) const {
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::subtract(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::subtract(const vector_dense<T> &vector) const {
 
-    const uint64_t dimension = vec._dimension;
+    const uint64_t dimension = vector._dimension;
     const auto vector_member = _vdsp.get();
-    const auto vector_in = vec._vdsp.get();
+    const auto vector_in = vector._vdsp.get();
     vector_dense<T> vector_out(dimension);
     uint64_t i = 0;
 
@@ -143,11 +143,11 @@ vector_dense<T> vector_dense<T>::subtract(const T &elem) const {
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::times(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::times(const vector_dense<T> &vector) const {
 
-    const uint64_t dimension = vec._dimension;
+    const uint64_t dimension = vector._dimension;
     const auto vector_member = _vdsp.get();
-    const auto vector_in = vec._vdsp.get();
+    const auto vector_in = vector._vdsp.get();
     vector_dense<T> vector_out(dimension);
     uint64_t i = 0;
 
@@ -189,11 +189,11 @@ vector_dense<T> vector_dense<T>::times(const T &elem) const {
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::divide(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::divide(const vector_dense<T> &vector) const {
 
-    const uint64_t dimension = vec._dimension;
+    const uint64_t dimension = vector._dimension;
     const auto vector_member = _vdsp.get();
-    const auto vector_in = vec._vdsp.get();
+    const auto vector_in = vector._vdsp.get();
     vector_dense<T> vector_out(dimension);
     uint64_t i = 0;
 
@@ -235,9 +235,9 @@ vector_dense<T> vector_dense<T>::divide(const T &elem) const {
 }
 
 template<typename T>
-bool vector_dense<T>::equal(const vector_dense<T> &vec) const {
+bool vector_dense<T>::equal(const vector_dense<T> &vector) const {
 
-    if (_dimension != vec._dimension) return false;
+    if (_dimension != vector._dimension) return false;
 
     bool flg = false;
     const uint64_t dimension = _dimension;
@@ -246,14 +246,14 @@ bool vector_dense<T>::equal(const vector_dense<T> &vec) const {
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)\
-        shared(vec)\
+        shared(vector)\
         shared(flg)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
 
-            if (!(_vdsp.get()[i] < vec._vdsp.get()[i]) &&
-                !(_vdsp.get()[i] > vec._vdsp.get()[i])) {
+            if (!(_vdsp.get()[i] < vector._vdsp.get()[i]) &&
+                !(_vdsp.get()[i] > vector._vdsp.get()[i])) {
 #pragma omp critical
                 flg = true;
 #pragma omp cancel for
@@ -266,11 +266,11 @@ bool vector_dense<T>::equal(const vector_dense<T> &vec) const {
 }
 
 template<typename T>
-bool vector_dense<T>::equal(const T &val) const {
+bool vector_dense<T>::equal(const T &value) const {
 
     if (_dimension == 0) return false;
 
-    vector_dense<T> vec_tmp(_dimension, val);
+    vector_dense<T> vec_tmp(_dimension, value);
 
     return equal(vec_tmp);
 }

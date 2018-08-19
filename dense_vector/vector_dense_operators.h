@@ -6,57 +6,57 @@
 using sepolia::vector_dense;
 
 template<typename T>
-vector_dense<T> &vector_dense<T>::operator=(const std::vector<T> &vec_std) {
+vector_dense<T> &vector_dense<T>::operator=(const std::vector<T> &vector_std) {
 
-    const auto dimension = vec_std.size();
+    const auto dimension = vector_std.size();
 
     deallocate();
     allocate(dimension);
 
-    std::copy(vec_std.begin(), vec_std.end(), _vdsp.get());
+    std::copy(vector_std.begin(), vector_std.end(), _vdsp.get());
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> &vector_dense<T>::operator=(std::vector<T> &&vec_std) {
+vector_dense<T> &vector_dense<T>::operator=(std::vector<T> &&vector_std) {
 
-    const auto dimension = vec_std.size();
+    const auto dimension = vector_std.size();
 
     this->deallocate();
     this->allocate(dimension);
 
-    std::move(vec_std.begin(), vec_std.end(), _vdsp.get());
+    std::move(vector_std.begin(), vector_std.end(), _vdsp.get());
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> &vector_dense<T>::operator=(const vector_dense<T> &vec) {
+vector_dense<T> &vector_dense<T>::operator=(const vector_dense<T> &vector) {
 
-    set(vec);
-
-    return *this;
-}
-
-template<typename T>
-vector_dense<T> &vector_dense<T>::operator=(const T &val) {
-
-    set(val);
+    set(vector);
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> &vector_dense<T>::operator=(vector_dense<T> &&vec) noexcept {
+vector_dense<T> &vector_dense<T>::operator=(const T &value) {
 
-    if (this != &vec) {
+    set(value);
+
+    return *this;
+}
+
+template<typename T>
+vector_dense<T> &vector_dense<T>::operator=(vector_dense<T> &&vector) noexcept {
+
+    if (this != &vector) {
         deallocate();
-        _vdsp = std::move(vec._vdsp);
-        _allocated = vec._allocated;
-        _dimension = vec._dimension;
-        vec._dimension = 0;
-        vec._allocated = false;
+        _vdsp = std::move(vector._vdsp);
+        _allocated = vector._allocated;
+        _dimension = vector._dimension;
+        vector._dimension = 0;
+        vector._allocated = false;
     }
 
     return *this;
@@ -76,19 +76,19 @@ T &vector_dense<T>::operator[](const uint64_t &index) const {
 
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator+(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::operator+(const vector_dense<T> &vector) const {
 
-    vector_dense<T> vec_tmp(vec.size());
-    vec_tmp = plus(vec);
+    vector_dense<T> vec_tmp(vector.size());
+    vec_tmp = plus(vector);
 
     return std::move(vec_tmp);
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator+(const T &val) const {
+vector_dense<T> vector_dense<T>::operator+(const T &value) const {
 
     vector_dense<T> vec_tmp(size());
-    vec_tmp = plus(val);
+    vec_tmp = plus(value);
 
     return std::move(vec_tmp);
 }
@@ -96,29 +96,29 @@ vector_dense<T> vector_dense<T>::operator+(const T &val) const {
 namespace sepolia {
 
     template<typename T>
-    vector_dense<T> operator+(const T &val, const vector_dense<T> &vec) {
+    vector_dense<T> operator+(const T &value, const vector_dense<T> &vector) {
 
-        vector_dense<T> vec_tmp(vec.size());
-        vec_tmp = vec.plus(val);
+        vector_dense<T> vec_tmp(vector.size());
+        vec_tmp = vector.plus(value);
 
         return std::move(vec_tmp);
     }
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator-(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::operator-(const vector_dense<T> &vector) const {
 
-    vector_dense<T> vec_tmp(vec.size());
-    vec_tmp = subtract(vec);
+    vector_dense<T> vec_tmp(vector.size());
+    vec_tmp = subtract(vector);
 
     return std::move(vec_tmp);
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator-(const T &val) const {
+vector_dense<T> vector_dense<T>::operator-(const T &value) const {
 
     vector_dense<T> vec_tmp(size());
-    vec_tmp = subtract(val);
+    vec_tmp = subtract(value);
 
     return std::move(vec_tmp);
 }
@@ -126,29 +126,29 @@ vector_dense<T> vector_dense<T>::operator-(const T &val) const {
 namespace sepolia {
 
     template<typename T>
-    vector_dense<T> operator-(const T &val, const vector_dense<T> &vec) {
+    vector_dense<T> operator-(const T &value, const vector_dense<T> &vector) {
 
-        vector_dense<T> vec_tmp(vec.size());
-        vec_tmp = vec.subtract(val);
+        vector_dense<T> vec_tmp(vector.size());
+        vec_tmp = vector.subtract(value);
 
         return std::move(vec_tmp);
     }
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator*(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::operator*(const vector_dense<T> &vector) const {
 
-    vector_dense<T> vec_tmp(vec.size());
-    vec_tmp = times(vec);
+    vector_dense<T> vec_tmp(vector.size());
+    vec_tmp = times(vector);
 
     return std::move(vec_tmp);
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator*(const T &val) const {
+vector_dense<T> vector_dense<T>::operator*(const T &value) const {
 
     vector_dense<T> vec_tmp(size());
-    vec_tmp = times(val);
+    vec_tmp = times(value);
 
     return std::move(vec_tmp);
 }
@@ -156,29 +156,29 @@ vector_dense<T> vector_dense<T>::operator*(const T &val) const {
 namespace sepolia {
 
     template<typename T>
-    vector_dense<T> operator*(const T &val, const vector_dense<T> &vec) {
+    vector_dense<T> operator*(const T &value, const vector_dense<T> &vector) {
 
-        vector_dense<T> vec_tmp(vec.size());
-        vec_tmp = vec.times(val);
+        vector_dense<T> vec_tmp(vector.size());
+        vec_tmp = vector.times(value);
 
         return std::move(vec_tmp);
     }
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator/(const vector_dense<T> &vec) const {
+vector_dense<T> vector_dense<T>::operator/(const vector_dense<T> &vector) const {
 
-    vector_dense<T> vec_tmp(vec.size());
-    vec_tmp = std::move(divide(vec));
+    vector_dense<T> vec_tmp(vector.size());
+    vec_tmp = std::move(divide(vector));
 
     return std::move(vec_tmp);
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator/(const T &val) const {
+vector_dense<T> vector_dense<T>::operator/(const T &value) const {
 
     vector_dense<T> vec_tmp(size());
-    vec_tmp = divide(val);
+    vec_tmp = divide(value);
 
     return std::move(vec_tmp);
 }
@@ -186,76 +186,76 @@ vector_dense<T> vector_dense<T>::operator/(const T &val) const {
 namespace sepolia {
 
     template<typename T>
-    vector_dense<T> operator/(const T &val, const vector_dense<T> &vec) {
+    vector_dense<T> operator/(const T &value, const vector_dense<T> &vector) {
 
-        vector_dense<T> vec_tmp(vec.size(), val);
+        vector_dense<T> vec_tmp(vector.size(), value);
 
-        vec_tmp = vec_tmp.divide(vec);
+        vec_tmp = vec_tmp.divide(vector);
 
         return std::move(vec_tmp);
     }
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator+=(const vector_dense<T> &vec) {
+vector_dense<T> vector_dense<T>::operator+=(const vector_dense<T> &vector) {
 
-    *this = std::move(plus(vec));
-
-    return *this;
-}
-
-template<typename T>
-vector_dense<T> vector_dense<T>::operator+=(const T &val) {
-
-    *this = std::move(plus(val));
+    *this = std::move(plus(vector));
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator-=(const vector_dense<T> &vec) {
+vector_dense<T> vector_dense<T>::operator+=(const T &value) {
 
-    *this = std::move(subtract(vec));
-
-    return *this;
-}
-
-template<typename T>
-vector_dense<T> vector_dense<T>::operator-=(const T &val) {
-
-    *this = std::move(subtract(val));
+    *this = std::move(plus(value));
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator*=(const vector_dense<T> &vec) {
+vector_dense<T> vector_dense<T>::operator-=(const vector_dense<T> &vector) {
 
-    *this = std::move(times(vec));
-
-    return *this;
-}
-
-template<typename T>
-vector_dense<T> vector_dense<T>::operator*=(const T &val) {
-
-    *this = std::move(times(val));
+    *this = std::move(subtract(vector));
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator/=(const vector_dense<T> &vec) {
+vector_dense<T> vector_dense<T>::operator-=(const T &value) {
 
-    *this = std::move(divide(vec));
+    *this = std::move(subtract(value));
 
     return *this;
 }
 
 template<typename T>
-vector_dense<T> vector_dense<T>::operator/=(const T &val) {
+vector_dense<T> vector_dense<T>::operator*=(const vector_dense<T> &vector) {
 
-    *this = std::move(divide(val));
+    *this = std::move(times(vector));
+
+    return *this;
+}
+
+template<typename T>
+vector_dense<T> vector_dense<T>::operator*=(const T &value) {
+
+    *this = std::move(times(value));
+
+    return *this;
+}
+
+template<typename T>
+vector_dense<T> vector_dense<T>::operator/=(const vector_dense<T> &vector) {
+
+    *this = std::move(divide(vector));
+
+    return *this;
+}
+
+template<typename T>
+vector_dense<T> vector_dense<T>::operator/=(const T &value) {
+
+    *this = std::move(divide(value));
 
     return *this;
 }
@@ -293,43 +293,43 @@ const vector_dense<T> vector_dense<T>::operator--(int) {
 }
 
 template<typename T1>
-bool vector_dense<T1>::operator==(const vector_dense<T1> &vec) const {
+bool vector_dense<T1>::operator==(const vector_dense<T1> &vector) const {
 
-    return equal(vec);
+    return equal(vector);
 }
 
 template<typename T>
-bool vector_dense<T>::operator==(const T &val) const {
+bool vector_dense<T>::operator==(const T &value) const {
 
-    return equal(val);
+    return equal(value);
 }
 
 namespace sepolia {
 
     template<typename T>
-    bool operator==(const T &val, const vector_dense<T> &vec) {
+    bool operator==(const T &value, const vector_dense<T> &vector) {
 
-        return vec.equal(val);
+        return vector.equal(value);
     }
 }
 
 template<typename T>
-bool vector_dense<T>::operator!=(const vector_dense<T> &vec) const {
+bool vector_dense<T>::operator!=(const vector_dense<T> &vector) const {
 
-    return !equal(vec);
+    return !equal(vector);
 }
 
 template<typename T>
-bool vector_dense<T>::operator!=(const T &val) const {
+bool vector_dense<T>::operator!=(const T &value) const {
 
-    return !equal(val);
+    return !equal(value);
 }
 
 namespace sepolia {
 
     template<typename T>
-    bool operator!=(const T &val, const vector_dense<T> &vec) {
+    bool operator!=(const T &value, const vector_dense<T> &vector) {
 
-        return !vec.equal(val);
+        return !vector.equal(value);
     }
 }

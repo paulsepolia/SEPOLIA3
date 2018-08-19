@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
 #include <memory>
+#include <vector>
 
 namespace sepolia {
 
@@ -12,7 +12,7 @@ namespace sepolia {
 
         explicit vector_dense<T>();
 
-        explicit vector_dense<T>(const uint64_t &dim, const T &val = 0);
+        explicit vector_dense<T>(const uint64_t &, const T & = 0);
 
         vector_dense<T>(const vector_dense<T> &);
 
@@ -124,17 +124,13 @@ namespace sepolia {
 
         const T *end() const;
 
-        const T & at(const uint64_t &index) const;
+        const T &at(const uint64_t &) const;
 
         void swap(vector_dense<T> &);
 
         bool empty() const;
 
     private:
-
-        uint64_t _dimension;
-        bool _allocated;
-        std::shared_ptr<T> _vdsp;
 
         void set(const T &);
 
@@ -159,5 +155,11 @@ namespace sepolia {
         bool equal(const vector_dense<T> &) const;
 
         bool equal(const T &) const;
+
+    private:
+
+        uint64_t _dimension;
+        bool _allocated;
+        std::shared_ptr<T> _vdsp;
     };
 }
