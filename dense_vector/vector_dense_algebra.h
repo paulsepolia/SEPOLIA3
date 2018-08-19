@@ -28,6 +28,10 @@ void vector_dense<T>::set(const T &value) {
 template<typename T>
 void vector_dense<T>::set(const vector_dense<T> &vec) {
 
+    if(*this == vec) {
+        return;
+    }
+
     const uint64_t dimension = vec._dimension;
     deallocate();
     allocate(dimension);

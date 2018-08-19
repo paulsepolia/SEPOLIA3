@@ -96,19 +96,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/dense_vector/vector_dense_parameters.h">
+			<Option target="sepolia3"/>
+		</Unit>
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/dense_vector/vector_dense_stl.h">
+			<Option target="sepolia3"/>
+		</Unit>
 		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp">
 			<Option target="sepolia3"/>
 		</Unit>
-		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_stl_compatibility.cpp">
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_algebra.cpp">
 			<Option target="sepolia3"/>
 		</Unit>
-		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_unit_algebra.cpp">
-			<Option target="sepolia3"/>
-		</Unit>
-		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/vector_dense/vector_dense_parameters.h">
-			<Option target="sepolia3"/>
-		</Unit>
-		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/vector_dense/vector_dense_stl.h">
+		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_stl_compatibility.cpp">
 			<Option target="sepolia3"/>
 		</Unit>
 		<Unit filename="/home/pgg/pgg/git_projects/not_finished/sepolia3/CMakeLists.txt">

@@ -5,8 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/fake_main.cpp.o"
-  "/home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_stl_compatibility.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o"
-  "/home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_unit_algebra.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o"
+  "/home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_algebra.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o"
+  "/home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_stl_compatibility.cpp" "/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

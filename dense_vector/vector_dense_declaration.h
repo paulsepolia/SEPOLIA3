@@ -124,6 +124,12 @@ namespace sepolia {
 
         const T *end() const;
 
+        const T & at(const uint64_t &index) const;
+
+        void swap(vector_dense<T> &);
+
+        bool empty() const;
+
     private:
 
         uint64_t _dimension;

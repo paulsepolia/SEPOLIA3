@@ -150,59 +150,59 @@ fake_main.cpp.s:
 	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/fake_main.cpp.s
 .PHONY : fake_main.cpp.s
 
-unit_tests/vector_dense/test_stl_compatibility.o: unit_tests/vector_dense/test_stl_compatibility.cpp.o
+tests_unit/dense_vector/test_algebra.o: tests_unit/dense_vector/test_algebra.cpp.o
 
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.o
-
-# target to build an object file
-unit_tests/vector_dense/test_stl_compatibility.cpp.o:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.cpp.o
-
-unit_tests/vector_dense/test_stl_compatibility.i: unit_tests/vector_dense/test_stl_compatibility.cpp.i
-
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.i
-
-# target to preprocess a source file
-unit_tests/vector_dense/test_stl_compatibility.cpp.i:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.i
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.cpp.i
-
-unit_tests/vector_dense/test_stl_compatibility.s: unit_tests/vector_dense/test_stl_compatibility.cpp.s
-
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.s
-
-# target to generate assembly for a file
-unit_tests/vector_dense/test_stl_compatibility.cpp.s:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.s
-.PHONY : unit_tests/vector_dense/test_stl_compatibility.cpp.s
-
-unit_tests/vector_dense/test_unit_algebra.o: unit_tests/vector_dense/test_unit_algebra.cpp.o
-
-.PHONY : unit_tests/vector_dense/test_unit_algebra.o
+.PHONY : tests_unit/dense_vector/test_algebra.o
 
 # target to build an object file
-unit_tests/vector_dense/test_unit_algebra.cpp.o:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o
-.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.o
+tests_unit/dense_vector/test_algebra.cpp.o:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o
+.PHONY : tests_unit/dense_vector/test_algebra.cpp.o
 
-unit_tests/vector_dense/test_unit_algebra.i: unit_tests/vector_dense/test_unit_algebra.cpp.i
+tests_unit/dense_vector/test_algebra.i: tests_unit/dense_vector/test_algebra.cpp.i
 
-.PHONY : unit_tests/vector_dense/test_unit_algebra.i
+.PHONY : tests_unit/dense_vector/test_algebra.i
 
 # target to preprocess a source file
-unit_tests/vector_dense/test_unit_algebra.cpp.i:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.i
-.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.i
+tests_unit/dense_vector/test_algebra.cpp.i:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.i
+.PHONY : tests_unit/dense_vector/test_algebra.cpp.i
 
-unit_tests/vector_dense/test_unit_algebra.s: unit_tests/vector_dense/test_unit_algebra.cpp.s
+tests_unit/dense_vector/test_algebra.s: tests_unit/dense_vector/test_algebra.cpp.s
 
-.PHONY : unit_tests/vector_dense/test_unit_algebra.s
+.PHONY : tests_unit/dense_vector/test_algebra.s
 
 # target to generate assembly for a file
-unit_tests/vector_dense/test_unit_algebra.cpp.s:
-	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.s
-.PHONY : unit_tests/vector_dense/test_unit_algebra.cpp.s
+tests_unit/dense_vector/test_algebra.cpp.s:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.s
+.PHONY : tests_unit/dense_vector/test_algebra.cpp.s
+
+tests_unit/dense_vector/test_stl_compatibility.o: tests_unit/dense_vector/test_stl_compatibility.cpp.o
+
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.o
+
+# target to build an object file
+tests_unit/dense_vector/test_stl_compatibility.cpp.o:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.cpp.o
+
+tests_unit/dense_vector/test_stl_compatibility.i: tests_unit/dense_vector/test_stl_compatibility.cpp.i
+
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.i
+
+# target to preprocess a source file
+tests_unit/dense_vector/test_stl_compatibility.cpp.i:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.i
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.cpp.i
+
+tests_unit/dense_vector/test_stl_compatibility.s: tests_unit/dense_vector/test_stl_compatibility.cpp.s
+
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.s
+
+# target to generate assembly for a file
+tests_unit/dense_vector/test_stl_compatibility.cpp.s:
+	$(MAKE) -f CMakeFiles/sepolia3.dir/build.make CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.s
+.PHONY : tests_unit/dense_vector/test_stl_compatibility.cpp.s
 
 # Help Target
 help:
@@ -216,12 +216,12 @@ help:
 	@echo "... fake_main.o"
 	@echo "... fake_main.i"
 	@echo "... fake_main.s"
-	@echo "... unit_tests/vector_dense/test_stl_compatibility.o"
-	@echo "... unit_tests/vector_dense/test_stl_compatibility.i"
-	@echo "... unit_tests/vector_dense/test_stl_compatibility.s"
-	@echo "... unit_tests/vector_dense/test_unit_algebra.o"
-	@echo "... unit_tests/vector_dense/test_unit_algebra.i"
-	@echo "... unit_tests/vector_dense/test_unit_algebra.s"
+	@echo "... tests_unit/dense_vector/test_algebra.o"
+	@echo "... tests_unit/dense_vector/test_algebra.i"
+	@echo "... tests_unit/dense_vector/test_algebra.s"
+	@echo "... tests_unit/dense_vector/test_stl_compatibility.o"
+	@echo "... tests_unit/dense_vector/test_stl_compatibility.i"
+	@echo "... tests_unit/dense_vector/test_stl_compatibility.s"
 .PHONY : help
 
 

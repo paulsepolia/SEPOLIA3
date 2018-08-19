@@ -70,44 +70,44 @@ CMakeFiles/sepolia3.dir/fake_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/fake_main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/fake_main.cpp -o CMakeFiles/sepolia3.dir/fake_main.cpp.s
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o: CMakeFiles/sepolia3.dir/flags.make
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o: ../unit_tests/vector_dense/test_unit_algebra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_unit_algebra.cpp
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o: CMakeFiles/sepolia3.dir/flags.make
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o: ../tests_unit/dense_vector/test_algebra.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_algebra.cpp
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_unit_algebra.cpp > CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.i
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_algebra.cpp > CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.i
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_unit_algebra.cpp -o CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.s
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_algebra.cpp -o CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.s
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o: CMakeFiles/sepolia3.dir/flags.make
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o: ../unit_tests/vector_dense/test_stl_compatibility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_stl_compatibility.cpp
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o: CMakeFiles/sepolia3.dir/flags.make
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o: ../tests_unit/dense_vector/test_stl_compatibility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o -c /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_stl_compatibility.cpp
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_stl_compatibility.cpp > CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.i
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_stl_compatibility.cpp > CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.i
 
-CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/unit_tests/vector_dense/test_stl_compatibility.cpp -o CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.s
+CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pgg/pgg/git_projects/not_finished/sepolia3/tests_unit/dense_vector/test_stl_compatibility.cpp -o CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.s
 
 # Object files for target sepolia3
 sepolia3_OBJECTS = \
 "CMakeFiles/sepolia3.dir/fake_main.cpp.o" \
-"CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o" \
-"CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o"
+"CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o" \
+"CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o"
 
 # External object files for target sepolia3
 sepolia3_EXTERNAL_OBJECTS =
 
 sepolia3: CMakeFiles/sepolia3.dir/fake_main.cpp.o
-sepolia3: CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_unit_algebra.cpp.o
-sepolia3: CMakeFiles/sepolia3.dir/unit_tests/vector_dense/test_stl_compatibility.cpp.o
+sepolia3: CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_algebra.cpp.o
+sepolia3: CMakeFiles/sepolia3.dir/tests_unit/dense_vector/test_stl_compatibility.cpp.o
 sepolia3: CMakeFiles/sepolia3.dir/build.make
 sepolia3: CMakeFiles/sepolia3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pgg/pgg/git_projects/not_finished/sepolia3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sepolia3"
