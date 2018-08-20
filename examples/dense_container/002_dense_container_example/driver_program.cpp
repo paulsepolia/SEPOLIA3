@@ -9,17 +9,17 @@ int main() {
 
     const auto dimension = static_cast<uint64_t>(0);
 
-    dense_container<double> dc(dimension, 123.456);
+    dense_container<double> dcon(dimension, 123.456);
 
     std::cout << std::boolalpha;
 
-    std::cout << (dc.size() == dimension) << std::endl;
-    std::cout << !dc.allocated() << std::endl;
-    std::cout << dc.deallocated() << std::endl;
+    std::cout << (dcon.size() == dimension) << std::endl;
+    std::cout << !dcon.allocated() << std::endl;
+    std::cout << dcon.deallocated() << std::endl;
 
-    dc.deallocate();
+    dcon.deallocate();
 
-    std::cout << (dc.size() == 0) << std::endl;
-    std::cout << !dc.allocated() << std::endl;
-    std::cout << dc.deallocated() << std::endl;
+    std::cout << (dcon.size() == 0) << std::endl;
+    std::cout << !dcon.allocated() << std::endl;
+    std::cout << dcon.deallocated() << std::endl;
 }

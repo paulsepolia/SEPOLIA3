@@ -10,44 +10,44 @@ int main() {
     {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 
-        dense_container<double> dc1(dimension);
-        dense_container<double> dc2(dimension);
+        dense_container<double> dcon1(dimension);
+        dense_container<double> dcon2(dimension);
 
         for (uint64_t i = 0; i != dimension; i++) {
 
-            dc1[i] = static_cast<double>(i);
-            dc2(i) = static_cast<double>(i);
+            dcon1[i] = static_cast<double>(i);
+            dcon2(i) = static_cast<double>(i);
         }
 
         std::cout << std::boolalpha;
-        std::cout << (dc1 == dc2) << std::endl;
+        std::cout << (dcon1 == dcon2) << std::endl;
 
-        dc1.deallocate();
-        dc2.deallocate();
+        dcon1.deallocate();
+        dcon2.deallocate();
 
-        std::cout << (dc1 != dc2) << std::endl;
-        std::cout << !(dc1 == dc2) << std::endl;
+        std::cout << (dcon1 != dcon2) << std::endl;
+        std::cout << !(dcon1 == dcon2) << std::endl;
     }
 
     {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 123.456789;
 
-        dense_container<double> dc1(dimension, value);
-        dense_container<double> dc2(dimension);
+        dense_container<double> dcon1(dimension, value);
+        dense_container<double> dcon2(dimension);
 
         for (uint64_t i = 0; i != dimension; i++) {
 
-            dc2(i) = value;
+            dcon2(i) = value;
         }
 
         std::cout << std::boolalpha;
-        std::cout << (dc1 == dc2) << std::endl;
+        std::cout << (dcon1 == dcon2) << std::endl;
 
-        dc1.deallocate();
-        dc2.deallocate();
+        dcon1.deallocate();
+        dcon2.deallocate();
 
-        std::cout << (dc1 != dc2) << std::endl;
-        std::cout << !(dc1 == dc2) << std::endl;
+        std::cout << (dcon1 != dcon2) << std::endl;
+        std::cout << !(dcon1 == dcon2) << std::endl;
     }
 }
