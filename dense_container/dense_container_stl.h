@@ -5,61 +5,61 @@
 using sepolia::dense_container;
 
 template<typename T>
-uint64_t dense_container<T>::rows() const {
+uint64_t dense_container<T>::size() const {
 
-    return _rows;
-}
-
-template<typename T>
-uint64_t dense_container<T>::columns() const {
-
-    return _columns;
+    return _dimension;
 }
 
 template<typename T>
 T *dense_container<T>::begin() {
 
-    return _mdsp.get();
+    return _dsp.get();
 }
 
 template<typename T>
 const T *dense_container<T>::begin() const {
 
-    return _mdsp.get();
+    return _dsp.get();
 }
 
 template<typename T>
 T *dense_container<T>::end() {
 
-    return _mdsp.get() + (_rows * _columns);
+    return _dsp.get() + _dimension;
 }
 
 template<typename T>
 const T *dense_container<T>::end() const {
 
-    return _mdsp.get() + (_rows * _columns);
+    return _dsp.get() + _dimension;
 }
 
 template<typename T>
-const T &dense_container<T>::at(const uint64_t &row, const uint64_t &column) const {
+const T &dense_container<T>::at(const uint64_t &index) const {
 
-    return _mdsp.get()[row * _columns + column];
+    return _dsp.get()[index];
 }
 
 template<typename T>
-void dense_container<T>::swap(dense_container<T> &matrix_in) {
+const T &dense_container<T>::at(const uint64_t & row, const uint64_t & column) const {
 
-    if (*this == matrix_in) {
+    return _dsp.get()[row * _dimension + column];
+}
+
+template<typename T>
+void dense_container<T>::swap(dense_container<T> &dense_in) {
+
+    if (*this == dense_in) {
         return;
     }
 
-    dense_container<T> matrix_tmp(std::move(*this));
-    *this = std::move(matrix_in);
-    matrix_in = std::move(matrix_tmp);
+    dense_container<T> dense_tmp(std::move(*this));
+    *this = std::move(dense_in);
+    dense_in = std::move(dense_tmp);
 }
 
 template<typename T>
 bool dense_container<T>::empty() const {
 
-    return _rows == 0 || _columns == 0;
+    return _dimension == 0;
 }

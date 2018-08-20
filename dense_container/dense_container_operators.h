@@ -9,6 +9,7 @@ using sepolia::dense_container;
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dense_in) {
 
+    allocate(dense_in._dimension);
     set(dense_in);
 
     return *this;
@@ -17,6 +18,7 @@ dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dens
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const T &value) {
 
+    allocate(_dimension);
     set(value);
 
     return *this;
@@ -26,6 +28,18 @@ template<typename T>
 dense_container<T> &dense_container<T>::operator=(dense_container<T> &&dense_in) noexcept {
 
     return *this;
+}
+
+template<typename T>
+T &dense_container<T>::operator()(const uint64_t & index) const {
+
+    return _dsp.get()[index];
+}
+
+template<typename T>
+T &dense_container<T>::operator[](const uint64_t & index) const {
+
+    return _dsp.get()[index];
 }
 
 template<typename T>
@@ -89,10 +103,10 @@ namespace sepolia {
 }
 
 template<typename T>
-dense_container<T> dense_container<T>::operator*(const dense_container<T> &matrix) const {
+dense_container<T> dense_container<T>::operator*(const dense_container<T> &dense_in) const {
 
-    dense_container<T> dense_tmp(matrix._rows, matrix._columns);
-    dense_tmp = times(matrix);
+    dense_container<T> dense_tmp(dense_in._dimension);
+    dense_tmp = times(dense_in);
 
     return std::move(dense_tmp);
 }

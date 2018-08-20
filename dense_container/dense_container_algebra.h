@@ -11,12 +11,13 @@ void dense_container<T>::set(const T &value) {
 
     const uint64_t dimension = _dimension;
 
-    if(dimension == 0) {
+    if (dimension == 0) {
         _allocated = false;
         return;
     }
 
-    const auto dense_out = _dsp.get();
+    allocate(_dimension);
+
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -26,7 +27,7 @@ void dense_container<T>::set(const T &value) {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out[i] = static_cast<T>(value);
+            _dsp.get()[i] = static_cast<T>(value);
         }
     }
 
@@ -42,7 +43,7 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
 
     const uint64_t dimension = dense_in._dimension;
 
-    if(dimension == 0) {
+    if (dimension == 0) {
         _allocated = false;
         return;
     }
@@ -78,7 +79,6 @@ dense_container<T> dense_container<T>::plus(const dense_container<T> &dense_in) 
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out_tmp)\
         private(i)
 
     {
@@ -126,7 +126,6 @@ dense_container<T> dense_container<T>::subtract(const dense_container<T> &dense_
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out_tmp)\
         private(i)
 
     {
@@ -174,7 +173,6 @@ dense_container<T> dense_container<T>::times(const dense_container<T> &dense_in)
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out_tmp)\
         private(i)
 
     {
@@ -222,7 +220,6 @@ dense_container<T> dense_container<T>::divide(const dense_container<T> &dense_in
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out_tmp)\
         private(i)
 
     {
@@ -261,14 +258,44 @@ dense_container<T> dense_container<T>::divide(const T &elem) const {
 template<typename T>
 bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
 
-    // dummy implementation
-    return false;
+    if (!dense_in._allocated || !_allocated) {
+        return false;
+    }
+
+    bool flg = false;
+    const uint64_t dimension = dense_in._dimension;
+    uint64_t i = 0;
+
+#pragma omp parallel default(none)\
+        num_threads(NT1D)\
+        private(i)\
+        shared(dense_in)\
+        shared(flg)
+    {
+#pragma omp for
+        for (i = 0; i < dimension; i++) {
+
+            if (!(_dsp.get()[i] < dense_in._dsp.get()[i]) &&
+                !(_dsp.get()[i] > dense_in._dsp.get()[i])) {
+#pragma omp critical
+                flg = true;
+#pragma omp cancel for
+            }
+#pragma omp cancellation point for
+        }
+    }
+
+    return flg;
 }
 
 template<typename T>
 bool dense_container<T>::equal(const T &val) const {
 
-    if (_dimension == 0) return false;
+    if (_dimension == 0)
+        return false;
+
+    if (!_allocated)
+        return false;
 
     dense_container<T> dense_tmp(_dimension, val);
 
