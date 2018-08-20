@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <vector>
 
 namespace sepolia {
 
@@ -11,7 +12,7 @@ namespace sepolia {
 
         explicit dense_container<T>();
 
-        explicit dense_container<T>(const uint64_t &,const T &val = 0);
+        explicit dense_container<T>(const uint64_t &, const T &val = 0);
 
         dense_container<T>(const dense_container<T> &);
 
@@ -19,55 +20,59 @@ namespace sepolia {
 
     public:
 
-        virtual ~dense_container();
+        ~dense_container();
 
-        virtual void allocate(const uint64_t &);
+        void allocate(const uint64_t &);
 
-        virtual bool allocated() const;
+        bool allocated() const;
 
-        virtual void deallocate();
+        void deallocate();
 
-        virtual bool deallocated() const;
+        bool deallocated() const;
 
         uint64_t size() const;
 
         // operators
 
+        dense_container<T> &operator=(const std::vector<T> &);
+
+        dense_container<T> &operator=(std::vector<T> &&);
+
         dense_container<T> &operator=(const dense_container<T> &);
 
-        virtual dense_container<T> &operator=(const T &);
+        dense_container<T> &operator=(const T &);
 
         dense_container<T> &operator=(dense_container<T> &&) noexcept;
 
-        virtual T &operator()(const uint64_t &) const;
+        T &operator()(const uint64_t &) const;
 
-        virtual T &operator[](const uint64_t &) const;
+        T &operator[](const uint64_t &) const;
 
-        virtual dense_container<T> operator+(const dense_container<T> &) const;
+        dense_container<T> operator+(const dense_container<T> &) const;
 
-        virtual dense_container<T> operator+(const T &) const;
+        dense_container<T> operator+(const T &) const;
 
         template<typename T2>
         friend dense_container<T2> operator+(const T2 &,
                                              const dense_container<T2> &);
 
-        virtual dense_container<T> operator-(const dense_container<T> &) const;
+        dense_container<T> operator-(const dense_container<T> &) const;
 
-        virtual dense_container<T> operator-(const T &) const;
+        dense_container<T> operator-(const T &) const;
 
         template<typename T2>
         friend dense_container<T2> operator-(const T2 &,
                                              const dense_container<T2> &);
 
-        virtual dense_container<T> operator*(const dense_container<T> &) const;
+        dense_container<T> operator*(const dense_container<T> &) const;
 
-        virtual dense_container<T> operator*(const T &) const;
+        dense_container<T> operator*(const T &) const;
 
         template<typename T2>
         friend dense_container<T2> operator*(const T2 &,
                                              const dense_container<T2> &);
 
-        virtual dense_container<T> operator/(const dense_container<T> &) const;
+        dense_container<T> operator/(const dense_container<T> &) const;
 
         dense_container<T> operator/(const T &) const;
 
@@ -75,59 +80,59 @@ namespace sepolia {
         friend dense_container<T2> operator/(const T2 &,
                                              const dense_container<T2> &);
 
-        virtual dense_container<T> operator+=(const dense_container<T> &);
+        dense_container<T> operator+=(const dense_container<T> &);
 
-        virtual dense_container<T> operator+=(const T &);
+        dense_container<T> operator+=(const T &);
 
-        virtual dense_container<T> operator-=(const dense_container<T> &);
+        dense_container<T> operator-=(const dense_container<T> &);
 
-        virtual dense_container<T> operator-=(const T &);
+        dense_container<T> operator-=(const T &);
 
-        virtual dense_container<T> operator*=(const dense_container<T> &);
+        dense_container<T> operator*=(const dense_container<T> &);
 
-        virtual dense_container<T> operator*=(const T &);
+        dense_container<T> operator*=(const T &);
 
-        virtual dense_container<T> operator/=(const dense_container<T> &);
+        dense_container<T> operator/=(const dense_container<T> &);
 
-        virtual dense_container<T> operator/=(const T &);
+        dense_container<T> operator/=(const T &);
 
-        virtual dense_container<T> operator++();
+        dense_container<T> operator++();
 
-        virtual const dense_container<T> operator++(int);
+        const dense_container<T> operator++(int);
 
-        virtual dense_container<T> operator--();
+        dense_container<T> operator--();
 
-        virtual const dense_container<T> operator--(int);
+        const dense_container<T> operator--(int);
 
-        virtual bool operator==(const dense_container<T> &) const;
+        bool operator==(const dense_container<T> &) const;
 
-        virtual bool operator==(const T &) const;
+        bool operator==(const T &) const;
 
         template<typename T2>
         friend bool operator==(const T2 &, const dense_container<T2> &);
 
-        virtual bool operator!=(const dense_container<T> &) const;
+        bool operator!=(const dense_container<T> &) const;
 
-        virtual bool operator!=(const T &) const;
+        bool operator!=(const T &) const;
 
         template<typename T2>
         friend bool operator!=(const T2 &, const dense_container<T2> &);
 
-        virtual T *begin();
+        T *begin();
 
-        virtual const T *begin() const;
+        const T *begin() const;
 
-        virtual T *end();
+        T *end();
 
-        virtual const T *end() const;
+        const T *end() const;
 
-        virtual const T &at(const uint64_t &) const;
+        const T &at(const uint64_t &) const;
 
-        virtual const T &at(const uint64_t &, const uint64_t &) const;
+        const T &at(const uint64_t &, const uint64_t &) const;
 
-        virtual void swap(dense_container<T> &);
+        void swap(dense_container<T> &);
 
-        virtual bool empty() const;
+        bool empty() const;
 
     private:
 
@@ -151,9 +156,9 @@ namespace sepolia {
 
         dense_container<T> divide(const T &) const;
 
-        virtual bool equal(const dense_container<T> &) const;
+        bool equal(const dense_container<T> &) const;
 
-        virtual bool equal(const T &) const;
+        bool equal(const T &) const;
 
     private:
 

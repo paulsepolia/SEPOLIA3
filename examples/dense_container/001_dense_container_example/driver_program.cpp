@@ -12,21 +12,21 @@ int main() {
     const auto dimension = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const double value = 123.456;
 
-    dense_container<double> vd(dimension, value);
+    dense_container<double> dc(dimension, value);
 
     std::cout << std::boolalpha;
 
-    for (auto &el: vd) {
+    for (auto &el: dc) {
         std::cout << (el == value) << std::endl;
     }
 
-    std::cout << (vd.size() == dimension) << std::endl;
-    std::cout << vd.allocated() << std::endl;
-    std::cout << !vd.deallocated() << std::endl;
+    std::cout << (dc.size() == dimension) << std::endl;
+    std::cout << dc.allocated() << std::endl;
+    std::cout << !dc.deallocated() << std::endl;
 
-    vd.deallocate();
+    dc.deallocate();
 
-    std::cout << (vd.size() == 0) << std::endl;
-    std::cout << !vd.allocated() << std::endl;
-    std::cout << vd.deallocated() << std::endl;
+    std::cout << (dc.size() == 0) << std::endl;
+    std::cout << !dc.allocated() << std::endl;
+    std::cout << dc.deallocated() << std::endl;
 }

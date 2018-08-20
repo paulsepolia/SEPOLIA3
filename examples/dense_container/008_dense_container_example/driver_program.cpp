@@ -11,63 +11,63 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         double value = 400.0;
 
-        dense_container<double> vd(dimension, value);
+        dense_container<double> dc(dimension, value);
 
         std::cout << std::boolalpha;
 
-        vd++;
+        dc++;
         value++;
 
-        std::cout << (vd == value) << std::endl;
+        std::cout << (dc == value) << std::endl;
 
-        ++vd;
+        ++dc;
         ++value;
 
-        std::cout << (vd == value) << std::endl;
+        std::cout << (dc == value) << std::endl;
 
-        --vd;
+        --dc;
         --value;
 
-        std::cout << (vd == value) << std::endl;
+        std::cout << (dc == value) << std::endl;
 
-        vd--;
+        dc--;
         value--;
 
-        std::cout << (vd == value) << std::endl;
+        std::cout << (dc == value) << std::endl;
     }
 
     {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        dense_container<double> vd(dimension, value);
+        dense_container<double> dc(dimension, value);
 
         std::cout << std::boolalpha;
 
-        vd += vd;
+        dc += dc;
 
-        std::cout << (vd == 2 * value) << std::endl;
+        std::cout << (dc == 2 * value) << std::endl;
 
-        vd -= vd;
+        dc -= dc;
 
-        std::cout << (vd == 0.0) << std::endl;
+        std::cout << (dc == 0.0) << std::endl;
     }
 
     {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        dense_container<double> vd(dimension, value);
+        dense_container<double> dc(dimension, value);
 
         std::cout << std::boolalpha;
 
-        vd *= vd;
+        dc *= dc;
 
-        std::cout << (vd == value * value) << std::endl;
+        std::cout << (dc == value * value) << std::endl;
 
-        vd /= vd;
+        dc /= dc;
 
-        std::cout << (vd == 1.0) << std::endl;
+        std::cout << (dc == 1.0) << std::endl;
     }
 
     {
@@ -75,20 +75,20 @@ int main() {
         const double value1 = 400.0;
         const double value2 = 800.0;
 
-        const dense_container<double> vd1(dimension, value1);
-        dense_container<double> vd2(dimension, value2);
+        const dense_container<double> dc1(dimension, value1);
+        dense_container<double> dc2(dimension, value2);
 
         std::cout << std::boolalpha;
 
-        vd2 *= vd1;
+        dc2 *= dc1;
 
-        std::cout << (vd2 == value1 * value2) << std::endl;
-        std::cout << (vd1 == value1) << std::endl;
+        std::cout << (dc2 == value1 * value2) << std::endl;
+        std::cout << (dc1 == value1) << std::endl;
 
-        vd2 /= vd1;
+        dc2 /= dc1;
 
-        std::cout << (vd2 == value2) << std::endl;
-        std::cout << (vd1 == value1) << std::endl;
+        std::cout << (dc2 == value2) << std::endl;
+        std::cout << (dc1 == value1) << std::endl;
     }
 
     {
@@ -96,19 +96,19 @@ int main() {
         const double value1 = 400.0;
         const double value2 = 800.0;
 
-        const dense_container<double> vd1(dimension, value1);
-        dense_container<double> vd2(dimension, value2);
+        const dense_container<double> dc1(dimension, value1);
+        dense_container<double> dc2(dimension, value2);
 
         std::cout << std::boolalpha;
 
-        vd2 += vd1;
+        dc2 += dc1;
 
-        std::cout << (vd2 == value1 + value2) << std::endl;
-        std::cout << (vd1 == value1) << std::endl;
+        std::cout << (dc2 == value1 + value2) << std::endl;
+        std::cout << (dc1 == value1) << std::endl;
 
-        vd2 -= vd1;
+        dc2 -= dc1;
 
-        std::cout << (vd2 == value2) << std::endl;
-        std::cout << (vd1 == value1) << std::endl;
+        std::cout << (dc2 == value2) << std::endl;
+        std::cout << (dc1 == value1) << std::endl;
     }
 }

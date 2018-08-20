@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "dense_container_declaration.h"
 #include "dense_container_parameters.h"
 
@@ -37,10 +38,6 @@ void dense_container<T>::set(const T &value) {
 template<typename T>
 void dense_container<T>::set(const dense_container<T> &dense_in) {
 
-    if (*this == dense_in) {
-        return;
-    }
-
     const uint64_t dimension = dense_in._dimension;
 
     if (dimension == 0) {
@@ -50,7 +47,7 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
 
     deallocate();
     allocate(dimension);
-    const auto dense_out = _dsp.get();
+    const auto dense_out_p = _dsp.get();
     const auto dense_in_tmp = dense_in._dsp.get();
     uint64_t i = 0;
 
@@ -60,7 +57,7 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out[i] = dense_in_tmp[i];
+            dense_out_p[i] = dense_in_tmp[i];
         }
     }
 
@@ -107,7 +104,7 @@ dense_container<T> dense_container<T>::plus(const T &elem) const {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out._dsp.get()[i] = matrix_member[i] + elem;
+            dense_out[i] = matrix_member[i] + elem;
         }
     }
 
@@ -178,7 +175,7 @@ dense_container<T> dense_container<T>::times(const dense_container<T> &dense_in)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = matrix_member_p[i] - dense_in_p[i];
+            dense_out_p[i] = matrix_member_p[i] * dense_in_p[i];
         }
     }
 

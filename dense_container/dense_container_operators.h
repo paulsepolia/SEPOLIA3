@@ -1,15 +1,40 @@
 #pragma once
 
 #include <algorithm>
+#include <iostream>
 #include "dense_container_declaration.h"
 
 using sepolia::dense_container;
 
+template<typename T>
+dense_container<T> &dense_container<T>::operator=(const std::vector<T> &vector_std) {
+
+    const auto dimension = vector_std.size();
+
+    deallocate();
+    allocate(dimension);
+
+    std::copy(vector_std.begin(), vector_std.end(), _dsp.get());
+
+    return *this;
+}
+
+template<typename T>
+dense_container<T> &dense_container<T>::operator=(std::vector<T> &&vector_std) {
+
+    const auto dimension = vector_std.size();
+
+    this->deallocate();
+    this->allocate(dimension);
+
+    std::move(vector_std.begin(), vector_std.end(), _dsp.get());
+
+    return *this;
+}
 
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dense_in) {
 
-    allocate(dense_in._dimension);
     set(dense_in);
 
     return *this;
@@ -18,7 +43,6 @@ dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dens
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const T &value) {
 
-    allocate(_dimension);
     set(value);
 
     return *this;
@@ -27,17 +51,26 @@ dense_container<T> &dense_container<T>::operator=(const T &value) {
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(dense_container<T> &&dense_in) noexcept {
 
+    if (this != &dense_in) {
+        deallocate();
+        _dsp = std::move(dense_in._dsp);
+        _allocated = dense_in._allocated;
+        _dimension = dense_in._dimension;
+        dense_in._dimension = 0;
+        dense_in._allocated = false;
+    }
+
     return *this;
 }
 
 template<typename T>
-T &dense_container<T>::operator()(const uint64_t & index) const {
+T &dense_container<T>::operator()(const uint64_t &index) const {
 
     return _dsp.get()[index];
 }
 
 template<typename T>
-T &dense_container<T>::operator[](const uint64_t & index) const {
+T &dense_container<T>::operator[](const uint64_t &index) const {
 
     return _dsp.get()[index];
 }

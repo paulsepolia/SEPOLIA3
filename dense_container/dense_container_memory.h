@@ -21,6 +21,7 @@ bool dense_container<T>::allocated() const {
 template<typename T>
 void dense_container<T>::deallocate() {
 
+    _dimension = 0;
     _dsp.reset();
     _allocated = false;
 }

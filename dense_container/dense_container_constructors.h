@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "dense_container_declaration.h"
 
 using sepolia::dense_container;
@@ -26,6 +27,7 @@ dense_container<T>::dense_container(const dense_container<T> &dense_in):
         _allocated(dense_in._allocated) {
 
     set(dense_in);
+
 }
 
 template<typename T>

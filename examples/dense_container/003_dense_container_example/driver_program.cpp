@@ -8,39 +8,39 @@ using sepolia::dense_container;
 int main() {
 
     {
-        dense_container<double> vd;
+        dense_container<double> dc;
 
-        vd.allocate(0);
+        dc.allocate(0);
 
         std::cout << std::boolalpha;
 
-        std::cout << (vd.size() == 0) << std::endl;
-        std::cout << !vd.allocated() << std::endl;
-        std::cout << vd.deallocated() << std::endl;
+        std::cout << (dc.size() == 0) << std::endl;
+        std::cout << !dc.allocated() << std::endl;
+        std::cout << dc.deallocated() << std::endl;
 
-        vd.deallocate();
+        dc.deallocate();
 
-        std::cout << (vd.size() == 0) << std::endl;
-        std::cout << !vd.allocated() << std::endl;
-        std::cout << vd.deallocated() << std::endl;
+        std::cout << (dc.size() == 0) << std::endl;
+        std::cout << !dc.allocated() << std::endl;
+        std::cout << dc.deallocated() << std::endl;
     }
 
     {
-        dense_container<double> vd;
+        dense_container<double> dc;
 
-        vd.allocate(100);
+        dc.allocate(100);
 
         std::cout << std::boolalpha;
 
-        std::cout << (vd.size() == 100) << std::endl;
-        std::cout << vd.allocated() << std::endl;
-        std::cout << !vd.deallocated() << std::endl;
+        std::cout << (dc.size() == 100) << std::endl;
+        std::cout << dc.allocated() << std::endl;
+        std::cout << !dc.deallocated() << std::endl;
 
-        vd.deallocate();
+        dc.deallocate();
 
-        std::cout << (vd.size() == 0) << std::endl;
-        std::cout << !vd.allocated() << std::endl;
-        std::cout << vd.deallocated() << std::endl;
+        std::cout << (dc.size() == 0) << std::endl;
+        std::cout << !dc.allocated() << std::endl;
+        std::cout << dc.deallocated() << std::endl;
     }
 
 }
