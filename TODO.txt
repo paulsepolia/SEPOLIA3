@@ -10,6 +10,8 @@ Task 4: to start the implementation of the matrix_dense
 
 Task 6: done
 
+Task 7: to put some more examples for matrix_dense
+
 #======#
 # TODO #
 #======#
@@ -18,8 +20,12 @@ Task 3: to finish the implementation of the DSYEVX and DSYEVR
 
 Task 5: to get rid of old tmp stuff
 
-Task 7: to put some more examples for matrix_dense
-
 Task 8: to write matrix_dense unit tests
 
 Task 9: to make a base class common to matrix_dense and vector_dense
+
+Task 10: to clean up all the unit tests and the examples
+
+Task 11: to write some benchmarks for vector_dense and matrix_dense
+
+Task 12: to make the dense container base class with protected attribute for to avoid using the dense_container directly
