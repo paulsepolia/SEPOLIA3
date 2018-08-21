@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
+
 #include "../../../dense_vector/vector_dense.h"
 
 using sepolia::vector_dense;

@@ -34,15 +34,15 @@ namespace sepolia {
 
         // operators
 
-        dense_container<T> &operator=(const std::vector<T> &);
+        virtual dense_container<T> &operator=(const std::vector<T> &);
 
-        dense_container<T> &operator=(std::vector<T> &&);
+        virtual dense_container<T> &operator=(std::vector<T> &&);
 
-        dense_container<T> &operator=(const dense_container<T> &);
+        virtual dense_container<T> &operator=(const dense_container<T> &);
 
-        dense_container<T> &operator=(const T &);
+        virtual dense_container<T> &operator=(const T &);
 
-        dense_container<T> &operator=(dense_container<T> &&) noexcept;
+        virtual dense_container<T> &operator=(dense_container<T> &&) noexcept;
 
         T &operator()(const uint64_t &) const;
 
@@ -134,8 +134,6 @@ namespace sepolia {
 
         bool empty() const;
 
-    private:
-
         void set(const T &);
 
         void set(const dense_container<T> &);
@@ -159,8 +157,6 @@ namespace sepolia {
         bool equal(const dense_container<T> &) const;
 
         bool equal(const T &) const;
-
-    private:
 
         uint64_t _dimension;
         bool _allocated;
