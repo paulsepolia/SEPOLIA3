@@ -259,6 +259,10 @@ bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
         return false;
     }
 
+    if (dense_in._dimension != _dimension) {
+        return false;
+    }
+
     bool flg = false;
     const uint64_t dimension = dense_in._dimension;
     uint64_t i = 0;

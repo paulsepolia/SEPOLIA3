@@ -49,10 +49,6 @@ const T &dense_container<T>::at(const uint64_t & row, const uint64_t & column) c
 template<typename T>
 void dense_container<T>::swap(dense_container<T> &dense_in) {
 
-    if (*this == dense_in) {
-        return;
-    }
-
     dense_container<T> dense_tmp(std::move(*this));
     *this = std::move(dense_in);
     dense_in = std::move(dense_tmp);
