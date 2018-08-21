@@ -27,7 +27,6 @@ dense_container<T>::dense_container(const dense_container<T> &dense_in):
         _allocated(dense_in._allocated) {
 
     set(dense_in);
-
 }
 
 template<typename T>

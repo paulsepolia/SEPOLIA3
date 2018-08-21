@@ -17,7 +17,7 @@ void dense_container<T>::set(const T &value) {
         return;
     }
 
-    allocate(_dimension);
+    allocate(dimension);
 
     uint64_t i = 0;
 
@@ -41,14 +41,14 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
     const uint64_t dimension = dense_in._dimension;
 
     if (dimension == 0) {
-        _allocated = false;
+        deallocate();
         return;
     }
 
     deallocate();
     allocate(dimension);
-    const auto dense_out_p = _dsp.get();
-    const auto dense_in_tmp = dense_in._dsp.get();
+    const auto sp_dense_out = _dsp.get();
+    const auto sp_dense_in = dense_in._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -57,31 +57,28 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = dense_in_tmp[i];
+            sp_dense_out[i] = sp_dense_in[i];
         }
     }
-
-    _allocated = true;
 }
 
 template<typename T>
 dense_container<T> dense_container<T>::plus(const dense_container<T> &dense_in) const {
 
     const uint64_t dimension = dense_in._dimension;
-    const auto matrix_member_p = _dsp.get();
-    const auto dense_in_p = dense_in._dsp.get();
+    const auto sp_dense_member = _dsp.get();
+    const auto sp_dense_in = dense_in._dsp.get();
     dense_container<T> dense_out(dimension);
-    const auto dense_out_p = dense_out._dsp.get();
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)
-
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = matrix_member_p[i] + dense_in_p[i];
+            sp_dense_out[i] = sp_dense_member[i] + sp_dense_in[i];
         }
     }
 
@@ -92,19 +89,19 @@ template<typename T>
 dense_container<T> dense_container<T>::plus(const T &elem) const {
 
     const uint64_t dimension = _dimension;
-    const auto matrix_member = _dsp.get();
+    const auto sp_dense_member = _dsp.get();
     dense_container<T> dense_out(_dimension);
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out)\
         shared(elem)\
         private(i)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out[i] = matrix_member[i] + elem;
+            sp_dense_out[i] = sp_dense_member[i] + elem;
         }
     }
 
@@ -115,20 +112,19 @@ template<typename T>
 dense_container<T> dense_container<T>::subtract(const dense_container<T> &dense_in) const {
 
     const uint64_t dimension = dense_in._dimension;
-    const auto matrix_member_p = _dsp.get();
-    const auto dense_in_p = dense_in._dsp.get();
+    const auto sp_dense_member = _dsp.get();
+    const auto sp_dense_in = dense_in._dsp.get();
     dense_container<T> dense_out(dimension);
-    const auto dense_out_p = dense_out._dsp.get();
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)
-
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = matrix_member_p[i] - dense_in_p[i];
+            sp_dense_out[i] = sp_dense_member[i] - sp_dense_in[i];
         }
     }
 
@@ -139,7 +135,7 @@ template<typename T>
 dense_container<T> dense_container<T>::subtract(const T &elem) const {
 
     const uint64_t dimension = _dimension;
-    const auto matrix_member = _dsp.get();
+    const auto dense_member = _dsp.get();
     dense_container<T> dense_out(_dimension);
     uint64_t i = 0;
 
@@ -151,7 +147,7 @@ dense_container<T> dense_container<T>::subtract(const T &elem) const {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out._dsp.get()[i] = matrix_member[i] - elem;
+            dense_out._dsp.get()[i] = dense_member[i] - elem;
         }
     }
 
@@ -162,20 +158,19 @@ template<typename T>
 dense_container<T> dense_container<T>::times(const dense_container<T> &dense_in) const {
 
     const uint64_t dimension = dense_in._dimension;
-    const auto matrix_member_p = _dsp.get();
-    const auto dense_in_p = dense_in._dsp.get();
+    const auto sp_dense_member = _dsp.get();
+    const auto sp_dense_in = dense_in._dsp.get();
     dense_container<T> dense_out(dimension);
-    const auto dense_out_p = dense_out._dsp.get();
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)
-
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = matrix_member_p[i] * dense_in_p[i];
+            sp_dense_out[i] = sp_dense_member[i] * sp_dense_in[i];
         }
     }
 
@@ -186,19 +181,19 @@ template<typename T>
 dense_container<T> dense_container<T>::times(const T &elem) const {
 
     const uint64_t dimension = _dimension;
-    const auto matrix_member = _dsp.get();
+    const auto dense_member = _dsp.get();
     dense_container<T> dense_out(_dimension);
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out)\
         shared(elem)\
         private(i)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out._dsp.get()[i] = matrix_member[i] * elem;
+            sp_dense_out[i] = dense_member[i] * elem;
         }
     }
 
@@ -209,20 +204,19 @@ template<typename T>
 dense_container<T> dense_container<T>::divide(const dense_container<T> &dense_in) const {
 
     const uint64_t dimension = dense_in._dimension;
-    const auto matrix_member_p = _dsp.get();
-    const auto dense_in_p = dense_in._dsp.get();
+    const auto sp_dense_member = _dsp.get();
+    const auto sp_dense_in = dense_in._dsp.get();
     dense_container<T> dense_out(dimension);
-    const auto dense_out_p = dense_out._dsp.get();
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)
-
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out_p[i] = matrix_member_p[i] / dense_in_p[i];
+            sp_dense_out[i] = sp_dense_member[i] / sp_dense_in[i];
         }
     }
 
@@ -233,19 +227,19 @@ template<typename T>
 dense_container<T> dense_container<T>::divide(const T &elem) const {
 
     const uint64_t dimension = _dimension;
-    const auto matrix_member = _dsp.get();
+    const auto sp_dense_member = _dsp.get();
     dense_container<T> dense_out(_dimension);
+    const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
-        shared(dense_out)\
         shared(elem)\
         private(i)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            dense_out._dsp.get()[i] = matrix_member[i] / elem;
+            sp_dense_out[i] = sp_dense_member[i] / elem;
         }
     }
 
@@ -265,19 +259,20 @@ bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
 
     bool flg = false;
     const uint64_t dimension = dense_in._dimension;
+    const auto sp_dense_in = dense_in._dsp.get();
+    const auto sp_dense_member = _dsp.get();
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
         num_threads(NT1D)\
         private(i)\
-        shared(dense_in)\
         shared(flg)
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
 
-            if (!(_dsp.get()[i] < dense_in._dsp.get()[i]) &&
-                !(_dsp.get()[i] > dense_in._dsp.get()[i])) {
+            if (!(sp_dense_member[i] < sp_dense_in[i]) &&
+                !(sp_dense_member[i] > sp_dense_in[i])) {
 #pragma omp critical
                 flg = true;
 #pragma omp cancel for
