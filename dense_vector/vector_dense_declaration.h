@@ -27,8 +27,12 @@ namespace sepolia {
 
         vector_dense<T> &operator=(const vector_dense<T> &);
 
-        vector_dense<T> &operator=(const T &);
-
         vector_dense<T> &operator=(vector_dense<T> &&) noexcept;
+
+        vector_dense<T> &operator=(const dense_container<T> &);
+
+        vector_dense<T> &operator=(dense_container<T> &&) noexcept;
+
+        vector_dense<T> &operator=(const T &);
     };
 }
