@@ -18,6 +18,8 @@ Task 13: renaming vector_dense<T> to dense_vector<T> . same for matrix_dense<T> 
 
 Task 14: to make dense_matrix<T> class to use the dense_container_class<T>
 
+Task 15: to add some valgrind test for dense_matrix<T>
+
 #======#
 # TODO #
 #======#
