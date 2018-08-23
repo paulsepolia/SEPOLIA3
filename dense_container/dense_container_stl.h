@@ -25,13 +25,13 @@ const T *dense_container<T>::begin() const {
 template<typename T>
 T *dense_container<T>::end() {
 
-    return _dsp.get() + _dimension;
+    return _dsp.get() + size();
 }
 
 template<typename T>
 const T *dense_container<T>::end() const {
 
-    return _dsp.get() + _dimension;
+    return _dsp.get() + size();
 }
 
 template<typename T>
@@ -43,7 +43,9 @@ const T &dense_container<T>::at(const uint64_t &index) const {
 template<typename T>
 const T &dense_container<T>::at(const uint64_t & row, const uint64_t & column) const {
 
-    return _dsp.get()[row * _dimension + column];
+    const uint64_t COLS = columns();
+
+    return _dsp.get()[row * COLS + column];
 }
 
 template<typename T>
