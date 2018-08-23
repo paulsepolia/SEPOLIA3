@@ -22,7 +22,7 @@ namespace sepolia {
 
     public:
 
-        ~dense_container();
+        virtual ~dense_container();
 
         void allocate(const uint64_t &);
 
@@ -39,8 +39,6 @@ namespace sepolia {
         uint64_t rows() const;
 
         uint64_t columns() const;
-
-        // operators
 
         virtual dense_container<T> &operator=(const std::vector<T> &);
 

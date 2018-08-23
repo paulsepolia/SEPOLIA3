@@ -34,6 +34,7 @@ dense_vector<T> &dense_vector<T>::operator=(std::vector<T> &&vector_std) {
 template<typename T>
 dense_vector<T> &dense_vector<T>::operator=(const dense_vector<T> &vector) {
 
+    dense_vector<T>::allocate(vector.size());
     dense_vector<T>::set(vector);
 
     return *this;
@@ -61,6 +62,7 @@ dense_vector<T> &dense_vector<T>::operator=(dense_vector<T> &&vector) noexcept {
 template<typename T>
 dense_vector<T> &dense_vector<T>::operator=(const T &value) {
 
+    dense_vector<T>::allocate(this->size());
     dense_vector<T>::set(value);
 
     return *this;
@@ -69,6 +71,7 @@ dense_vector<T> &dense_vector<T>::operator=(const T &value) {
 template<typename T>
 dense_vector<T> &dense_vector<T>::operator=(const dense_container<T> &vector) {
 
+    dense_vector<T>::allocate(vector.size());
     dense_vector<T>::set(vector);
 
     return *this;

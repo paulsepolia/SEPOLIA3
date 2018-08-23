@@ -8,6 +8,7 @@ using sepolia::dense_matrix;
 template<typename T>
 dense_matrix<T> &dense_matrix<T>::operator=(const dense_matrix<T> &matrix) {
 
+    dense_matrix<T>::allocate(matrix.rows(), matrix.columns());
     dense_matrix<T>::set(matrix);
 
     return *this;
@@ -35,6 +36,7 @@ dense_matrix<T> &dense_matrix<T>::operator=(dense_matrix<T> &&matrix) noexcept {
 template<typename T>
 dense_matrix<T> &dense_matrix<T>::operator=(const dense_container<T> &matrix) {
 
+    dense_matrix<T>::allocate(matrix.rows(), matrix.columns());
     dense_matrix<T>::set(matrix);
 
     return *this;
@@ -62,6 +64,7 @@ dense_matrix<T> &dense_matrix<T>::operator=(dense_container<T> &&matrix) noexcep
 template<typename T>
 dense_matrix<T> &dense_matrix<T>::operator=(const T &value) {
 
+    dense_matrix<T>::allocate(this->rows(), this->columns());
     dense_matrix<T>::set(value);
 
     return *this;

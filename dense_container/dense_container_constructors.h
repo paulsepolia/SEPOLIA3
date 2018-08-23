@@ -22,8 +22,12 @@ dense_container<T>::dense_container(const uint64_t &dimension, const T &val):
         _dimension(dimension),
         _allocated(false) {
 
-    if (dimension == 0) _rows = 0;
+    if (dimension == 0) {
+        _rows = 0;
+        return;
+    }
 
+    allocate(_rows, _columns);
     set(val);
 }
 
@@ -39,6 +43,7 @@ dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &column
         _columns = 0;
     }
 
+    allocate(_rows, _columns);
     set(val);
 }
 
@@ -49,6 +54,7 @@ dense_container<T>::dense_container(const dense_container<T> &dense_in):
         _dimension(dense_in._dimension),
         _allocated(dense_in._allocated) {
 
+    allocate(_rows, _columns);
     set(dense_in);
 }
 

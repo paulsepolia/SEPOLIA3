@@ -24,8 +24,8 @@ dense_container<T> &dense_container<T>::operator=(std::vector<T> &&vector_std) {
 
     const auto dimension = vector_std.size();
 
-    this->deallocate();
-    this->allocate(dimension);
+    deallocate();
+    allocate(dimension);
 
     std::move(vector_std.begin(), vector_std.end(), _dsp.get());
 
@@ -35,6 +35,7 @@ dense_container<T> &dense_container<T>::operator=(std::vector<T> &&vector_std) {
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dense_in) {
 
+    allocate(dense_in._rows, dense_in._columns);
     set(dense_in);
 
     return *this;
@@ -43,6 +44,7 @@ dense_container<T> &dense_container<T>::operator=(const dense_container<T> &dens
 template<typename T>
 dense_container<T> &dense_container<T>::operator=(const T &value) {
 
+    allocate(_rows, _columns);
     set(value);
 
     return *this;

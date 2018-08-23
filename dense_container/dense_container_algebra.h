@@ -23,14 +23,6 @@ template<typename T>
 void dense_container<T>::set(const T &value) {
 
     const uint64_t dimension = _dimension;
-
-    if (dimension == 0) {
-        _allocated = false;
-        return;
-    }
-
-    allocate(_rows, _columns);
-
     const auto sp_dense_out = _dsp.get();
 
     uint64_t i = 0;
@@ -45,8 +37,6 @@ void dense_container<T>::set(const T &value) {
             sp_dense_out[i] = static_cast<T>(value);
         }
     }
-
-    _allocated = true;
 }
 
 template<typename T>
@@ -59,8 +49,6 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
         return;
     }
 
-    deallocate();
-    allocate(dimension);
     const auto sp_dense_out = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
     _rows = dense_in._rows;
