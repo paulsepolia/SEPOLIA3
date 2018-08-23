@@ -16,6 +16,8 @@ Task 9: to make a base class common to matrix_dense and vector_dense
 
 Task 13: renaming vector_dense<T> to dense_vector<T> . same for matrix_dense<T> to dense_matrix<T>
 
+Task 14: to make dense_matrix<T> class to use the dense_container_class<T>
+
 #======#
 # TODO #
 #======#
@@ -31,5 +33,3 @@ Task 10: to clean up all the unit tests and the examples
 Task 11: to write some benchmarks for vector_dense and matrix_dense
 
 Task 12: to make the dense container base class with protected attribute for to avoid using the dense_container directly
-
-Task 14: to make dense_matrix<T> class to use the dense_container_class<T>
