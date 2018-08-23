@@ -65,7 +65,7 @@ vector_dense<T> &vector_dense<T>::operator=(const T &value) {
 template<typename T>
 vector_dense<T> &vector_dense<T>::operator=(const dense_container<T> &vector) {
 
-    dense_container<T>::set(vector);
+    vector_dense<T>::set(vector);
 
     return *this;
 }
@@ -74,10 +74,10 @@ template<typename T>
 vector_dense<T> &vector_dense<T>::operator=(dense_container<T> &&vector) noexcept {
 
     if (this != &vector) {
-        dense_container<T>::deallocate();
-        dense_container<T>::_dsp = std::move(vector._dsp);
-        dense_container<T>::_allocated = vector._allocated;
-        dense_container<T>::_dimension = vector._dimension;
+        vector_dense<T>::deallocate();
+        vector_dense<T>::_dsp = std::move(vector._dsp);
+        vector_dense<T>::_allocated = vector._allocated;
+        vector_dense<T>::_dimension = vector._dimension;
         vector._dimension = 0;
         vector._allocated = false;
     }
