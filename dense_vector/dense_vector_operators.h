@@ -47,7 +47,11 @@ dense_vector<T> &dense_vector<T>::operator=(dense_vector<T> &&vector) noexcept {
         dense_vector<T>::_dsp = std::move(vector._dsp);
         dense_vector<T>::_allocated = vector._allocated;
         dense_vector<T>::_dimension = vector._dimension;
+        dense_vector<T>::_rows = vector._rows;
+        dense_vector<T>::_columns = vector._columns;
         vector._dimension = 0;
+        vector._rows = 0;
+        vector._columns = 0;
         vector._allocated = false;
     }
 
@@ -78,7 +82,11 @@ dense_vector<T> &dense_vector<T>::operator=(dense_container<T> &&vector) noexcep
         dense_vector<T>::_dsp = std::move(vector._dsp);
         dense_vector<T>::_allocated = vector._allocated;
         dense_vector<T>::_dimension = vector._dimension;
+        dense_vector<T>::_rows = vector._rows;
+        dense_vector<T>::_columns = vector._columns;
         vector._dimension = 0;
+        vector._rows = 0;
+        vector._columns = 0;
         vector._allocated = false;
     }
 

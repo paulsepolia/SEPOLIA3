@@ -50,7 +50,7 @@ int main() {
         std::cout << std::boolalpha;
 
         md2 = std::move(md1);
-
+        
         std::cout << (md2 == value) << std::endl;
         std::cout << md2.allocated() << std::endl;
         std::cout << md1.deallocated() << std::endl;

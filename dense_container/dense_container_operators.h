@@ -56,7 +56,11 @@ dense_container<T> &dense_container<T>::operator=(dense_container<T> &&dense_in)
         _dsp = std::move(dense_in._dsp);
         _allocated = dense_in._allocated;
         _dimension = dense_in._dimension;
+        _rows = dense_in._rows;
+        _columns = dense_in._columns;
         dense_in._dimension = 0;
+        dense_in._rows = 0;
+        dense_in._columns = 0;
         dense_in._allocated = false;
     }
 
@@ -70,6 +74,12 @@ T &dense_container<T>::operator()(const uint64_t &index) const {
 }
 
 template<typename T>
+T &dense_container<T>::operator()(const uint64_t &row, const uint64_t &column) const {
+
+    return _dsp.get()[row * _columns + column];
+}
+
+template<typename T>
 T &dense_container<T>::operator[](const uint64_t &index) const {
 
     return _dsp.get()[index];
@@ -78,7 +88,7 @@ T &dense_container<T>::operator[](const uint64_t &index) const {
 template<typename T>
 dense_container<T> dense_container<T>::operator+(const dense_container<T> &dense_in) const {
 
-    dense_container<T> dense_tmp(dense_in._dimension);
+    dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
     dense_tmp = plus(dense_in);
 
     return std::move(dense_tmp);
@@ -87,7 +97,7 @@ dense_container<T> dense_container<T>::operator+(const dense_container<T> &dense
 template<typename T>
 dense_container<T> dense_container<T>::operator+(const T &value) const {
 
-    dense_container<T> dense_tmp(_dimension);
+    dense_container<T> dense_tmp(_rows, _columns);
     dense_tmp = plus(value);
 
     return std::move(dense_tmp);
@@ -98,7 +108,7 @@ namespace sepolia {
     template<typename T>
     dense_container<T> operator+(const T &value, const dense_container<T> &dense_in) {
 
-        dense_container<T> dense_tmp(dense_in._dimension);
+        dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
         dense_tmp = dense_in.plus(value);
 
         return std::move(dense_tmp);
@@ -108,7 +118,7 @@ namespace sepolia {
 template<typename T>
 dense_container<T> dense_container<T>::operator-(const dense_container<T> &dense_in) const {
 
-    dense_container<T> dense_tmp(dense_in._dimension);
+    dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
     dense_tmp = subtract(dense_in);
 
     return std::move(dense_tmp);
@@ -117,7 +127,7 @@ dense_container<T> dense_container<T>::operator-(const dense_container<T> &dense
 template<typename T>
 dense_container<T> dense_container<T>::operator-(const T &value) const {
 
-    dense_container<T> dense_tmp(_dimension);
+    dense_container<T> dense_tmp(_rows, _columns);
     dense_tmp = subtract(value);
 
     return std::move(dense_tmp);
@@ -128,7 +138,7 @@ namespace sepolia {
     template<typename T>
     dense_container<T> operator-(const T &value, const dense_container<T> &dense_in) {
 
-        dense_container<T> dense_tmp(dense_in._dimension);
+        dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
         dense_tmp = dense_in.subtract(value);
 
         return std::move(dense_tmp);
@@ -138,7 +148,7 @@ namespace sepolia {
 template<typename T>
 dense_container<T> dense_container<T>::operator*(const dense_container<T> &dense_in) const {
 
-    dense_container<T> dense_tmp(dense_in._dimension);
+    dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
     dense_tmp = times(dense_in);
 
     return std::move(dense_tmp);
@@ -147,7 +157,7 @@ dense_container<T> dense_container<T>::operator*(const dense_container<T> &dense
 template<typename T>
 dense_container<T> dense_container<T>::operator*(const T &value) const {
 
-    dense_container<T> dense_tmp(_dimension);
+    dense_container<T> dense_tmp(_rows, _columns);
     dense_tmp = times(value);
 
     return std::move(dense_tmp);
@@ -158,7 +168,7 @@ namespace sepolia {
     template<typename T>
     dense_container<T> operator*(const T &value, const dense_container<T> &dense_in) {
 
-        dense_container<T> dense_tmp(dense_in._dimension);
+        dense_container<T> dense_tmp(dense_in._rows, dense_in._columns);
         dense_tmp = dense_in.times(value);
 
         return std::move(dense_tmp);
@@ -177,7 +187,7 @@ dense_container<T> dense_container<T>::operator/(const dense_container<T> &dense
 template<typename T>
 dense_container<T> dense_container<T>::operator/(const T &value) const {
 
-    dense_container<T> dense_tmp(_dimension);
+    dense_container<T> dense_tmp(_rows, _columns);
     dense_tmp = divide(value);
 
     return std::move(dense_tmp);
@@ -188,7 +198,7 @@ namespace sepolia {
     template<typename T>
     dense_container<T> operator/(const T &value, const dense_container<T> &dense_in) {
 
-        dense_container<T> dense_tmp(dense_in._dimension, value);
+        dense_container<T> dense_tmp(dense_in._rows, dense_in._columns, value);
 
         dense_tmp = dense_tmp.divide(dense_in);
 

@@ -14,6 +14,8 @@ namespace sepolia {
 
         explicit dense_container<T>(const uint64_t &, const T & = 0);
 
+        explicit dense_container<T>(const uint64_t &, const uint64_t &, const T & = 0);
+
         dense_container<T>(const dense_container<T> &);
 
         dense_container<T>(dense_container<T> &&) noexcept;
@@ -24,6 +26,8 @@ namespace sepolia {
 
         void allocate(const uint64_t &);
 
+        void allocate(const uint64_t &, const uint64_t &);
+
         bool allocated() const;
 
         void deallocate();
@@ -32,19 +36,25 @@ namespace sepolia {
 
         uint64_t size() const;
 
+        uint64_t rows() const;
+
+        uint64_t columns() const;
+
         // operators
 
         virtual dense_container<T> &operator=(const std::vector<T> &);
 
         virtual dense_container<T> &operator=(std::vector<T> &&);
 
-        virtual dense_container<T> &operator=(const dense_container<T> &);
+        dense_container<T> &operator=(const dense_container<T> &);
 
         virtual dense_container<T> &operator=(const T &);
 
-        virtual dense_container<T> &operator=(dense_container<T> &&) noexcept;
+        dense_container<T> &operator=(dense_container<T> &&) noexcept;
 
         T &operator()(const uint64_t &) const;
+
+        T &operator()(const uint64_t &, const uint64_t &) const;
 
         T &operator[](const uint64_t &) const;
 
@@ -158,6 +168,8 @@ namespace sepolia {
 
         bool equal(const T &) const;
 
+        uint64_t _rows;
+        uint64_t _columns;
         uint64_t _dimension;
         bool _allocated;
         std::shared_ptr<T> _dsp;

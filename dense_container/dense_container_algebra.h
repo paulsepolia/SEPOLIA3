@@ -8,6 +8,18 @@ using sepolia::dense_container;
 using sepolia::NT1D;
 
 template<typename T>
+uint64_t dense_container<T>::rows() const {
+
+    return _rows;
+}
+
+template<typename T>
+uint64_t dense_container<T>::columns() const {
+
+    return _columns;
+}
+
+template<typename T>
 void dense_container<T>::set(const T &value) {
 
     const uint64_t dimension = _dimension;
@@ -17,7 +29,9 @@ void dense_container<T>::set(const T &value) {
         return;
     }
 
-    allocate(dimension);
+    allocate(_rows, _columns);
+
+    const auto sp_dense_out = _dsp.get();
 
     uint64_t i = 0;
 
@@ -28,7 +42,7 @@ void dense_container<T>::set(const T &value) {
     {
 #pragma omp for
         for (i = 0; i < dimension; i++) {
-            _dsp.get()[i] = static_cast<T>(value);
+            sp_dense_out[i] = static_cast<T>(value);
         }
     }
 
@@ -49,6 +63,8 @@ void dense_container<T>::set(const dense_container<T> &dense_in) {
     allocate(dimension);
     const auto sp_dense_out = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
+    _rows = dense_in._rows;
+    _columns = dense_in._columns;
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -68,7 +84,9 @@ dense_container<T> dense_container<T>::plus(const dense_container<T> &dense_in) 
     const uint64_t dimension = dense_in._dimension;
     const auto sp_dense_member = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
-    dense_container<T> dense_out(dimension);
+    dense_container<T> dense_out(dense_in._rows, dense_in._columns);
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
@@ -90,7 +108,7 @@ dense_container<T> dense_container<T>::plus(const T &elem) const {
 
     const uint64_t dimension = _dimension;
     const auto sp_dense_member = _dsp.get();
-    dense_container<T> dense_out(_dimension);
+    dense_container<T> dense_out(_rows, _columns);
     const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
@@ -114,8 +132,12 @@ dense_container<T> dense_container<T>::subtract(const dense_container<T> &dense_
     const uint64_t dimension = dense_in._dimension;
     const auto sp_dense_member = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
-    dense_container<T> dense_out(dimension);
+    dense_container<T> dense_out(dense_in._rows, dense_in._columns);
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     const auto sp_dense_out = dense_out._dsp.get();
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -136,7 +158,7 @@ dense_container<T> dense_container<T>::subtract(const T &elem) const {
 
     const uint64_t dimension = _dimension;
     const auto dense_member = _dsp.get();
-    dense_container<T> dense_out(_dimension);
+    dense_container<T> dense_out(_rows, _columns);
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -160,8 +182,12 @@ dense_container<T> dense_container<T>::times(const dense_container<T> &dense_in)
     const uint64_t dimension = dense_in._dimension;
     const auto sp_dense_member = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
-    dense_container<T> dense_out(dimension);
+    dense_container<T> dense_out(dense_in._rows, dense_in._columns);
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     const auto sp_dense_out = dense_out._dsp.get();
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     uint64_t i = 0;
 
 #pragma omp parallel default(none)\
@@ -182,7 +208,7 @@ dense_container<T> dense_container<T>::times(const T &elem) const {
 
     const uint64_t dimension = _dimension;
     const auto dense_member = _dsp.get();
-    dense_container<T> dense_out(_dimension);
+    dense_container<T> dense_out(_rows, _columns);
     const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
@@ -206,7 +232,9 @@ dense_container<T> dense_container<T>::divide(const dense_container<T> &dense_in
     const uint64_t dimension = dense_in._dimension;
     const auto sp_dense_member = _dsp.get();
     const auto sp_dense_in = dense_in._dsp.get();
-    dense_container<T> dense_out(dimension);
+    dense_container<T> dense_out(dense_in._rows, dense_in._columns);
+    dense_out._rows = dense_in._rows;
+    dense_out._columns = dense_in._columns;
     const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
@@ -228,7 +256,7 @@ dense_container<T> dense_container<T>::divide(const T &elem) const {
 
     const uint64_t dimension = _dimension;
     const auto sp_dense_member = _dsp.get();
-    dense_container<T> dense_out(_dimension);
+    dense_container<T> dense_out(_rows, _columns);
     const auto sp_dense_out = dense_out._dsp.get();
     uint64_t i = 0;
 
@@ -249,13 +277,10 @@ dense_container<T> dense_container<T>::divide(const T &elem) const {
 template<typename T>
 bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
 
-    if (!dense_in._allocated || !_allocated) {
-        return false;
-    }
-
-    if (dense_in._dimension != _dimension) {
-        return false;
-    }
+    if (!dense_in._allocated || !_allocated) return false;
+    if (dense_in._dimension != _dimension) return false;
+    if (dense_in._rows != _rows) return false;
+    if (dense_in._columns != _columns) return false;
 
     bool flg = false;
     const uint64_t dimension = dense_in._dimension;
@@ -293,7 +318,7 @@ bool dense_container<T>::equal(const T &val) const {
     if (!_allocated)
         return false;
 
-    dense_container<T> dense_tmp(_dimension, val);
+    dense_container<T> dense_tmp(_rows, _columns, val);
 
     return equal(dense_tmp);
 }

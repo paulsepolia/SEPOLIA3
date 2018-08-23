@@ -10,7 +10,7 @@ int main() {
     // any output line to the examples should be 'true'
 
     const auto rows = static_cast<uint64_t>(std::pow(10.0, 1.0));
-    const auto columns = static_cast<uint64_t>(std::pow(10.0, 2.0));
+    const auto columns = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const double value = 123.456;
 
     dense_matrix<double> md(rows, columns, value);

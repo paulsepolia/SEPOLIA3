@@ -23,6 +23,7 @@ int main() {
         std::cout << (md1.allocated() == md2.allocated()) << std::endl;
         std::cout << (md1.deallocated() == md2.deallocated()) << std::endl;
         std::cout << (md1 == md2) << std::endl;
+
         std::cout << (md1 == value) << std::endl;
         std::cout << (value == md1) << std::endl;
         std::cout << (md2 == value) << std::endl;
