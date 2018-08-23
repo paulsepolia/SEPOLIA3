@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 const auto dimension1 = static_cast<uint64_t>(std::pow(10.0, 3.0));
 const auto dimension2 = static_cast<uint64_t>(std::pow(10.0, 4.0));
@@ -12,8 +12,8 @@ const double value2 = 345.678;
 
 TEST(vd_swap_preallocated, stl) {
 
-    vector_dense<double> vd1(dimension1, value1);
-    vector_dense<double> vd2(dimension2, value2);
+    dense_vector<double> vd1(dimension1, value1);
+    dense_vector<double> vd2(dimension2, value2);
 
     EXPECT_EQ(value1, vd1);
     EXPECT_EQ(value2, vd2);
@@ -26,8 +26,8 @@ TEST(vd_swap_preallocated, stl) {
 
 TEST(vd_swap_one_preallocated, stl) {
 
-    vector_dense<double> vd1(dimension1, value1);
-    vector_dense<double> vd2;
+    dense_vector<double> vd1(dimension1, value1);
+    dense_vector<double> vd2;
 
     EXPECT_EQ(value1, vd1);
     EXPECT_TRUE(vd2.deallocated());
@@ -40,7 +40,7 @@ TEST(vd_swap_one_preallocated, stl) {
 
 TEST(vd_swap_same_vector, stl) {
 
-    vector_dense<double> vd1(dimension1, value1);
+    dense_vector<double> vd1(dimension1, value1);
 
     EXPECT_EQ(value1, vd1);
     EXPECT_TRUE(vd1.allocated());
@@ -53,7 +53,7 @@ TEST(vd_swap_same_vector, stl) {
 
 TEST(vd_empty_preallocated_value, stl) {
 
-    vector_dense<double> vd1(dimension1, value1);
+    dense_vector<double> vd1(dimension1, value1);
 
     EXPECT_FALSE(vd1.empty());
 
@@ -64,7 +64,7 @@ TEST(vd_empty_preallocated_value, stl) {
 
 TEST(vd_empty_preallocated_default_value, stl) {
 
-    vector_dense<double> vd1(dimension1);
+    dense_vector<double> vd1(dimension1);
 
     EXPECT_FALSE(vd1.empty());
 
@@ -75,7 +75,7 @@ TEST(vd_empty_preallocated_default_value, stl) {
 
 TEST(vd_empty_not_preallocated, stl) {
 
-    vector_dense<double> vd1;
+    dense_vector<double> vd1;
 
     EXPECT_TRUE(vd1.empty());
 
@@ -86,8 +86,8 @@ TEST(vd_empty_not_preallocated, stl) {
 
 TEST(vd_at, stl) {
 
-    vector_dense<double> vd1(dimension1, value1);
-    vector_dense<double> vd2(dimension2, value2);
+    dense_vector<double> vd1(dimension1, value1);
+    dense_vector<double> vd2(dimension2, value2);
 
     EXPECT_EQ(value1, vd1);
     EXPECT_EQ(value2, vd2);

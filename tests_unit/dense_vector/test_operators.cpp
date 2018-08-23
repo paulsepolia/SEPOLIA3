@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 const auto dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
 const double value1 = 765.432;
@@ -14,7 +14,7 @@ const double ERROR_M12 = std::pow(10.0, -12.0);
 
 TEST(vd_test_operator_curved_brackets, operators) {
 
-    vector_dense<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension, value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -23,7 +23,7 @@ TEST(vd_test_operator_curved_brackets, operators) {
 
 TEST(vd_test_set_operator_square_brackets, operators) {
 
-    vector_dense<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension, value1);
 
     EXPECT_EQ(dimension, vd.size());
 
@@ -40,7 +40,7 @@ TEST(vd_test_set_operator_square_brackets, operators) {
 
 TEST(vd_test_set_operator_curved_brackets, operators) {
 
-    vector_dense<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension, value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -55,7 +55,7 @@ TEST(vd_test_set_operator_curved_brackets, operators) {
 
 TEST(vd_test_operator_plus_plus, operators) {
 
-    vector_dense<double> v1(dimension, value1);
+    dense_vector<double> v1(dimension, value1);
 
     ++v1;
 
@@ -95,7 +95,7 @@ TEST(vd_test_operator_plus_plus, operators) {
 
 TEST(vd_test_operator_minus_minus, operators) {
 
-    vector_dense<double> v1(dimension, value1);
+    dense_vector<double> v1(dimension, value1);
 
     --v1;
 
@@ -136,8 +136,8 @@ TEST(vd_test_operator_minus_minus, operators) {
 
 TEST(vd_test_operator_plus_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v2 += v1;
 
@@ -186,8 +186,8 @@ TEST(vd_test_operator_plus_equal, operators) {
 
 TEST(vd_test_operator_minus_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v2 -= v1;
 
@@ -249,8 +249,8 @@ TEST(vd_test_operator_minus_equal, operators) {
 
 TEST(vd_test_operator_times_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v2 *= v1;
 
@@ -312,8 +312,8 @@ TEST(vd_test_operator_times_equal, operators) {
 
 TEST(vd_test_operator_divide_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v2 /= v1;
 
@@ -370,8 +370,8 @@ TEST(vd_test_operator_divide_equal, operators) {
 
 TEST(vd_test_operator_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value1);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value1);
 
     EXPECT_EQ(v2, v1);
     EXPECT_EQ(v1, v2);
@@ -394,8 +394,8 @@ TEST(vd_test_operator_equal, operators) {
 
 TEST(vd_test_operator_not_equal, operators) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     EXPECT_NE(v2, v1);
     EXPECT_NE(v1, v2);

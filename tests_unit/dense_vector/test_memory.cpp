@@ -1,16 +1,16 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
 
 TEST(vd_allocated_deallocated, memory) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     EXPECT_EQ(false, vd.allocated());
     EXPECT_EQ(true, vd.deallocated());
@@ -30,7 +30,7 @@ TEST(vd_allocated_deallocated, memory) {
 
 TEST(vd_allocate_deallocate_constructor_one_argument, memory) {
 
-    vector_dense<double> vd(dimension);
+    dense_vector<double> vd(dimension);
 
     EXPECT_TRUE(vd.allocated());
     EXPECT_FALSE(vd.deallocated());
@@ -45,7 +45,7 @@ TEST(vd_allocate_deallocate_constructor_one_argument, memory) {
 
 TEST(vd_allocate_deallocate_constructor_two_arguments, memory) {
 
-    vector_dense<double> vd(dimension, value);
+    dense_vector<double> vd(dimension, value);
 
     EXPECT_TRUE(vd.allocated());
     EXPECT_FALSE(vd.deallocated());

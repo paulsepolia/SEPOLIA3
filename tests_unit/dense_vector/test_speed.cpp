@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <chrono>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
@@ -14,11 +14,11 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        vector_dense<double> v1(dimension, value);
+        dense_vector<double> v1(dimension, value);
 
         EXPECT_TRUE(v1.allocated());
 
-        vector_dense<double> v2(v1);
+        dense_vector<double> v2(v1);
 
         EXPECT_TRUE(v1.allocated());
         EXPECT_TRUE(v2.allocated());
@@ -31,11 +31,11 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        vector_dense<double> v1(dimension, value);
+        dense_vector<double> v1(dimension, value);
 
         EXPECT_TRUE(v1.allocated());
 
-        vector_dense<double> v2(std::move(v1));
+        dense_vector<double> v2(std::move(v1));
 
         EXPECT_TRUE(v1.deallocated());
         EXPECT_TRUE(v2.allocated());
@@ -53,8 +53,8 @@ TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        vector_dense<double> v1(dimension, value);
-        vector_dense<double> v2;
+        dense_vector<double> v1(dimension, value);
+        dense_vector<double> v2;
 
         EXPECT_TRUE(v1.allocated());
         EXPECT_TRUE(v2.deallocated());
@@ -72,8 +72,8 @@ TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        vector_dense<double> v1(dimension, value);
-        vector_dense<double> v2;
+        dense_vector<double> v1(dimension, value);
+        dense_vector<double> v2;
 
         EXPECT_TRUE(v1.allocated());
         EXPECT_TRUE(v2.deallocated());

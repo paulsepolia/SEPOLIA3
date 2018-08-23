@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include <cmath>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 const uint64_t dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
@@ -16,8 +16,8 @@ const uint64_t index2 = 12;
 
 TEST(vd_test_add_with_number_double, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 + value1;
 
@@ -37,8 +37,8 @@ TEST(vd_test_add_with_number_double, algebra) {
 
 TEST(vd_test_add_with_number_uint64t, algebra) {
 
-    vector_dense<uint64_t> v1(dimension, value3);
-    vector_dense<uint64_t> v2;
+    dense_vector<uint64_t> v1(dimension, value3);
+    dense_vector<uint64_t> v2;
 
     v2 = v1 + value4;
 
@@ -58,9 +58,9 @@ TEST(vd_test_add_with_number_uint64t, algebra) {
 
 TEST(vd_test_add_with_vector_double, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 + v2;
 
@@ -78,9 +78,9 @@ TEST(vd_test_add_with_vector_double, algebra) {
 
 TEST(vd_test_add_with_vector_uint64t, algebra) {
 
-    vector_dense<uint64_t> v1(dimension, value3);
-    vector_dense<uint64_t> v2(dimension, value4);
-    vector_dense<uint64_t> v3;
+    dense_vector<uint64_t> v1(dimension, value3);
+    dense_vector<uint64_t> v2(dimension, value4);
+    dense_vector<uint64_t> v3;
 
     v3 = v1 + v2;
 
@@ -99,7 +99,7 @@ TEST(vd_test_add_with_vector_uint64t, algebra) {
 
 TEST(vd_test_add_with_number_return_to_same_double, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 + value1;
 
@@ -114,7 +114,7 @@ TEST(vd_test_add_with_number_return_to_same_double, algebra) {
 
 TEST(vd_test_add_with_number_return_to_same_uint64_t, algebra) {
 
-    vector_dense<uint64_t> v1(dimension, value3);
+    dense_vector<uint64_t> v1(dimension, value3);
 
     v1 = v1 + value4;
 
@@ -130,7 +130,7 @@ TEST(vd_test_add_with_number_return_to_same_uint64_t, algebra) {
 
 TEST(vd_test_add_with_number_return_to_same_in_parallel_double, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 + value1;
 
@@ -148,8 +148,8 @@ TEST(vd_test_add_with_number_return_to_same_in_parallel_double, algebra) {
 
 TEST(vd_test_add_with_vector_return_to_same_double, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 + v2;
 
@@ -191,8 +191,8 @@ TEST(vd_test_add_with_vector_return_to_same_double, algebra) {
 
 TEST(vd_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
-    vector_dense<uint64_t> v1(dimension, value3);
-    vector_dense<uint64_t> v2(dimension, value4);
+    dense_vector<uint64_t> v1(dimension, value3);
+    dense_vector<uint64_t> v2(dimension, value4);
 
     v1 = v1 + v2;
 
@@ -234,8 +234,8 @@ TEST(vd_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
 TEST(vd_test_add_with_vector_return_to_same_parallel_double, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 + v2;
 
@@ -279,8 +279,8 @@ TEST(vd_test_add_with_vector_return_to_same_parallel_double, algebra) {
 
 TEST(vd_test_subtract_a_number, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 - value1;
 
@@ -294,9 +294,9 @@ TEST(vd_test_subtract_a_number, algebra) {
 
 TEST(vd_test_subtract_with_vector, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 - v2;
 
@@ -308,7 +308,7 @@ TEST(vd_test_subtract_with_vector, algebra) {
 
 TEST(vd_test_subtract_a_number_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 - value1;
 
@@ -322,8 +322,8 @@ TEST(vd_test_subtract_a_number_to_same, algebra) {
 
 TEST(vd_test_subtract_with_vector_return_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 - v2;
 
@@ -363,8 +363,8 @@ TEST(vd_test_subtract_with_vector_return_to_same, algebra) {
 
 TEST(vd_test_times_a_number, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 * value1;
 
@@ -375,9 +375,9 @@ TEST(vd_test_times_a_number, algebra) {
 
 TEST(vd_test_times_with_vector, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 * v2;
 
@@ -389,7 +389,7 @@ TEST(vd_test_times_with_vector, algebra) {
 
 TEST(vd_test_times_a_number_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 * value1;
 
@@ -401,7 +401,7 @@ TEST(vd_test_times_a_number_to_same, algebra) {
 
 TEST(vd_test_times_a_number_to_same_in_parallel, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 * value1;
 
@@ -413,8 +413,8 @@ TEST(vd_test_times_a_number_to_same_in_parallel, algebra) {
 
 TEST(vd_test_times_a_vector_return_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 * v2;
 
@@ -446,8 +446,8 @@ TEST(vd_test_times_a_vector_return_to_same, algebra) {
 
 TEST(vd_test_divide_a_number, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 / value1;
 
@@ -459,9 +459,9 @@ TEST(vd_test_divide_a_number, algebra) {
 
 TEST(vd_test_divide_with_vector, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 / v2;
 
@@ -473,7 +473,7 @@ TEST(vd_test_divide_with_vector, algebra) {
 
 TEST(vd_test_divide_a_number_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 / value1;
 
@@ -485,8 +485,8 @@ TEST(vd_test_divide_a_number_to_same, algebra) {
 
 TEST(vd_test_divide_a_vector_return_to_same, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 / v2;
 
@@ -523,8 +523,8 @@ TEST(vd_test_divide_a_vector_return_to_same, algebra) {
 
 TEST(vd_test_add_with_number_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 + value1;
 
@@ -536,9 +536,9 @@ TEST(vd_test_add_with_number_operator, algebra) {
 
 TEST(vd_test_add_with_vector_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 + v2;
 
@@ -550,7 +550,7 @@ TEST(vd_test_add_with_vector_operator, algebra) {
 
 TEST(vd_test_add_with_number_return_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 + value1;
 
@@ -563,8 +563,8 @@ TEST(vd_test_add_with_number_return_to_same_operator, algebra) {
 
 TEST(vd_test_add_with_vector_return_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 + v2;
 
@@ -601,8 +601,8 @@ TEST(vd_test_add_with_vector_return_to_same_operator, algebra) {
 
 TEST(vd_test_subtract_a_number_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 - value1;
 
@@ -613,9 +613,9 @@ TEST(vd_test_subtract_a_number_operator, algebra) {
 
 TEST(vd_test_subtract_with_vector_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 - v2;
 
@@ -627,7 +627,7 @@ TEST(vd_test_subtract_with_vector_operator, algebra) {
 
 TEST(vd_test_subtract_a_number_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 - value1;
 
@@ -641,8 +641,8 @@ TEST(vd_test_subtract_a_number_to_same_operator, algebra) {
 
 TEST(vd_test_subtract_with_vector_return_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 - v2;
 
@@ -671,8 +671,8 @@ TEST(vd_test_subtract_with_vector_return_to_same_operator, algebra) {
 
 TEST(vd_test_times_a_number_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 * value1;
 
@@ -684,9 +684,9 @@ TEST(vd_test_times_a_number_operator, algebra) {
 
 TEST(vd_test_times_with_vector_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 * v2;
 
@@ -701,7 +701,7 @@ TEST(vd_test_times_with_vector_operator, algebra) {
 
 TEST(vd_test_times_a_number_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 * value1;
 
@@ -712,8 +712,8 @@ TEST(vd_test_times_a_number_to_same_operator, algebra) {
 
 TEST(vd_test_times_a_vector_return_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 * v2;
 
@@ -742,8 +742,8 @@ TEST(vd_test_times_a_vector_return_to_same_operator, algebra) {
 
 TEST(vd_test_divide_a_number_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
-    vector_dense<double> v2;
+    dense_vector<double> v1(dimension, value);
+    dense_vector<double> v2;
 
     v2 = v1 / value1;
 
@@ -754,9 +754,9 @@ TEST(vd_test_divide_a_number_operator, algebra) {
 
 TEST(vd_test_divide_with_vector_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
-    vector_dense<double> v3;
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> v3;
 
     v3 = v1 / v2;
 
@@ -776,7 +776,7 @@ TEST(vd_test_divide_with_vector_operator, algebra) {
 
 TEST(vd_test_divide_with_number_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value);
+    dense_vector<double> v1(dimension, value);
 
     v1 = v1 / value1;
 
@@ -787,8 +787,8 @@ TEST(vd_test_divide_with_number_to_same_operator, algebra) {
 
 TEST(vd_test_divide_a_vector_return_to_same_operator, algebra) {
 
-    vector_dense<double> v1(dimension, value1);
-    vector_dense<double> v2(dimension, value2);
+    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> v2(dimension, value2);
 
     v1 = v1 / v2;
 

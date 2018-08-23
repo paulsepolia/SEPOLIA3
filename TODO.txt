@@ -12,6 +12,8 @@ Task 6: done
 
 Task 7: to put some more examples for matrix_dense
 
+Task 13: renaming vector_dense<T> to dense_vector<T> . same for matrix_dense<T> to dense_matrix<T>
+
 #======#
 # TODO #
 #======#

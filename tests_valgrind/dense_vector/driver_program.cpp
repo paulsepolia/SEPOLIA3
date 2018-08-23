@@ -2,9 +2,9 @@
 #include <iomanip>
 #include <cmath>
 #include <chrono>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 // help display function
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     const auto dim = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_large = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_small = static_cast<uint64_t>(std::pow(10.0, 1.0));
-    vector_dense<double> vd(dim, 2.0);
+    dense_vector<double> vd(dim, 2.0);
     const uint64_t test_index = 5;
     const uint64_t test_dim = 10;
     const double value1 = 1234.56789;
@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            vector_dense<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large, value3);
             vd = vd_tmp;
 
             if (i == dim_small - 1) {
@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            vector_dense<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large, value3);
             vd = std::move(vd_tmp);
 
             if (i == dim_small - 1) {
@@ -116,8 +116,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            vector_dense<double> vd_tmp(dim_large, value3);
-            vector_dense<double> vd(std::move(vd_tmp));
+            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd(std::move(vd_tmp));
 
             if (i == dim_small - 1) {
                 fc();
@@ -128,8 +128,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            vector_dense<double> vd_tmp(dim_large, value3);
-            vector_dense<double> vd(std::move(vd_tmp));
+            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd(std::move(vd_tmp));
 
             if (i == dim_small - 1) {
                 fc();
@@ -150,8 +150,8 @@ int main(int argc, char **argv) {
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            vector_dense<double> v1(dim_large, value1);
-            vector_dense<double> v2(std::move(v1));
+            dense_vector<double> v1(dim_large, value1);
+            dense_vector<double> v2(std::move(v1));
         }
 
         auto t2(std::chrono::system_clock::now());
@@ -162,8 +162,8 @@ int main(int argc, char **argv) {
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            vector_dense<double> v1(dim_large, value1);
-            vector_dense<double> v2(v1);
+            dense_vector<double> v1(dim_large, value1);
+            dense_vector<double> v2(v1);
         }
 
         t2 = std::chrono::system_clock::now();
@@ -199,8 +199,8 @@ int main(int argc, char **argv) {
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim; i++) {
-            vector_dense<double> v1(dim_large, value1);
-            vector_dense<double> v2(std::move(v1));
+            dense_vector<double> v1(dim_large, value1);
+            dense_vector<double> v2(std::move(v1));
         }
 
         auto t2(std::chrono::system_clock::now());
@@ -211,8 +211,8 @@ int main(int argc, char **argv) {
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim; i++) {
-            vector_dense<double> v1(dim_large, value1);
-            vector_dense<double> v2(v1);
+            dense_vector<double> v1(dim_large, value1);
+            dense_vector<double> v2(v1);
         }
 
         t2 = std::chrono::system_clock::now();
@@ -243,9 +243,9 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        vector_dense<double> v1(dim, value1);
+        dense_vector<double> v1(dim, value1);
         const double val(value2);
-        vector_dense<double> v2;
+        dense_vector<double> v2;
 
         // plus
 
@@ -290,9 +290,9 @@ int main(int argc, char **argv) {
     //=======================//
 
     {
-        vector_dense<double> v1(dim, value1);
+        dense_vector<double> v1(dim, value1);
         const double val(value2);
-        vector_dense<double> v2;
+        dense_vector<double> v2;
 
         // plus
 
@@ -336,9 +336,9 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        vector_dense<double> v1(dim, value1);
-        vector_dense<double> v2(dim, value2);
-        vector_dense<double> v3;
+        dense_vector<double> v1(dim, value1);
+        dense_vector<double> v2(dim, value2);
+        dense_vector<double> v3;
 
         // plus
 
@@ -386,9 +386,9 @@ int main(int argc, char **argv) {
     //=======================//
 
     {
-        vector_dense<double> v1(dim, value1);
-        vector_dense<double> v2(dim, value2);
-        vector_dense<double> v3;
+        dense_vector<double> v1(dim, value1);
+        dense_vector<double> v2(dim, value2);
+        dense_vector<double> v3;
 
         // plus
 
@@ -436,9 +436,9 @@ int main(int argc, char **argv) {
     //==============================//
 
     {
-        vector_dense<double> v1(dim, value1);
-        vector_dense<double> v2(dim, value2);
-        vector_dense<double> v3;
+        dense_vector<double> v1(dim, value1);
+        dense_vector<double> v2(dim, value2);
+        dense_vector<double> v3;
 
         // plus
 

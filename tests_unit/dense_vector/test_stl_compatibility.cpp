@@ -1,14 +1,14 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdlib>
-#include "../../dense_vector/vector_dense.h"
+#include "../../dense_vector/dense_vector.h"
 
 const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 1.0));
 const uint64_t dim2 = static_cast<uint64_t>(std::pow(10.0, 3.0));
 const double value1 = 123.456;
 const uint64_t value2 = 123456;
 
-using sepolia::vector_dense;
+using sepolia::dense_vector;
 
 // help functions and classes
 
@@ -49,8 +49,8 @@ sort_class_reverse sort_obj_reverse;
 
 TEST(vd_for_each, stl_compatibility) {
 
-    vector_dense<double> vd1;
-    vector_dense<double> vd2;
+    dense_vector<double> vd1;
+    dense_vector<double> vd2;
 
     vd1.allocate(dimension);
     vd2.allocate(dimension);
@@ -69,7 +69,7 @@ TEST(vd_for_each, stl_compatibility) {
 
 TEST(vd_generate, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
@@ -89,7 +89,7 @@ TEST(vd_generate, stl_compatibility) {
 
 TEST(vd_generate_n, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
@@ -109,23 +109,23 @@ TEST(vd_generate_n, stl_compatibility) {
 
 TEST(vd_includes_equal_vectors, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension, value1);
-    vector_dense<double> vd2(dimension, value1);;
+    dense_vector<double> vd1(dimension, value1);
+    dense_vector<double> vd2(dimension, value1);;
 
     EXPECT_TRUE(std::includes(vd1.begin(), vd1.end(), vd2.begin(), vd2.end()));
 }
 
 TEST(vd_includes_same_vector, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension, value1);
+    dense_vector<double> vd1(dimension, value1);
 
     EXPECT_TRUE(std::includes(vd1.begin(), vd1.end(), vd1.begin(), vd1.end()));
 }
 
 TEST(vd_includes_sorted, stl_compatibility) {
 
-    vector_dense<double> vd1;
-    vector_dense<double> vd2;
+    dense_vector<double> vd1;
+    dense_vector<double> vd2;
 
     vd1.allocate(dim2);
     vd2.allocate(dim2 - 1);
@@ -141,8 +141,8 @@ TEST(vd_includes_sorted, stl_compatibility) {
 
 TEST(vd_includes_sorted_reverse, stl_compatibility) {
 
-    vector_dense<double> vd1;
-    vector_dense<double> vd2;
+    dense_vector<double> vd1;
+    dense_vector<double> vd2;
 
     vd1.allocate(dim2);
     vd2.allocate(dim2);
@@ -158,7 +158,7 @@ TEST(vd_includes_sorted_reverse, stl_compatibility) {
 
 TEST(vd_is_sorted_default, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
     vd = value1;
@@ -173,7 +173,7 @@ TEST(vd_is_sorted_default, stl_compatibility) {
 
 TEST(vd_is_sorted_non_default, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
@@ -192,7 +192,7 @@ TEST(vd_is_sorted_non_default, stl_compatibility) {
 
 TEST(vd_is_sorted_non_default_reverse, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
@@ -209,8 +209,8 @@ TEST(vd_is_sorted_non_default_reverse, stl_compatibility) {
 
 TEST(vd_reverse_constructor_default, stl_compatibility) {
 
-    vector_dense<double> vd1;
-    vector_dense<double> vd2;
+    dense_vector<double> vd1;
+    dense_vector<double> vd2;
 
     vd1.allocate(dimension);
     vd2.allocate(dimension);
@@ -234,8 +234,8 @@ TEST(vd_reverse_constructor_default, stl_compatibility) {
 
 TEST(vd_reverse_constructor_one, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension);
-    vector_dense<double> vd2(dimension);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
     for (uint64_t i = 0; i < dimension; i++) {
         vd1[i] = static_cast<double>(i);
@@ -256,8 +256,8 @@ TEST(vd_reverse_constructor_one, stl_compatibility) {
 
 TEST(vd_reverse_constructor_two, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension, value1);
-    vector_dense<double> vd2(dimension, value1);
+    dense_vector<double> vd1(dimension, value1);
+    dense_vector<double> vd2(dimension, value1);
 
     EXPECT_EQ(vd1, vd2);
 
@@ -272,8 +272,8 @@ TEST(vd_reverse_constructor_two, stl_compatibility) {
 
 TEST(vd_reverse_copy_constructor_default, stl_compatibility) {
 
-    vector_dense<double> vd1;
-    vector_dense<double> vd2;
+    dense_vector<double> vd1;
+    dense_vector<double> vd2;
 
     vd1.allocate(dimension);
     vd2.allocate(dimension);
@@ -295,8 +295,8 @@ TEST(vd_reverse_copy_constructor_default, stl_compatibility) {
 
 TEST(vd_reverse_copy_constructor_one, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension);
-    vector_dense<double> vd2(dimension);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
     for (uint64_t i = 0; i < dimension; i++) {
         vd1[i] = static_cast<double>(i);
@@ -319,8 +319,8 @@ TEST(vd_reverse_copy_constructor_one, stl_compatibility) {
 
 TEST(vd_reverse_copy_constructor_two, stl_compatibility) {
 
-    vector_dense<double> vd1(dimension, value1);
-    vector_dense<double> vd2(dimension, value1);
+    dense_vector<double> vd1(dimension, value1);
+    dense_vector<double> vd2(dimension, value1);
 
     EXPECT_EQ(vd1, vd2);
 
@@ -335,7 +335,7 @@ TEST(vd_reverse_copy_constructor_two, stl_compatibility) {
 
 TEST(vd_sort_default, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
@@ -354,7 +354,7 @@ TEST(vd_sort_default, stl_compatibility) {
 
 TEST(vd_sort_non_default, stl_compatibility) {
 
-    vector_dense<double> vd;
+    dense_vector<double> vd;
 
     vd.allocate(dimension);
 
