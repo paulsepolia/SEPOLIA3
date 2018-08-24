@@ -18,7 +18,7 @@ namespace sepolia {
 
         dense_matrix<T>(dense_matrix<T> &&) noexcept;
 
-        virtual ~dense_matrix();
+        ~dense_matrix() final;
 
         dense_matrix<T> &operator=(const dense_matrix<T> &);
 

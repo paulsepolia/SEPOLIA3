@@ -33,6 +33,6 @@ namespace sepolia {
 
         dense_vector<T> &operator=(dense_container<T> &&) noexcept;
 
-        dense_vector<T> &operator=(const T &);
+        dense_vector<T> &operator=(const T &) final;
     };
 }
