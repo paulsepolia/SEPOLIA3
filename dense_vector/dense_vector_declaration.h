@@ -19,11 +19,11 @@ namespace sepolia {
 
         dense_vector<T>(dense_vector<T> &&) noexcept;
 
-        virtual ~dense_vector();
+        ~dense_vector() final;
 
-        dense_vector<T> &operator=(const std::vector<T> &);
+        dense_vector<T> &operator=(const std::vector<T> &) final;
 
-        dense_vector<T> &operator=(std::vector<T> &&);
+        dense_vector<T> &operator=(std::vector<T> &&) final;
 
         dense_vector<T> &operator=(const dense_vector<T> &);
 

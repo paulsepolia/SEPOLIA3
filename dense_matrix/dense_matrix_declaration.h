@@ -28,6 +28,6 @@ namespace sepolia {
 
         dense_matrix<T> &operator=(dense_container<T> &&) noexcept;
 
-        dense_matrix<T> &operator=(const T &);
+        dense_matrix<T> &operator=(const T &) final;
     };
 }

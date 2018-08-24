@@ -20,9 +20,9 @@ namespace sepolia {
 
         dense_container<T>(dense_container<T> &&) noexcept;
 
-    public:
-
         virtual ~dense_container();
+
+    public:
 
         void allocate(const uint64_t &);
 

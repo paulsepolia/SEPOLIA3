@@ -41,6 +41,7 @@ dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &column
     if (_dimension == 0) {
         _rows = 0;
         _columns = 0;
+        return;
     }
 
     allocate(_rows, _columns);

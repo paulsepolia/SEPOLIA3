@@ -303,7 +303,7 @@ bool dense_container<T>::equal(const T &val) const {
     if (size() == 0)
         return false;
 
-    if (!allocated())
+    if (deallocated())
         return false;
 
     dense_container<T> dense_tmp(rows(), columns());
