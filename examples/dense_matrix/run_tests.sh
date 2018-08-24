@@ -10,11 +10,11 @@ out_name="out_all";
 
 for subdir in */; do
     cd "$subdir"
-    ./$script_name;
-    ./$exe_name >> ../out_tmp;
-    ./$clean_exe_name > /dev/null 2>&1 ;
+    ./${script_name};
+    ./${exe_name} >> ../out_tmp;
+    ./${clean_exe_name} > /dev/null 2>&1 ;
     cd ..
-    sort out_tmp | uniq > $out_name
+    sort out_tmp | uniq > ${out_name}
     rm out_tmp
 done
 
