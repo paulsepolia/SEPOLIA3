@@ -14,7 +14,7 @@ Task 7: to put some more examples for matrix_dense
 
 Task 9: to make a base class common to matrix_dense and vector_dense
 
-Task 13: renaming vector_dense<T> to dense_vector<T> . same for matrix_dense<T> to dense_matrix<T>
+Task 13: renaming vector_dense<T> to dense_vector<T>. same for matrix_dense<T> to dense_matrix<T>
 
 Task 14: to make dense_matrix<T> class to use the dense_container_class<T>
 
@@ -22,6 +22,8 @@ Task 15: to add some valgrind test for dense_matrix<T>
 
 Task 16: To fix the ambiguity of constructors (uint64_t, uint64_t, uint64_t = 0)
          and (uint64_t, uint64_t)
+
+Task 18: to make units tests to comply with the new simplified constructors
 
 #======#
 # TODO #
