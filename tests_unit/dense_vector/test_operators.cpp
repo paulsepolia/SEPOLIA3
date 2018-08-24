@@ -14,7 +14,9 @@ const double ERROR_M12 = std::pow(10.0, -12.0);
 
 TEST(vd_test_operator_curved_brackets, operators) {
 
-    dense_vector<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension);
+
+vd.set(value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -23,7 +25,9 @@ TEST(vd_test_operator_curved_brackets, operators) {
 
 TEST(vd_test_set_operator_square_brackets, operators) {
 
-    dense_vector<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension);
+
+vd.set(value1);
 
     EXPECT_EQ(dimension, vd.size());
 
@@ -40,7 +44,9 @@ TEST(vd_test_set_operator_square_brackets, operators) {
 
 TEST(vd_test_set_operator_curved_brackets, operators) {
 
-    dense_vector<double> vd(dimension, value1);
+    dense_vector<double> vd(dimension);
+
+vd.set(value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -55,357 +61,379 @@ TEST(vd_test_set_operator_curved_brackets, operators) {
 
 TEST(vd_test_operator_plus_plus, operators) {
 
-    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> vd1(dimension);
 
-    ++v1;
+vd1.set(value1);
+
+    ++vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 + 1.0, v1(i));
+        EXPECT_EQ(value1 + 1.0, vd1(i));
     }
 
-    v1++;
+    vd1++;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 + 2.0, v1(i));
+        EXPECT_EQ(value1 + 2.0, vd1(i));
     }
 
-    v1.deallocate();
-    v1.allocate(dimension);
+    vd1.deallocate();
+    vd1.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = std::sin(static_cast<double>(i));
+        vd1[i] = std::sin(static_cast<double>(i));
     }
 
-    v1++;
+    vd1++;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, v1(i), ERROR_M10);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, v1(i), ERROR_M11);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, vd1(i), ERROR_M10);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, vd1(i), ERROR_M11);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 1.0, vd1(i), ERROR_M12);
     }
 
-    ++v1;
+    ++vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, v1(i), ERROR_M10);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, v1(i), ERROR_M11);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, vd1(i), ERROR_M10);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, vd1(i), ERROR_M11);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) + 2.0, vd1(i), ERROR_M12);
     }
 }
 
 TEST(vd_test_operator_minus_minus, operators) {
 
-    dense_vector<double> v1(dimension, value1);
+    dense_vector<double> vd1(dimension);
 
-    --v1;
+vd1.set(value1);
+
+    --vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 - 1.0, v1(i));
+        EXPECT_EQ(value1 - 1.0, vd1(i));
     }
 
-    v1--;
+    vd1--;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 - 2.0, v1(i));
+        EXPECT_EQ(value1 - 2.0, vd1(i));
     }
 
-    v1.deallocate();
-    v1.allocate(dimension);
+    vd1.deallocate();
+    vd1.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = std::sin(static_cast<double>(i));
+        vd1[i] = std::sin(static_cast<double>(i));
     }
 
-    v1--;
+    vd1--;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, v1(i), ERROR_M10);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, v1(i), ERROR_M11);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, vd1(i), ERROR_M10);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, vd1(i), ERROR_M11);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 1.0, vd1(i), ERROR_M12);
     }
 
-    --v1;
+    --vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, v1(i), ERROR_M10);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, v1(i), ERROR_M11);
-        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, vd1(i), ERROR_M10);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, vd1(i), ERROR_M11);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)) - 2.0, vd1(i), ERROR_M12);
     }
 
 }
 
 TEST(vd_test_operator_plus_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    v2 += v1;
+vd1.set(value1);
+vd2.set(value2);
+
+    vd2 += vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 + value2, v2(i));
-        EXPECT_EQ(value1, v1(i));
+        EXPECT_EQ(value1 + value2, vd2(i));
+        EXPECT_EQ(value1, vd1(i));
     }
 
-    EXPECT_EQ(value1 + value2, v2);
-    EXPECT_EQ(value1, v1);
+    EXPECT_EQ(value1 + value2, vd2);
+    EXPECT_EQ(value1, vd1);
 
-    v1.deallocate();
-    v1.allocate(dimension);
-    v1 = value1;
+    vd1.deallocate();
+    vd1.allocate(dimension);
+    vd1 = value1;
 
-    v1 += v1;
+    vd1 += vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 + value1, v1(i));
+        EXPECT_EQ(value1 + value1, vd1(i));
     }
 
-    EXPECT_EQ(value1 + value1, v1);
+    EXPECT_EQ(value1 + value1, vd1);
 
-    v1.deallocate();
-    v2.deallocate();
-    v1.allocate(dimension);
-    v2.allocate(dimension);
+    vd1.deallocate();
+    vd2.deallocate();
+    vd1.allocate(dimension);
+    vd2.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = std::sin(static_cast<double>(i));
-        v2[i] = std::cos(static_cast<double>(i));
+        vd1[i] = std::sin(static_cast<double>(i));
+        vd2[i] = std::cos(static_cast<double>(i));
     }
 
-    v2 += v1;
+    vd2 += vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)), v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)), vd1(i), ERROR_M12);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_NEAR(std::sin(static_cast<double>(i)) +
                     std::cos(static_cast<double>(i)),
-                    v2(i), ERROR_M12);
+                    vd2(i), ERROR_M12);
     }
 }
 
 TEST(vd_test_operator_minus_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    v2 -= v1;
+vd1.set(value1);
+vd2.set(value2);
+
+    vd2 -= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value2 - value1, v2(i));
-        EXPECT_EQ(value1, v1(i));
+        EXPECT_EQ(value2 - value1, vd2(i));
+        EXPECT_EQ(value1, vd1(i));
     }
 
-    EXPECT_EQ(value2 - value1, v2);
-    EXPECT_EQ(value1, v1);
+    EXPECT_EQ(value2 - value1, vd2);
+    EXPECT_EQ(value1, vd1);
 
-    v1.deallocate();
-    v1.allocate(dimension);
-    v1 = value1;
+    vd1.deallocate();
+    vd1.allocate(dimension);
+    vd1 = value1;
 
-    v1 -= v1;
+    vd1 -= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 - value1, v1(i));
+        EXPECT_EQ(value1 - value1, vd1(i));
     }
 
-    EXPECT_EQ(value1 - value1, v1);
-    EXPECT_EQ(0.0, v1);
+    EXPECT_EQ(value1 - value1, vd1);
+    EXPECT_EQ(0.0, vd1);
 
-    EXPECT_EQ(v1, value1 - value1);
-    EXPECT_EQ(v1, 0);
+    EXPECT_EQ(vd1, value1 - value1);
+    EXPECT_EQ(vd1, 0);
 
-    v1.deallocate();
-    v2.deallocate();
-    v1.allocate(dimension);
-    v2.allocate(dimension);
+    vd1.deallocate();
+    vd2.deallocate();
+    vd1.allocate(dimension);
+    vd2.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = std::sin(static_cast<double>(i));
-        v2[i] = std::cos(static_cast<double>(i));
+        vd1[i] = std::sin(static_cast<double>(i));
+        vd2[i] = std::cos(static_cast<double>(i));
     }
 
-    v2 -= v1;
+    vd2 -= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)), v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)), vd1(i), ERROR_M12);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_NEAR(std::cos(static_cast<double>(i)) -
                     std::sin(static_cast<double>(i)),
-                    v2(i), ERROR_M12);
+                    vd2(i), ERROR_M12);
     }
 
-    v2 -= v2;
+    vd2 -= vd2;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(0, v2(i));
+        EXPECT_EQ(0, vd2(i));
     }
 
-    EXPECT_EQ(0.0, v2);
-    EXPECT_EQ(v2, 0.0);
+    EXPECT_EQ(0.0, vd2);
+    EXPECT_EQ(vd2, 0.0);
 }
 
 TEST(vd_test_operator_times_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    v2 *= v1;
+vd1.set(value1);
+vd1.set(value1);
+
+    vd2 *= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 * value2, v2(i));
-        EXPECT_EQ(value1, v1(i));
+        EXPECT_EQ(value1 * value2, vd2(i));
+        EXPECT_EQ(value1, vd1(i));
     }
 
-    EXPECT_EQ(value1 * value2, v2);
-    EXPECT_EQ(value1, v1);
+    EXPECT_EQ(value1 * value2, vd2);
+    EXPECT_EQ(value1, vd1);
 
-    EXPECT_EQ(v2, value1 * value2);
-    EXPECT_EQ(v1, value1);
+    EXPECT_EQ(vd2, value1 * value2);
+    EXPECT_EQ(vd1, value1);
 
-    v1.deallocate();
-    v1.allocate(dimension);
-    v1 = value1;
+    vd1.deallocate();
+    vd1.allocate(dimension);
+    vd1 = value1;
 
-    v1 *= v1;
+    vd1 *= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 * value1, v1(i));
+        EXPECT_EQ(value1 * value1, vd1(i));
     }
 
-    EXPECT_EQ(value1 * value1, v1);
-    EXPECT_EQ(v1, value1 * value1);
+    EXPECT_EQ(value1 * value1, vd1);
+    EXPECT_EQ(vd1, value1 * value1);
 
-    v1.deallocate();
-    v2.deallocate();
-    v1.allocate(dimension);
-    v2.allocate(dimension);
+    vd1.deallocate();
+    vd2.deallocate();
+    vd1.allocate(dimension);
+    vd2.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = std::sin(static_cast<double>(i));
-        v2[i] = std::cos(static_cast<double>(i));
+        vd1[i] = std::sin(static_cast<double>(i));
+        vd2[i] = std::cos(static_cast<double>(i));
     }
 
-    v2 *= v1;
+    vd2 *= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(std::sin(static_cast<double>(i)), v1(i), ERROR_M12);
+        EXPECT_NEAR(std::sin(static_cast<double>(i)), vd1(i), ERROR_M12);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_NEAR(std::cos(static_cast<double>(i)) *
                     std::sin(static_cast<double>(i)),
-                    v2(i), ERROR_M12);
+                    vd2(i), ERROR_M12);
     }
 
-    v2 *= v2;
+    vd2 *= vd2;
 
     for (uint64_t i = 0; i != dimension; i++) {
         EXPECT_NEAR(std::cos(static_cast<double>(i)) *
                     std::sin(static_cast<double>(i)) *
                     std::cos(static_cast<double>(i)) *
-                    std::sin(static_cast<double>(i)), v2(i), ERROR_M12);
+                    std::sin(static_cast<double>(i)), vd2(i), ERROR_M12);
     }
 }
 
 TEST(vd_test_operator_divide_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    v2 /= v1;
+vd1.set(value1);
+vd2.set(value2);
+
+    vd2 /= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value2 / value1, v2(i));
-        EXPECT_EQ(value1, v1(i));
+        EXPECT_EQ(value2 / value1, vd2(i));
+        EXPECT_EQ(value1, vd1(i));
     }
 
-    EXPECT_EQ(value2 / value1, v2);
-    EXPECT_EQ(value1, v1);
+    EXPECT_EQ(value2 / value1, vd2);
+    EXPECT_EQ(value1, vd1);
 
-    EXPECT_EQ(v2, value2 / value1);
-    EXPECT_EQ(v1, value1);
+    EXPECT_EQ(vd2, value2 / value1);
+    EXPECT_EQ(vd1, value1);
 
-    v1.deallocate();
-    v1.allocate(dimension);
-    v1 = value1;
+    vd1.deallocate();
+    vd1.allocate(dimension);
+    vd1 = value1;
 
-    v1 /= v1;
+    vd1 /= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_EQ(value1 / value1, v1(i));
+        EXPECT_EQ(value1 / value1, vd1(i));
     }
 
-    EXPECT_EQ(v1, value1 / value1);
-    EXPECT_EQ(value1 / value1, v1);
+    EXPECT_EQ(vd1, value1 / value1);
+    EXPECT_EQ(value1 / value1, vd1);
 
-    v1.deallocate();
-    v2.deallocate();
-    v1.allocate(dimension);
-    v2.allocate(dimension);
+    vd1.deallocate();
+    vd2.deallocate();
+    vd1.allocate(dimension);
+    vd2.allocate(dimension);
 
     for (uint64_t i = 0; i != dimension; i++) {
-        v1[i] = static_cast<double>(i + 1);
-        v2[i] = static_cast<double>(i + 2);
+        vd1[i] = static_cast<double>(i + 1);
+        vd2[i] = static_cast<double>(i + 2);
     }
 
-    v2 /= v1;
+    vd2 /= vd1;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(i + 1, v1(i), ERROR_M12);
+        EXPECT_NEAR(i + 1, vd1(i), ERROR_M12);
     }
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR((i + 2.0) / (i + 1.0), v2(i), ERROR_M12);
+        EXPECT_NEAR((i + 2.0) / (i + 1.0), vd2(i), ERROR_M12);
     }
 
-    v2 /= v2;
+    vd2 /= vd2;
 
     for (uint64_t i = 0; i != dimension; i++) {
-        EXPECT_NEAR(1.0, v2(i), ERROR_M12);
+        EXPECT_NEAR(1.0, vd2(i), ERROR_M12);
     }
 }
 
 TEST(vd_test_operator_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value1);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    EXPECT_EQ(v2, v1);
-    EXPECT_EQ(v1, v2);
-    EXPECT_TRUE(v2 == v1);
-    EXPECT_TRUE(v1 == v2);
+vd1.set(value1);
+vd2.set(value1);
 
-    v1 = value1;
-    v2 = value2;
+    EXPECT_EQ(vd2, vd1);
+    EXPECT_EQ(vd1, vd2);
+    EXPECT_TRUE(vd2 == vd1);
+    EXPECT_TRUE(vd1 == vd2);
 
-    EXPECT_FALSE(v2 == v1);
-    EXPECT_FALSE(v1 == v2);
+    vd1 = value1;
+    vd2 = value2;
 
-    EXPECT_EQ(v1, value1);
-    EXPECT_EQ(v2, value2);
+    EXPECT_FALSE(vd2 == vd1);
+    EXPECT_FALSE(vd1 == vd2);
 
-    EXPECT_EQ(value1, v1);
-    EXPECT_EQ(value2, v2);
+    EXPECT_EQ(vd1, value1);
+    EXPECT_EQ(vd2, value2);
+
+    EXPECT_EQ(value1, vd1);
+    EXPECT_EQ(value2, vd2);
 
 }
 
 TEST(vd_test_operator_not_equal, operators) {
 
-    dense_vector<double> v1(dimension, value1);
-    dense_vector<double> v2(dimension, value2);
+    dense_vector<double> vd1(dimension);
+    dense_vector<double> vd2(dimension);
 
-    EXPECT_NE(v2, v1);
-    EXPECT_NE(v1, v2);
+vd1.set(value1);
+vd2.set(value2);
 
-    EXPECT_TRUE(v2 != v1);
-    EXPECT_TRUE(v1 != v2);
+    EXPECT_NE(vd2, vd1);
+    EXPECT_NE(vd1, vd2);
 
-    EXPECT_NE(v2, value1);
-    EXPECT_NE(v1, value2);
+    EXPECT_TRUE(vd2 != vd1);
+    EXPECT_TRUE(vd1 != vd2);
 
-    EXPECT_NE(value1, v2);
-    EXPECT_NE(value2, v1);
+    EXPECT_NE(vd2, value1);
+    EXPECT_NE(vd1, value2);
+
+    EXPECT_NE(value1, vd2);
+    EXPECT_NE(value2, vd1);
 }

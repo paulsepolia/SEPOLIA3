@@ -45,7 +45,9 @@ TEST(vd_allocate_deallocate_constructor_one_argument, memory) {
 
 TEST(vd_allocate_deallocate_constructor_two_arguments, memory) {
 
-    dense_vector<double> vd(dimension, value);
+    dense_vector<double> vd(dimension);
+
+    vd.set(value);
 
     EXPECT_TRUE(vd.allocated());
     EXPECT_FALSE(vd.deallocated());

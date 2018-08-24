@@ -14,14 +14,16 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        dense_vector<double> v1(dimension, value);
+        dense_vector<double> vd1(dimension);
 
-        EXPECT_TRUE(v1.allocated());
+        vd1.set(value);
 
-        dense_vector<double> v2(v1);
+        EXPECT_TRUE(vd1.allocated());
 
-        EXPECT_TRUE(v1.allocated());
-        EXPECT_TRUE(v2.allocated());
+        dense_vector<double> vd2(vd1);
+
+        EXPECT_TRUE(vd1.allocated());
+        EXPECT_TRUE(vd2.allocated());
     }
 
     auto t2 = std::chrono::system_clock::now();
@@ -31,14 +33,16 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        dense_vector<double> v1(dimension, value);
+        dense_vector<double> vd1(dimension);
 
-        EXPECT_TRUE(v1.allocated());
+vd1.set(value);
 
-        dense_vector<double> v2(std::move(v1));
+        EXPECT_TRUE(vd1.allocated());
 
-        EXPECT_TRUE(v1.deallocated());
-        EXPECT_TRUE(v2.allocated());
+        dense_vector<double> vd2(std::move(vd1));
+
+        EXPECT_TRUE(vd1.deallocated());
+        EXPECT_TRUE(vd2.allocated());
     }
 
     t2 = std::chrono::system_clock::now();
@@ -53,16 +57,18 @@ TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        dense_vector<double> v1(dimension, value);
-        dense_vector<double> v2;
+        dense_vector<double> vd1(dimension);
+        dense_vector<double> vd2;
 
-        EXPECT_TRUE(v1.allocated());
-        EXPECT_TRUE(v2.deallocated());
+vd1.set(value);
 
-        v2 = v1;
+        EXPECT_TRUE(vd1.allocated());
+        EXPECT_TRUE(vd2.deallocated());
 
-        EXPECT_TRUE(v1.allocated());
-        EXPECT_TRUE(v2.allocated());
+        vd2 = vd1;
+
+        EXPECT_TRUE(vd1.allocated());
+        EXPECT_TRUE(vd2.allocated());
     }
 
     auto t2 = std::chrono::system_clock::now();
@@ -72,16 +78,18 @@ TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
 
     for (uint64_t i = 0; i != dimension; i++) {
 
-        dense_vector<double> v1(dimension, value);
-        dense_vector<double> v2;
+        dense_vector<double> vd1(dimension);
+        dense_vector<double> vd2;
 
-        EXPECT_TRUE(v1.allocated());
-        EXPECT_TRUE(v2.deallocated());
+vd1.set(value);
 
-        v2 = std::move(v1);
+        EXPECT_TRUE(vd1.allocated());
+        EXPECT_TRUE(vd2.deallocated());
 
-        EXPECT_TRUE(v1.deallocated());
-        EXPECT_TRUE(v2.allocated());
+        vd2 = std::move(vd1);
+
+        EXPECT_TRUE(vd1.deallocated());
+        EXPECT_TRUE(vd2.allocated());
     }
 
     t2 = std::chrono::system_clock::now();

@@ -21,7 +21,6 @@ do
                 -Wall                           \
                 -std=gnu++17                    \
                 -fopenmp                        \
-                -D_GLIBCXX_PARALLEL             \
                 -isystem                        \
                 /opt/gtest/1.7.0/include        \
                 -pthread                        \
