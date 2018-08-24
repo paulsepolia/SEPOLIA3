@@ -20,6 +20,9 @@ Task 14: to make dense_matrix<T> class to use the dense_container_class<T>
 
 Task 15: to add some valgrind test for dense_matrix<T>
 
+Task 16: To fix the ambiguity of constructors (uint64_t, uint64_t, uint64_t = 0)
+         and (uint64_t, uint64_t)
+
 #======#
 # TODO #
 #======#
@@ -37,5 +40,5 @@ Task 11: to write some benchmarks for vector_dense and matrix_dense
 Task 12: to make the dense container base class with protected attribute 
          to avoid using the dense_container directly
 
-Task 16: To fix the ambiguity of constructors (uint64_t, uint64_t, uint64_t = 0)
-         and (uint64_t, uint64_t)
+Task 17: to improve the performance of the functions 'set', '='
+         to make them comparable to a element by element set and assignment
