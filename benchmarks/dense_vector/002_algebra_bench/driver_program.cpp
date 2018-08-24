@@ -12,7 +12,7 @@ int main() {
     const uint32_t TRY = 100;
     std::cout << std::boolalpha;
 
-    const auto dimension = 2 * static_cast<uint64_t>(std::pow(10.0, 7.0));
+    const auto dimension = 1 * static_cast<uint64_t>(std::pow(10.0, 7.0));
     const double value1 = 123.456;
     const double value2 = 345.678;
 
