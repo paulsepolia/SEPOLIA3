@@ -72,8 +72,10 @@ int main() {
         const auto columns = static_cast<uint64_t>(std::pow(10.0, 2.0));
         const double value = 400.0;
 
-        const dense_matrix<double> md1(rows, columns, value);
+        dense_matrix<double> md1(rows, columns);
         dense_matrix<double> md2(rows, columns);
+
+        md1.set(value);
 
         std::cout << std::boolalpha;
 
@@ -110,8 +112,11 @@ int main() {
         const double value1 = 400.0;
         const double value2 = 500.0;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        const dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -131,8 +136,11 @@ int main() {
         double value2 = 100.0;
         const double coeff = value1 / value2;
 
-        dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -170,8 +178,11 @@ int main() {
         double value2 = 100.0;
         const double coeff = value1 / value2;
 
-        dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -185,8 +196,11 @@ int main() {
         double value1 = 400.0;
         double value2 = 100.0;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        const dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -209,8 +223,11 @@ int main() {
         double value1 = 400.0;
         double value2 = 100.0;
 
-        dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -233,9 +250,12 @@ int main() {
         double value1 = 400.0;
         double value2 = 100.0;
 
-        dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
         dense_matrix<double> md3;
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -262,9 +282,12 @@ int main() {
         double value1 = 400.0;
         double value2 = 100.0;
 
-        dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
         dense_matrix<double> md3;
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 

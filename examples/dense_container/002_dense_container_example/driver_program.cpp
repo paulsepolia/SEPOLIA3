@@ -9,7 +9,7 @@ int main() {
 
     const auto dimension = static_cast<uint64_t>(0);
 
-    dense_container<double> dcon(dimension, 123.456);
+    dense_container<double> dcon(dimension);
 
     std::cout << std::boolalpha;
 

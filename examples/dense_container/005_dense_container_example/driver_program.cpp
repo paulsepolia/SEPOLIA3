@@ -33,7 +33,10 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 123.456789;
 
-        dense_container<double> dcon1(dimension, value);
+        dense_container<double> dcon1(dimension);
+
+        dcon1.set(value);
+
         dense_container<double> dcon2(dimension);
 
         for (uint64_t i = 0; i != dimension; i++) {

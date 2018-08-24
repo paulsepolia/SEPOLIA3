@@ -33,8 +33,10 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 123.456789;
 
-        dense_vector<double> vd1(dimension, value);
+        dense_vector<double> vd1(dimension);
         dense_vector<double> vd2(dimension);
+
+        vd1.set(value);
 
         for (uint64_t i = 0; i != dimension; i++) {
 

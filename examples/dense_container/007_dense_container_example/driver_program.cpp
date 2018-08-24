@@ -13,8 +13,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 / coeff;
 
-        const dense_container<double> dcon1(dimension, value1);
-        dense_container<double> dcon2(dimension, value2);
+        dense_container<double> dcon1(dimension);
+        dense_container<double> dcon2(dimension);
+
+        dcon1.set(value1);
+        dcon2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -35,8 +38,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 + coeff;
 
-        const dense_container<double> dcon1(dimension, value1);
-        dense_container<double> dcon2(dimension, value2);
+        dense_container<double> dcon1(dimension);
+        dense_container<double> dcon2(dimension);
+
+        dcon1.set(value1);
+        dcon2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -57,8 +63,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 - coeff;
 
-        const dense_container<double> dcon1(dimension, value1);
-        dense_container<double> dcon2(dimension, value2);
+        dense_container<double> dcon1(dimension);
+        dense_container<double> dcon2(dimension);
+
+        dcon1.set(value1);
+        dcon2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -82,8 +91,11 @@ int main() {
         const double coeff = 2.0;
         const double value2 = coeff * value1;
 
-        const dense_container<double> dcon1(dimension, value1);
-        dense_container<double> dcon2(dimension, value2);
+        dense_container<double> dcon1(dimension);
+        dense_container<double> dcon2(dimension);
+
+        dcon1.set(value1);
+        dcon2.set(value2);
 
         std::cout << std::boolalpha;
 

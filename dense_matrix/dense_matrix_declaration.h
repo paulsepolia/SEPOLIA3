@@ -12,7 +12,7 @@ namespace sepolia {
 
         explicit dense_matrix<T>();
 
-        explicit dense_matrix<T>(const uint64_t &, const uint64_t &, const T &val = 0);
+        explicit dense_matrix<T>(const uint64_t &, const uint64_t &);
 
         dense_matrix<T>(const dense_matrix<T> &);
 

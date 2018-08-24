@@ -11,8 +11,10 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        const dense_container<double> dcon1(dimension, value);
+        dense_container<double> dcon1(dimension);
         dense_container<double> dcon2(dimension);
+
+        dcon1.set(value);
 
         std::cout << std::boolalpha;
 
@@ -27,8 +29,10 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        const dense_container<double> dcon1(dimension, value);
+        dense_container<double> dcon1(dimension);
         dense_container<double> dcon2(dimension);
+
+        dcon1.set(value);
 
         std::cout << std::boolalpha;
 
@@ -41,8 +45,10 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        dense_container<double> dcon1(dimension, value);
+        dense_container<double> dcon1(dimension);
         dense_container<double> dcon2(dimension);
+
+        dcon1.set(value);
 
         std::cout << std::boolalpha;
 

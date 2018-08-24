@@ -12,9 +12,9 @@ namespace sepolia {
 
         explicit dense_container<T>();
 
-        explicit dense_container<T>(const uint64_t &, const T & = 0);
+        explicit dense_container<T>(const uint64_t &);
 
-        explicit dense_container<T>(const uint64_t &, const uint64_t &, const T & = 0);
+        explicit dense_container<T>(const uint64_t &, const uint64_t &);
 
         dense_container<T>(const dense_container<T> &);
 

@@ -13,7 +13,9 @@ int main() {
     const auto columns = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const double value = 123.456;
 
-    dense_matrix<double> md(rows, columns, value);
+    dense_matrix<double> md(rows, columns);
+
+    md.set(value);
 
     std::cout << std::boolalpha;
 

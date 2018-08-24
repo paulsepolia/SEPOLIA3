@@ -10,7 +10,9 @@ int main() {
     const auto rows = static_cast<uint64_t>(0);
     const auto columns = static_cast<uint64_t>(0);
 
-    dense_matrix<double> md(rows, columns, 123.456);
+    dense_matrix<double> md(rows, columns);
+
+    md.set(123.456);
 
     std::cout << std::boolalpha;
 

@@ -12,7 +12,9 @@ int main() {
     const auto dimension = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const double value = 123.456;
 
-    dense_vector<double> vd(dimension, value);
+    dense_vector<double> vd(dimension);
+
+    vd.set(value);
 
     std::cout << std::boolalpha;
 

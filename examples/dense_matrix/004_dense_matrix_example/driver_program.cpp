@@ -13,8 +13,11 @@ int main() {
 
         const double value = 123.456;
 
-        dense_matrix<double> md1(rows, columns, value);
-        dense_matrix<double> md2(rows, columns, value);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value);
+        md2.set(value);
 
         std::cout << std::boolalpha;
 

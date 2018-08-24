@@ -13,7 +13,7 @@ namespace sepolia {
 
         explicit dense_vector<T>();
 
-        explicit dense_vector<T>(const uint64_t &, const T & = 0);
+        explicit dense_vector<T>(const uint64_t &);
 
         dense_vector<T>(const dense_vector<T> &);
 

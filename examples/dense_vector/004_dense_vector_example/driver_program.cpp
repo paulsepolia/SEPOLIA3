@@ -11,8 +11,11 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 123.456;
 
-        dense_vector<double> vd1(dimension, value);
-        dense_vector<double> vd2(dimension, value);
+        dense_vector<double> vd1(dimension);
+        dense_vector<double> vd2(dimension);
+
+        vd1.set(value);
+        vd2.set(value);
 
         std::cout << std::boolalpha;
 

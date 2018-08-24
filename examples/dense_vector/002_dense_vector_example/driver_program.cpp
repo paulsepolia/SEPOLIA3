@@ -9,7 +9,9 @@ int main() {
 
     const auto dimension = static_cast<uint64_t>(0);
 
-    dense_vector<double> vd(dimension, 123.456);
+    dense_vector<double> vd(dimension);
+
+    vd.set(123.456);
 
     std::cout << std::boolalpha;
 

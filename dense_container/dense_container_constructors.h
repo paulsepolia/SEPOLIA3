@@ -16,7 +16,7 @@ dense_container<T>::dense_container():
 }
 
 template<typename T>
-dense_container<T>::dense_container(const uint64_t &dimension, const T &val):
+dense_container<T>::dense_container(const uint64_t &dimension):
         _rows(1),
         _columns(dimension),
         _dimension(dimension),
@@ -28,11 +28,10 @@ dense_container<T>::dense_container(const uint64_t &dimension, const T &val):
     }
 
     allocate(_rows, _columns);
-    set(val);
 }
 
 template<typename T>
-dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &columns, const T &val):
+dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &columns):
         _rows(rows),
         _columns(columns),
         _dimension(rows * columns),
@@ -44,7 +43,6 @@ dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &column
     }
 
     allocate(_rows, _columns);
-    set(val);
 }
 
 template<typename T>

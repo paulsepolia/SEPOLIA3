@@ -14,8 +14,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 / coeff;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -37,8 +40,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 + coeff;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -60,8 +66,11 @@ int main() {
         const double coeff = 20.0;
         const double value2 = value1 - coeff;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -86,8 +95,11 @@ int main() {
         const double coeff = 2.0;
         const double value2 = coeff * value1;
 
-        const dense_matrix<double> md1(rows, columns, value1);
-        dense_matrix<double> md2(rows, columns, value2);
+        dense_matrix<double> md1(rows, columns);
+        dense_matrix<double> md2(rows, columns);
+
+        md1.set(value1);
+        md2.set(value2);
 
         std::cout << std::boolalpha;
 

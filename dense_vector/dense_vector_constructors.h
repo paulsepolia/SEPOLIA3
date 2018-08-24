@@ -10,8 +10,8 @@ dense_vector<T>::dense_vector():
         dense_container<T>() {}
 
 template<typename T>
-dense_vector<T>::dense_vector(const uint64_t &dimension, const T &value):
-        dense_container<T>(dimension, value) {
+dense_vector<T>::dense_vector(const uint64_t &dimension):
+        dense_container<T>(dimension) {
 
 }
 

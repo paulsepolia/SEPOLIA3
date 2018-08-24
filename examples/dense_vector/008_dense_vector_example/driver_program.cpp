@@ -11,7 +11,9 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         double value = 400.0;
 
-        dense_vector<double> vd(dimension, value);
+        dense_vector<double> vd(dimension);
+
+        vd.set(value);
 
         std::cout << std::boolalpha;
 
@@ -40,7 +42,9 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        dense_vector<double> vd(dimension, value);
+        dense_vector<double> vd(dimension);
+
+        vd.set(value);
 
         std::cout << std::boolalpha;
 
@@ -57,7 +61,9 @@ int main() {
         const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
         const double value = 400.0;
 
-        dense_vector<double> vd(dimension, value);
+        dense_vector<double> vd(dimension);
+
+        vd.set(value);
 
         std::cout << std::boolalpha;
 
@@ -75,8 +81,11 @@ int main() {
         const double value1 = 400.0;
         const double value2 = 800.0;
 
-        const dense_vector<double> vd1(dimension, value1);
-        dense_vector<double> vd2(dimension, value2);
+        dense_vector<double> vd1(dimension);
+        dense_vector<double> vd2(dimension);
+
+        vd1.set(value1);
+        vd2.set(value2);
 
         std::cout << std::boolalpha;
 
@@ -96,8 +105,11 @@ int main() {
         const double value1 = 400.0;
         const double value2 = 800.0;
 
-        const dense_vector<double> vd1(dimension, value1);
-        dense_vector<double> vd2(dimension, value2);
+        dense_vector<double> vd1(dimension);
+        dense_vector<double> vd2(dimension);
+
+        vd1.set(value1);
+        vd2.set(value2);
 
         std::cout << std::boolalpha;
 
