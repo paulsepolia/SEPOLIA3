@@ -20,7 +20,8 @@ int main(int argc, char **argv) {
     const auto dim = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_large = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_small = static_cast<uint64_t>(std::pow(10.0, 1.0));
-    dense_vector<double> vd(dim, 2.0);
+    dense_vector<double> vd(dim);
+    vd.set(2.0);
     const uint64_t test_index = 5;
     const uint64_t test_dim = 10;
     const double value1 = 1234.56789;
@@ -90,7 +91,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large);
+            vd_tmp.set(value3);
             vd = vd_tmp;
 
             if (i == dim_small - 1) {
@@ -102,7 +104,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large);
+            vd_tmp.set(value3);
             vd = std::move(vd_tmp);
 
             if (i == dim_small - 1) {
@@ -114,7 +117,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large);
+            vd_tmp.set(value3);
             dense_vector<double> vd(std::move(vd_tmp));
 
             if (i == dim_small - 1) {
@@ -126,7 +130,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_vector<double> vd_tmp(dim_large, value3);
+            dense_vector<double> vd_tmp(dim_large);
+            vd_tmp.set(value3);
             dense_vector<double> vd(std::move(vd_tmp));
 
             if (i == dim_small - 1) {
@@ -143,25 +148,27 @@ int main(int argc, char **argv) {
     //=====================================//
 
     {
-        // using move constructor to create the v2 vector from v1
+        // using move constructor to create the vd2 vector from vd1
 
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            dense_vector<double> v1(dim_large, value1);
-            dense_vector<double> v2(std::move(v1));
+            dense_vector<double> vd1(dim_large);
+            vd1.set(value1);
+            dense_vector<double> vd2(std::move(vd1));
         }
 
         auto t2(std::chrono::system_clock::now());
         auto time_span_move(std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(t2 - t1));
 
-        // using copy constructor to create the v2 vector from v1
+        // using copy constructor to create the vd2 vector from vd1
 
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            dense_vector<double> v1(dim_large, value1);
-            dense_vector<double> v2(v1);
+            dense_vector<double> vd1(dim_large);
+            vd1.set(value1);
+            dense_vector<double> vd2(vd1);
         }
 
         t2 = std::chrono::system_clock::now();
@@ -192,25 +199,27 @@ int main(int argc, char **argv) {
     //=====================================//
 
     {
-        // using move constructor to create the v2 vector from v1
+        // using move constructor to create the vd2 vector from vd1
 
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim; i++) {
-            dense_vector<double> v1(dim_large, value1);
-            dense_vector<double> v2(std::move(v1));
+            dense_vector<double> vd1(dim_large);
+            vd1.set(value1);
+            dense_vector<double> vd2(std::move(vd1));
         }
 
         auto t2(std::chrono::system_clock::now());
         auto time_span_move(std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(t2 - t1));
 
-        // using copy constructor to create the v2 vector from v1
+        // using copy constructor to create the vd2 vector from vd1
 
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim; i++) {
-            dense_vector<double> v1(dim_large, value1);
-            dense_vector<double> v2(v1);
+            dense_vector<double> vd1(dim_large);
+            vd1.set(value1);
+            dense_vector<double> vd2(vd1);
         }
 
         t2 = std::chrono::system_clock::now();
@@ -241,45 +250,46 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        dense_vector<double> v1(dim, value1);
+        dense_vector<double> vd1(dim);
+        vd1.set(value1);
         const double val(value2);
-        dense_vector<double> v2;
+        dense_vector<double> vd2;
 
         // plus
 
         for (uint64_t i = 0; i != dim_large; i++) {
-            v2 = v1 + val;
+            vd2 = vd1 + val;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[0] + val) == v2[0]) << std::endl;
+        std::cout << ((vd1[0] + val) == vd2[0]) << std::endl;
 
         // subtract
 
         for (uint64_t i = 0; i != dim; i++) {
-            v2 = v1 - val;
+            vd2 = vd1 - val;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[0] - val) == v2[0]) << std::endl;
+        std::cout << ((vd1[0] - val) == vd2[0]) << std::endl;
 
         // times
 
         for (uint64_t i = 0; i != dim; i++) {
-            v2 = v1 * val;
+            vd2 = vd1 * val;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[0] * val) == v2[0]) << std::endl;
+        std::cout << ((vd1[0] * val) == vd2[0]) << std::endl;
 
         // divide
 
         for (uint64_t i = 0; i != dim; i++) {
-            v2 = v1 / val;
+            vd2 = vd1 / val;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[0] / val) == v2[0]) << std::endl;
+        std::cout << ((vd1[0] / val) == vd2[0]) << std::endl;
 
     }
 
@@ -288,45 +298,48 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        dense_vector<double> v1(dim, value1);
-        dense_vector<double> v2(dim, value2);
+        dense_vector<double> vd1(dim);
+        dense_vector<double> vd2(dim);
         dense_vector<double> v3;
+
+        vd1.set(value1);
+        vd2.set(value2);
 
         // plus
 
         for (uint64_t i = 0; i != dim_large; i++) {
-            v3 = v1 + v2;
+            v3 = vd1 + vd2;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[test_index] + v2[test_index]) == v3[test_index]) << std::endl;
+        std::cout << ((vd1[test_index] + vd2[test_index]) == v3[test_index]) << std::endl;
 
         // subtract
 
         for (uint64_t i = 0; i != dim; i++) {
-            v3 = v1 - v2;
+            v3 = vd1 - vd2;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[test_index] - v2[test_index]) == v3[test_index]) << std::endl;
+        std::cout << ((vd1[test_index] - vd2[test_index]) == v3[test_index]) << std::endl;
 
         // times
 
         for (uint64_t i = 0; i != dim; i++) {
-            v3 = v1 * v2;
+            v3 = vd1 * vd2;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[test_index] * v2[test_index]) == v3[test_index]) << std::endl;
+        std::cout << ((vd1[test_index] * vd2[test_index]) == v3[test_index]) << std::endl;
 
         // divide
 
         for (uint64_t i = 0; i != dim; i++) {
-            v3 = v1 / v2;
+            v3 = vd1 / vd2;
         }
 
         fc(__LINE__);
-        std::cout << ((v1[test_index] / v2[test_index]) == v3[test_index]) << std::endl;
+        std::cout << ((vd1[test_index] / vd2[test_index]) == v3[test_index]) << std::endl;
     }
 
     return 0;

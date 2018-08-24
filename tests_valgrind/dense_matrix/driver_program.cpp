@@ -20,7 +20,8 @@ int main(int argc, char **argv) {
     const auto dim = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_large = static_cast<uint64_t>(std::pow(10.0, 1.0));
     const auto dim_small = static_cast<uint64_t>(std::pow(10.0, 1.0));
-    dense_matrix<double> md(dim, dim, 2.0);
+    dense_matrix<double> md(dim, dim);
+    md.set(2.0);
     const uint64_t test_index = 5;
     const uint64_t test_dim = 10;
     const double value1 = 1234.56789;
@@ -90,7 +91,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_matrix<double> md_tmp(dim_large, dim_large, value3);
+            dense_matrix<double> md_tmp(dim_large, dim_large);
+            md_tmp.set(value3);
             md = md_tmp;
 
             if (i == dim_small - 1) {
@@ -102,7 +104,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_matrix<double> md_tmp(dim_large, dim_large, value3);
+            dense_matrix<double> md_tmp(dim_large, dim_large);
+            md_tmp.set(value3);
             md = std::move(md_tmp);
 
             if (i == dim_small - 1) {
@@ -114,7 +117,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_matrix<double> md_tmp(dim_large, dim_large, value3);
+            dense_matrix<double> md_tmp(dim_large, dim_large);
+            md_tmp.set(value3);
             dense_matrix<double> md(std::move(md_tmp));
 
             if (i == dim_small - 1) {
@@ -126,7 +130,8 @@ int main(int argc, char **argv) {
         }
 
         for (uint64_t i = 0; i < dim_small; i++) {
-            dense_matrix<double> md_tmp(dim_large, dim_large, value3);
+            dense_matrix<double> md_tmp(dim_large, dim_large);
+            md_tmp.set(value3);
             dense_matrix<double> md(std::move(md_tmp));
 
             if (i == dim_small - 1) {
@@ -148,7 +153,8 @@ int main(int argc, char **argv) {
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            dense_matrix<double> md1(dim_large, value1);
+            dense_matrix<double> md1(dim_large, dim_large);
+            md1.set(value1);
             dense_matrix<double> md2(std::move(md1));
         }
 
@@ -160,7 +166,8 @@ int main(int argc, char **argv) {
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim_small; i++) {
-            dense_matrix<double> md1(dim_large, value1);
+            dense_matrix<double> md1(dim_large, dim_large);
+            md1.set(value1);
             dense_matrix<double> md2(md1);
         }
 
@@ -197,7 +204,8 @@ int main(int argc, char **argv) {
         auto t1(std::chrono::system_clock::now());
 
         for (uint64_t i = 0; i != dim; i++) {
-            dense_matrix<double> md1(dim_large, dim_large, value1);
+            dense_matrix<double> md1(dim_large, dim_large);
+            md1.set(value1);
             dense_matrix<double> md2(std::move(md1));
         }
 
@@ -209,7 +217,8 @@ int main(int argc, char **argv) {
         t1 = std::chrono::system_clock::now();
 
         for (uint64_t i = 0; i != dim; i++) {
-            dense_matrix<double> md1(dim_large, dim_large, value1);
+            dense_matrix<double> md1(dim_large, dim_large);
+            md1.set(value1);
             dense_matrix<double> md2(md1);
         }
 
@@ -241,7 +250,8 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        dense_matrix<double> md1(dim, dim, value1);
+        dense_matrix<double> md1(dim, dim);
+        md1.set(value1);
         const double val(value2);
         dense_matrix<double> md2;
 
@@ -288,9 +298,12 @@ int main(int argc, char **argv) {
     //==============//
 
     {
-        dense_matrix<double> md1(dim, dim, value1);
-        dense_matrix<double> md2(dim, dim, value2);
+        dense_matrix<double> md1(dim, dim);
+        dense_matrix<double> md2(dim, dim);
         dense_matrix<double> md3;
+
+        md1.set(value1);
+        md2.set(value2);
 
         // plus
 
