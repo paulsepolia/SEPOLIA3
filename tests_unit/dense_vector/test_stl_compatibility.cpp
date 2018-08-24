@@ -112,8 +112,8 @@ TEST(vd_includes_equal_vectors, stl_compatibility) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value1);
+    vd1.set(value1);
+    vd2.set(value1);
 
     EXPECT_TRUE(std::includes(vd1.begin(), vd1.end(), vd2.begin(), vd2.end()));
 }
@@ -122,7 +122,7 @@ TEST(vd_includes_same_vector, stl_compatibility) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     EXPECT_TRUE(std::includes(vd1.begin(), vd1.end(), vd1.begin(), vd1.end()));
 }
@@ -264,8 +264,8 @@ TEST(vd_reverse_constructor_two, stl_compatibility) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value1);
+    vd1.set(value1);
+    vd2.set(value1);
 
     EXPECT_EQ(vd1, vd2);
 
@@ -330,8 +330,8 @@ TEST(vd_reverse_copy_constructor_two, stl_compatibility) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value1);
+    vd1.set(value1);
+    vd2.set(value1);
 
     EXPECT_EQ(vd1, vd2);
 

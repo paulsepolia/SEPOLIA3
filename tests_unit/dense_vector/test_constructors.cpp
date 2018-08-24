@@ -97,8 +97,8 @@ TEST(constructor_all_in_one, constructors) {
         dense_vector<double> vd1(dimension1);
         dense_vector<double> vd2(dimension2);
 
-vd1.set(value);
-vd2.set(value);
+        vd1.set(value);
+        vd2.set(value);
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());
@@ -132,7 +132,7 @@ vd2.set(value);
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2(dimension);
 
-vd2.set(value);
+        vd2.set(value);
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());
@@ -174,8 +174,8 @@ vd2.set(value);
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value2);
+        vd1.set(value1);
+        vd2.set(value2);
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());

@@ -35,7 +35,7 @@ TEST(vd_test_speed_move_copy_constructor, declare_vectors) {
 
         dense_vector<double> vd1(dimension);
 
-vd1.set(value);
+        vd1.set(value);
 
         EXPECT_TRUE(vd1.allocated());
 
@@ -60,7 +60,7 @@ TEST(vd_test_speed_move_copy_assignment_operator, assign_to_vector) {
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2;
 
-vd1.set(value);
+        vd1.set(value);
 
         EXPECT_TRUE(vd1.allocated());
         EXPECT_TRUE(vd2.deallocated());
@@ -81,7 +81,7 @@ vd1.set(value);
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2;
 
-vd1.set(value);
+        vd1.set(value);
 
         EXPECT_TRUE(vd1.allocated());
         EXPECT_TRUE(vd2.deallocated());

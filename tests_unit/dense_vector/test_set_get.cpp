@@ -14,7 +14,7 @@ TEST(vd_set_element_via_constructor_and_get_it_double, set_get) {
 
     dense_vector<double> vd(dimension);
 
-vd.set(value1);
+    vd.set(value1);
 
     for (const auto &el: vd) {
 
@@ -26,7 +26,7 @@ TEST(vd_set_element_via_constructor_and_get_it_uint64_t, set_get) {
 
     dense_vector<uint64_t> vd(dimension);
 
-vd.set(value2);
+    vd.set(value2);
 
     for (const auto &el: vd) {
 
@@ -38,7 +38,7 @@ TEST(vd_set_element_via_constructor_and_get_it_int64_t, set_get) {
 
     dense_vector<int64_t> vd(dimension);
 
-vd.set(value3);
+    vd.set(value3);
 
     for (const auto &el: vd) {
 
@@ -175,7 +175,7 @@ TEST(vd_set_vector_to_another_using_assignment_operator_double, set_get) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2;
 
-vd1.set(value1);
+    vd1.set(value1);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -201,7 +201,7 @@ TEST(vd_set_vector_via_copy_constructor_double, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -226,7 +226,7 @@ TEST(vd_set_vector_via_copy_constructor_uint64_t, set_get) {
 
     dense_vector<uint64_t> vd1(dimension);
 
-vd1.set(value2);
+    vd1.set(value2);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -253,7 +253,7 @@ TEST(vd_set_vector_via_copy_constructor_int64_t, set_get) {
 
     dense_vector<int64_t> vd1(dimension);
 
-vd1.set(value3);
+    vd1.set(value3);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -280,7 +280,7 @@ TEST(vd_set_vector_via_move_constructor_double, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -304,7 +304,7 @@ TEST(vd_set_vector_via_move_constructor_uint64_t, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value2);
+    vd1.set(value2);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -328,7 +328,7 @@ TEST(vd_set_vector_via_move_constructor_int64_t, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value3);
+    vd1.set(value3);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -352,7 +352,7 @@ TEST(vd_set_vector_via_move_assignment_operator_double, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -377,7 +377,7 @@ TEST(vd_set_vector_via_move_assignment_operator_uint64_t, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value2);
+    vd1.set(value2);
 
     EXPECT_EQ(dimension, vd1.size());
 
@@ -402,7 +402,7 @@ TEST(vd_set_vector_via_move_assignment_operator_int64_t, set_get) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value3);
+    vd1.set(value3);
 
     EXPECT_EQ(dimension, vd1.size());
 
