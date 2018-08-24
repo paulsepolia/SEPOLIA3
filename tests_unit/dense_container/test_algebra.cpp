@@ -16,8 +16,10 @@ const uint64_t index2 = 12;
 
 TEST(dcon_test_add_with_number_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+    dcon1.set(value);
 
     dcon2 = dcon1 + value1;
 
@@ -37,8 +39,10 @@ TEST(dcon_test_add_with_number_double, algebra) {
 
 TEST(dcon_test_add_with_number_uint64t, algebra) {
 
-    dense_container<uint64_t> dcon1(dimension, value3);
+    dense_container<uint64_t> dcon1(dimension);
     dense_container<uint64_t> dcon2;
+
+    dcon1.set(value3);
 
     dcon2 = dcon1 + value4;
 
@@ -58,9 +62,12 @@ TEST(dcon_test_add_with_number_uint64t, algebra) {
 
 TEST(dcon_test_add_with_vector_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 + dcon2;
 
@@ -78,9 +85,12 @@ TEST(dcon_test_add_with_vector_double, algebra) {
 
 TEST(dcon_test_add_with_vector_uint64t, algebra) {
 
-    dense_container<uint64_t> dcon1(dimension, value3);
-    dense_container<uint64_t> dcon2(dimension, value4);
+    dense_container<uint64_t> dcon1(dimension);
+    dense_container<uint64_t> dcon2(dimension);
     dense_container<uint64_t> v3;
+
+dcon1.set(value3);
+dcon2.set(value4);
 
     v3 = dcon1 + dcon2;
 
@@ -99,7 +109,9 @@ TEST(dcon_test_add_with_vector_uint64t, algebra) {
 
 TEST(dcon_test_add_with_number_return_to_same_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 + value1;
 
@@ -114,7 +126,9 @@ TEST(dcon_test_add_with_number_return_to_same_double, algebra) {
 
 TEST(dcon_test_add_with_number_return_to_same_uint64_t, algebra) {
 
-    dense_container<uint64_t> dcon1(dimension, value3);
+    dense_container<uint64_t> dcon1(dimension);
+
+dcon1.set(value3);
 
     dcon1 = dcon1 + value4;
 
@@ -130,7 +144,9 @@ TEST(dcon_test_add_with_number_return_to_same_uint64_t, algebra) {
 
 TEST(dcon_test_add_with_number_return_to_same_in_parallel_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 + value1;
 
@@ -148,8 +164,11 @@ TEST(dcon_test_add_with_number_return_to_same_in_parallel_double, algebra) {
 
 TEST(dcon_test_add_with_vector_return_to_same_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 + dcon2;
 
@@ -191,8 +210,11 @@ TEST(dcon_test_add_with_vector_return_to_same_double, algebra) {
 
 TEST(dcon_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
-    dense_container<uint64_t> dcon1(dimension, value3);
-    dense_container<uint64_t> dcon2(dimension, value4);
+    dense_container<uint64_t> dcon1(dimension);
+    dense_container<uint64_t> dcon2(dimension);
+
+dcon1.set(value3);
+dcon2.set(value4);
 
     dcon1 = dcon1 + dcon2;
 
@@ -234,8 +256,11 @@ TEST(dcon_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
 TEST(dcon_test_add_with_vector_return_to_same_parallel_double, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 + dcon2;
 
@@ -279,8 +304,10 @@ TEST(dcon_test_add_with_vector_return_to_same_parallel_double, algebra) {
 
 TEST(dcon_test_subtract_a_number, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 - value1;
 
@@ -294,9 +321,12 @@ TEST(dcon_test_subtract_a_number, algebra) {
 
 TEST(dcon_test_subtract_with_vector, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 - dcon2;
 
@@ -308,7 +338,9 @@ TEST(dcon_test_subtract_with_vector, algebra) {
 
 TEST(dcon_test_subtract_a_number_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 - value1;
 
@@ -322,8 +354,11 @@ TEST(dcon_test_subtract_a_number_to_same, algebra) {
 
 TEST(dcon_test_subtract_with_vector_return_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 - dcon2;
 
@@ -363,8 +398,10 @@ TEST(dcon_test_subtract_with_vector_return_to_same, algebra) {
 
 TEST(dcon_test_times_a_number, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 * value1;
 
@@ -375,9 +412,12 @@ TEST(dcon_test_times_a_number, algebra) {
 
 TEST(dcon_test_times_with_vector, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 * dcon2;
 
@@ -389,7 +429,9 @@ TEST(dcon_test_times_with_vector, algebra) {
 
 TEST(dcon_test_times_a_number_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 * value1;
 
@@ -401,7 +443,9 @@ TEST(dcon_test_times_a_number_to_same, algebra) {
 
 TEST(dcon_test_times_a_number_to_same_in_parallel, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 * value1;
 
@@ -413,8 +457,11 @@ TEST(dcon_test_times_a_number_to_same_in_parallel, algebra) {
 
 TEST(dcon_test_times_a_vector_return_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 * dcon2;
 
@@ -446,8 +493,10 @@ TEST(dcon_test_times_a_vector_return_to_same, algebra) {
 
 TEST(dcon_test_divide_a_number, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 / value1;
 
@@ -459,9 +508,12 @@ TEST(dcon_test_divide_a_number, algebra) {
 
 TEST(dcon_test_divide_with_vector, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 / dcon2;
 
@@ -473,7 +525,9 @@ TEST(dcon_test_divide_with_vector, algebra) {
 
 TEST(dcon_test_divide_a_number_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 / value1;
 
@@ -485,8 +539,11 @@ TEST(dcon_test_divide_a_number_to_same, algebra) {
 
 TEST(dcon_test_divide_a_vector_return_to_same, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 / dcon2;
 
@@ -523,8 +580,10 @@ TEST(dcon_test_divide_a_vector_return_to_same, algebra) {
 
 TEST(dcon_test_add_with_number_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 + value1;
 
@@ -536,9 +595,12 @@ TEST(dcon_test_add_with_number_operator, algebra) {
 
 TEST(dcon_test_add_with_vector_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 + dcon2;
 
@@ -550,7 +612,9 @@ TEST(dcon_test_add_with_vector_operator, algebra) {
 
 TEST(dcon_test_add_with_number_return_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 + value1;
 
@@ -563,8 +627,11 @@ TEST(dcon_test_add_with_number_return_to_same_operator, algebra) {
 
 TEST(dcon_test_add_with_vector_return_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 + dcon2;
 
@@ -601,8 +668,10 @@ TEST(dcon_test_add_with_vector_return_to_same_operator, algebra) {
 
 TEST(dcon_test_subtract_a_number_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 - value1;
 
@@ -613,9 +682,12 @@ TEST(dcon_test_subtract_a_number_operator, algebra) {
 
 TEST(dcon_test_subtract_with_vector_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 - dcon2;
 
@@ -627,7 +699,9 @@ TEST(dcon_test_subtract_with_vector_operator, algebra) {
 
 TEST(dcon_test_subtract_a_number_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 - value1;
 
@@ -641,8 +715,11 @@ TEST(dcon_test_subtract_a_number_to_same_operator, algebra) {
 
 TEST(dcon_test_subtract_with_vector_return_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 - dcon2;
 
@@ -671,8 +748,10 @@ TEST(dcon_test_subtract_with_vector_return_to_same_operator, algebra) {
 
 TEST(dcon_test_times_a_number_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
+
+dcon1.set(value);
 
     dcon2 = dcon1 * value1;
 
@@ -684,9 +763,12 @@ TEST(dcon_test_times_a_number_operator, algebra) {
 
 TEST(dcon_test_times_with_vector_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 * dcon2;
 
@@ -701,7 +783,9 @@ TEST(dcon_test_times_with_vector_operator, algebra) {
 
 TEST(dcon_test_times_a_number_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 * value1;
 
@@ -712,8 +796,11 @@ TEST(dcon_test_times_a_number_to_same_operator, algebra) {
 
 TEST(dcon_test_times_a_vector_return_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 * dcon2;
 
@@ -745,6 +832,8 @@ TEST(dcon_test_divide_a_number_operator, algebra) {
     dense_container<double> dcon1(dimension, value);
     dense_container<double> dcon2;
 
+dcon1.set(value);
+
     dcon2 = dcon1 / value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] / value1);
@@ -754,9 +843,12 @@ TEST(dcon_test_divide_a_number_operator, algebra) {
 
 TEST(dcon_test_divide_with_vector_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
     dense_container<double> v3;
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     v3 = dcon1 / dcon2;
 
@@ -776,7 +868,9 @@ TEST(dcon_test_divide_with_vector_operator, algebra) {
 
 TEST(dcon_test_divide_with_number_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value);
 
     dcon1 = dcon1 / value1;
 
@@ -787,8 +881,11 @@ TEST(dcon_test_divide_with_number_to_same_operator, algebra) {
 
 TEST(dcon_test_divide_a_vector_return_to_same_operator, algebra) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon1 = dcon1 / dcon2;
 

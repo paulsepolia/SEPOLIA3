@@ -109,15 +109,20 @@ TEST(dcon_generate_n, stl_compatibility) {
 
 TEST(dcon_includes_equal_vectors, stl_compatibility) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value1);;
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value1);
 
     EXPECT_TRUE(std::includes(dcon1.begin(), dcon1.end(), dcon2.begin(), dcon2.end()));
 }
 
 TEST(dcon_includes_same_vector, stl_compatibility) {
 
-    dense_container<double> dcon1(dimension, value1);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value1);
 
     EXPECT_TRUE(std::includes(dcon1.begin(), dcon1.end(), dcon1.begin(), dcon1.end()));
 }
@@ -256,8 +261,11 @@ TEST(dcon_reverse_constructor_one, stl_compatibility) {
 
 TEST(dcon_reverse_constructor_two, stl_compatibility) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value1);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value1);
 
     EXPECT_EQ(dcon1, dcon2);
 
@@ -319,8 +327,11 @@ TEST(dcon_reverse_copy_constructor_one, stl_compatibility) {
 
 TEST(dcon_reverse_copy_constructor_two, stl_compatibility) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value1);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value1);
 
     EXPECT_EQ(dcon1, dcon2);
 

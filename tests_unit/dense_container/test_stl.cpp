@@ -12,8 +12,11 @@ const double value2 = 345.678;
 
 TEST(dcon_swap_preallocated, stl) {
 
-    dense_container<double> dcon1(dimension1, value1);
-    dense_container<double> dcon2(dimension2, value2);
+    dense_container<double> dcon1(dimension1);
+    dense_container<double> dcon2(dimension2);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     EXPECT_EQ(value1, dcon1);
     EXPECT_EQ(value2, dcon2);
@@ -26,8 +29,10 @@ TEST(dcon_swap_preallocated, stl) {
 
 TEST(dcon_swap_one_preallocated, stl) {
 
-    dense_container<double> dcon1(dimension1, value1);
+    dense_container<double> dcon1(dimension1);
     dense_container<double> dcon2;
+
+dcon1.set(value1);
 
     EXPECT_EQ(value1, dcon1);
     EXPECT_TRUE(dcon2.deallocated());
@@ -40,7 +45,9 @@ TEST(dcon_swap_one_preallocated, stl) {
 
 TEST(dcon_swap_same_vector, stl) {
 
-    dense_container<double> dcon1(dimension1, value1);
+    dense_container<double> dcon1(dimension1);
+
+dcon1.set(value1);
 
     EXPECT_EQ(value1, dcon1);
     EXPECT_TRUE(dcon1.allocated());
@@ -53,7 +60,9 @@ TEST(dcon_swap_same_vector, stl) {
 
 TEST(dcon_empty_preallocated_value, stl) {
 
-    dense_container<double> dcon1(dimension1, value1);
+    dense_container<double> dcon1(dimension1);
+
+dcon1.set(value1);
 
     EXPECT_FALSE(dcon1.empty());
 
@@ -86,8 +95,11 @@ TEST(dcon_empty_not_preallocated, stl) {
 
 TEST(dcon_at, stl) {
 
-    dense_container<double> dcon1(dimension1, value1);
-    dense_container<double> dcon2(dimension2, value2);
+    dense_container<double> dcon1(dimension1);
+    dense_container<double> dcon2(dimension2);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     EXPECT_EQ(value1, dcon1);
     EXPECT_EQ(value2, dcon2);

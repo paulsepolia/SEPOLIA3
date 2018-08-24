@@ -14,7 +14,9 @@ const double ERROR_M12 = std::pow(10.0, -12.0);
 
 TEST(dcon_test_operator_curved_brackets, operators) {
 
-    dense_container<double> dcon(dimension, value1);
+    dense_container<double> dcon(dimension);
+
+dcon.set(value1);
 
     for (const auto &el: dcon) {
         EXPECT_EQ(value1, el);
@@ -23,7 +25,9 @@ TEST(dcon_test_operator_curved_brackets, operators) {
 
 TEST(dcon_test_set_operator_square_brackets, operators) {
 
-    dense_container<double> dcon(dimension, value1);
+    dense_container<double> dcon(dimension);
+
+dcon.set(value1);
 
     EXPECT_EQ(dimension, dcon.size());
 
@@ -40,7 +44,9 @@ TEST(dcon_test_set_operator_square_brackets, operators) {
 
 TEST(dcon_test_set_operator_curved_brackets, operators) {
 
-    dense_container<double> dcon(dimension, value1);
+    dense_container<double> dcon(dimension);
+
+dcon.set(value1);
 
     for (const auto &el: dcon) {
         EXPECT_EQ(value1, el);
@@ -55,7 +61,9 @@ TEST(dcon_test_set_operator_curved_brackets, operators) {
 
 TEST(dcon_test_operator_plus_plus, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
+    dense_container<double> dcon1(dimension);
+
+    dcon1.set(value1);
 
     ++dcon1;
 
@@ -95,7 +103,9 @@ TEST(dcon_test_operator_plus_plus, operators) {
 
 TEST(dcon_test_operator_minus_minus, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
+    dense_container<double> dcon1(dimension);
+
+dcon1.set(value1);
 
     --dcon1;
 
@@ -136,8 +146,11 @@ TEST(dcon_test_operator_minus_minus, operators) {
 
 TEST(dcon_test_operator_plus_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon2 += dcon1;
 
@@ -186,8 +199,11 @@ TEST(dcon_test_operator_plus_equal, operators) {
 
 TEST(dcon_test_operator_minus_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon2 -= dcon1;
 
@@ -249,8 +265,11 @@ TEST(dcon_test_operator_minus_equal, operators) {
 
 TEST(dcon_test_operator_times_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon2 *= dcon1;
 
@@ -312,8 +331,11 @@ TEST(dcon_test_operator_times_equal, operators) {
 
 TEST(dcon_test_operator_divide_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     dcon2 /= dcon1;
 
@@ -370,8 +392,11 @@ TEST(dcon_test_operator_divide_equal, operators) {
 
 TEST(dcon_test_operator_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value1);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     EXPECT_EQ(dcon2, dcon1);
     EXPECT_EQ(dcon1, dcon2);
@@ -394,8 +419,11 @@ TEST(dcon_test_operator_equal, operators) {
 
 TEST(dcon_test_operator_not_equal, operators) {
 
-    dense_container<double> dcon1(dimension, value1);
-    dense_container<double> dcon2(dimension, value2);
+    dense_container<double> dcon1(dimension);
+    dense_container<double> dcon2(dimension);
+
+dcon1.set(value1);
+dcon2.set(value2);
 
     EXPECT_NE(dcon2, dcon1);
     EXPECT_NE(dcon1, dcon2);
