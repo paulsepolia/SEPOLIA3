@@ -13,7 +13,7 @@ int main() {
     std::cout << std::boolalpha;
 
     dense_vector<double> vd1;
-    const auto dimension = 2 * static_cast<uint64_t>(std::pow(10.0, 7.0));
+    const auto dimension = 2 * static_cast<uint64_t>(std::pow(10.0, 6.0));
     const double value = 123.456;
 
     // allocate vector

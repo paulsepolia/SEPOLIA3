@@ -143,7 +143,10 @@ namespace sepolia {
     dense_container<T> operator-(const T &value, const dense_container<T> &dense_in) {
 
         dense_container<T> dense_tmp(dense_in.rows(), dense_in.columns());
-        dense_tmp = dense_in.subtract(value);
+
+        for (uint64_t i = 0; i != dense_in.size(); i++) {
+            dense_tmp[i] = value - dense_in[i];
+        }
 
         return std::move(dense_tmp);
     }
