@@ -16,7 +16,7 @@ TEST(vd_test_operator_curved_brackets, operators) {
 
     dense_vector<double> vd(dimension);
 
-vd.set(value1);
+    vd.set(value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -27,7 +27,7 @@ TEST(vd_test_set_operator_square_brackets, operators) {
 
     dense_vector<double> vd(dimension);
 
-vd.set(value1);
+    vd.set(value1);
 
     EXPECT_EQ(dimension, vd.size());
 
@@ -46,7 +46,7 @@ TEST(vd_test_set_operator_curved_brackets, operators) {
 
     dense_vector<double> vd(dimension);
 
-vd.set(value1);
+    vd.set(value1);
 
     for (const auto &el: vd) {
         EXPECT_EQ(value1, el);
@@ -63,7 +63,7 @@ TEST(vd_test_operator_plus_plus, operators) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     ++vd1;
 
@@ -105,7 +105,7 @@ TEST(vd_test_operator_minus_minus, operators) {
 
     dense_vector<double> vd1(dimension);
 
-vd1.set(value1);
+    vd1.set(value1);
 
     --vd1;
 
@@ -149,8 +149,8 @@ TEST(vd_test_operator_plus_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value2);
+    vd1.set(value1);
+    vd2.set(value2);
 
     vd2 += vd1;
 
@@ -202,8 +202,8 @@ TEST(vd_test_operator_minus_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value2);
+    vd1.set(value1);
+    vd2.set(value2);
 
     vd2 -= vd1;
 
@@ -268,8 +268,8 @@ TEST(vd_test_operator_times_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd1.set(value1);
+    vd1.set(value1);
+    vd2.set(value2);
 
     vd2 *= vd1;
 
@@ -334,8 +334,8 @@ TEST(vd_test_operator_divide_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value2);
+    vd1.set(value1);
+    vd2.set(value2);
 
     vd2 /= vd1;
 
@@ -395,8 +395,8 @@ TEST(vd_test_operator_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value1);
+    vd1.set(value1);
+    vd2.set(value1);
 
     EXPECT_EQ(vd2, vd1);
     EXPECT_EQ(vd1, vd2);
@@ -422,8 +422,8 @@ TEST(vd_test_operator_not_equal, operators) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-vd1.set(value1);
-vd2.set(value2);
+    vd1.set(value1);
+    vd2.set(value2);
 
     EXPECT_NE(vd2, vd1);
     EXPECT_NE(vd1, vd2);

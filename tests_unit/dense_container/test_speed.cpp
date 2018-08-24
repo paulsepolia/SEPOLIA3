@@ -16,7 +16,7 @@ TEST(dcon_test_speed_move_copy_constructor, declare_vectors) {
 
         dense_container<double> dcon1(dimension);
 
-dcon1.set(value);
+        dcon1.set(value);
 
         EXPECT_TRUE(dcon1.allocated());
 
@@ -35,7 +35,7 @@ dcon1.set(value);
 
         dense_container<double> dcon1(dimension);
 
-dcon1.set(value);
+        dcon1.set(value);
 
         EXPECT_TRUE(dcon1.allocated());
 
@@ -60,7 +60,7 @@ TEST(dcon_test_speed_move_copy_assignment_operator, assign_to_vector) {
         dense_container<double> dcon1(dimension);
         dense_container<double> dcon2;
 
-dcon1.set(value);
+        dcon1.set(value);
 
         EXPECT_TRUE(dcon1.allocated());
         EXPECT_TRUE(dcon2.deallocated());
@@ -81,7 +81,7 @@ dcon1.set(value);
         dense_container<double> dcon1(dimension);
         dense_container<double> dcon2;
 
-dcon1.set(value);
+        dcon1.set(value);
 
         EXPECT_TRUE(dcon1.allocated());
         EXPECT_TRUE(dcon2.deallocated());

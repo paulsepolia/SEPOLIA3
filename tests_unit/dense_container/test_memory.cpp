@@ -47,7 +47,7 @@ TEST(dcon_allocate_deallocate_constructor_two_arguments, memory) {
 
     dense_container<double> dcon(dimension);
 
-dcon.set(value);
+    dcon.set(value);
 
     EXPECT_TRUE(dcon.allocated());
     EXPECT_FALSE(dcon.deallocated());

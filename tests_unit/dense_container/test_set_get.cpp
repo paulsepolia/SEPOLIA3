@@ -14,7 +14,7 @@ TEST(dcon_set_element_via_constructor_and_get_it_double, set_get) {
 
     dense_container<double> dcon(dimension);
 
-dcon.set(value1);
+    dcon.set(value1);
 
     for (const auto &el: dcon) {
 
@@ -24,9 +24,9 @@ dcon.set(value1);
 
 TEST(dcon_set_element_via_constructor_and_get_it_uint64_t, set_get) {
 
-    dense_container<uint64_t> dcon(dimension, value2);
+    dense_container<uint64_t> dcon(dimension);
 
-dcon.set(value2);
+    dcon.set(value2);
 
     for (const auto &el: dcon) {
 
@@ -36,9 +36,9 @@ dcon.set(value2);
 
 TEST(dcon_set_element_via_constructor_and_get_it_int64_t, set_get) {
 
-    dense_container<int64_t> dcon(dimension, value3);
+    dense_container<int64_t> dcon(dimension);
 
-dcon.set(value3);
+    dcon.set(value3);
 
     for (const auto &el: dcon) {
 
@@ -175,7 +175,7 @@ TEST(dcon_set_vector_to_another_using_assignment_operator_double, set_get) {
     dense_container<double> dcon1(dimension);
     dense_container<double> dcon2;
 
-dcon1.set(value1);
+    dcon1.set(value1);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -201,7 +201,7 @@ TEST(dcon_set_vector_via_copy_constructor_double, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value1);
+    dcon1.set(value1);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -226,7 +226,7 @@ TEST(dcon_set_vector_via_copy_constructor_uint64_t, set_get) {
 
     dense_container<uint64_t> dcon1(dimension);
 
-dcon1.set(value2);
+    dcon1.set(value2);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -253,7 +253,7 @@ TEST(dcon_set_vector_via_copy_constructor_int64_t, set_get) {
 
     dense_container<int64_t> dcon1(dimension);
 
-dcon1.set(value3);
+    dcon1.set(value3);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -280,7 +280,7 @@ TEST(dcon_set_vector_via_move_constructor_double, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value1);
+    dcon1.set(value1);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -304,7 +304,7 @@ TEST(dcon_set_vector_via_move_constructor_uint64_t, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value2);
+    dcon1.set(value2);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -328,7 +328,7 @@ TEST(dcon_set_vector_via_move_constructor_int64_t, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value3);
+    dcon1.set(value3);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -352,7 +352,7 @@ TEST(dcon_set_vector_via_move_assignment_operator_double, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value1);
+    dcon1.set(value1);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -377,7 +377,7 @@ TEST(dcon_set_vector_via_move_assignment_operator_uint64_t, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value2);
+    dcon1.set(value2);
 
     EXPECT_EQ(dimension, dcon1.size());
 
@@ -402,7 +402,7 @@ TEST(dcon_set_vector_via_move_assignment_operator_int64_t, set_get) {
 
     dense_container<double> dcon1(dimension);
 
-dcon1.set(value3);
+    dcon1.set(value3);
 
     EXPECT_EQ(dimension, dcon1.size());
 

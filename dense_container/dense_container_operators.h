@@ -202,9 +202,11 @@ namespace sepolia {
     template<typename T>
     dense_container<T> operator/(const T &value, const dense_container<T> &dense_in) {
 
-        dense_container<T> dense_tmp(dense_in.rows(), dense_in.columns(), value);
+        dense_container<T> dense_tmp(dense_in.rows(), dense_in.columns());
 
-        dense_tmp = dense_tmp.divide(dense_in);
+        for (uint64_t i = 0; i != dense_in.size(); i++) {
+            dense_tmp[i] = value / dense_in[i];
+        }
 
         return std::move(dense_tmp);
     }
