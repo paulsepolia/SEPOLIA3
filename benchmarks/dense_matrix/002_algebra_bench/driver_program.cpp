@@ -362,9 +362,6 @@ int main() {
         std::cout << " --> " << (md3 == value2 - value1) << std::endl;
         std::cout << " --> " << (md1 == value1) << std::endl;
 
-        std::cout << " --> pgg " << md3[1] << std::endl;
-        //== value2 - value1) << std::endl;
-
         // multiply value with matrix
 
         t1 = std::chrono::high_resolution_clock::now();

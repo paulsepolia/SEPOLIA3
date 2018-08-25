@@ -8,7 +8,7 @@ using sepolia::dense_vector;
 const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;
 
-TEST(constructor_with_no_arguments, constructors) {
+TEST(constructor_no_arguments, constructors) {
 
     dense_vector<double> vd;
 
@@ -16,7 +16,7 @@ TEST(constructor_with_no_arguments, constructors) {
     EXPECT_EQ(true, vd.deallocated());
 }
 
-TEST(constructor_with_one_argument, constructors) {
+TEST(constructor_one_argument_zero_value, constructors) {
 
     dense_vector<double> vd(dimension);
 
@@ -29,11 +29,11 @@ TEST(constructor_with_one_argument, constructors) {
     EXPECT_EQ(vd, dense_vector<double>(dimension));
 }
 
-TEST(constructor_with_two_arguments, constructors) {
+TEST(constructor_one_arguments_value, constructors) {
 
     dense_vector<double> vd(dimension);
 
-    vd.set(value);
+    vd = value;
 
     EXPECT_EQ(true, vd.allocated());
     EXPECT_EQ(false, vd.deallocated());
@@ -97,8 +97,8 @@ TEST(constructor_all_in_one, constructors) {
         dense_vector<double> vd1(dimension1);
         dense_vector<double> vd2(dimension2);
 
-        vd1.set(value);
-        vd2.set(value);
+        vd1 = value;
+        vd2 = value;
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());
@@ -132,7 +132,7 @@ TEST(constructor_all_in_one, constructors) {
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2(dimension);
 
-        vd2.set(value);
+        vd2 = value;
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());
@@ -174,8 +174,8 @@ TEST(constructor_all_in_one, constructors) {
         dense_vector<double> vd1(dimension);
         dense_vector<double> vd2(dimension);
 
-        vd1.set(value1);
-        vd2.set(value2);
+        vd1 = value1;
+        vd2 = value2;
 
         EXPECT_EQ(true, vd1.allocated());
         EXPECT_EQ(true, vd2.allocated());

@@ -16,7 +16,7 @@ TEST(constructor_with_no_arguments, constructors) {
     EXPECT_EQ(true, dcon.deallocated());
 }
 
-TEST(constructor_with_one_argument, constructors) {
+TEST(constructor_with_one_argument_zero_value, constructors) {
 
     dense_container<double> dcon(dimension);
 
@@ -29,7 +29,7 @@ TEST(constructor_with_one_argument, constructors) {
     EXPECT_EQ(dcon, dense_container<double>(dimension));
 }
 
-TEST(constructor_with_two_arguments, constructors) {
+TEST(constructor_with_one_argument_value, constructors) {
 
     dense_container<double> dcon(dimension);
 

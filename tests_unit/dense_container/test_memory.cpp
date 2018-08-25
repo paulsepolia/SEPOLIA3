@@ -43,7 +43,7 @@ TEST(dcon_allocate_deallocate_constructor_one_argument, memory) {
     EXPECT_EQ(0UL, dcon.size());
 }
 
-TEST(dcon_allocate_deallocate_constructor_two_arguments, memory) {
+TEST(dcon_allocate_deallocate_constructor_one_argument_value, memory) {
 
     dense_container<double> dcon(dimension);
 

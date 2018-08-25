@@ -15,8 +15,8 @@ TEST(vd_swap_preallocated, stl) {
     dense_vector<double> vd1(dimension1);
     dense_vector<double> vd2(dimension2);
 
-    vd1.set(value1);
-    vd2.set(value2);
+    vd1 = value1;
+    vd2 = value2;
 
     EXPECT_EQ(value1, vd1);
     EXPECT_EQ(value2, vd2);
@@ -32,7 +32,7 @@ TEST(vd_swap_one_preallocated, stl) {
     dense_vector<double> vd1(dimension1);
     dense_vector<double> vd2;
 
-    vd1.set(value1);
+    vd1 = value1;
 
     EXPECT_EQ(value1, vd1);
     EXPECT_TRUE(vd2.deallocated());
@@ -47,7 +47,7 @@ TEST(vd_swap_same_vector, stl) {
 
     dense_vector<double> vd1(dimension1);
 
-    vd1.set(value1);
+    vd1 = value1;
 
     EXPECT_EQ(value1, vd1);
     EXPECT_TRUE(vd1.allocated());
@@ -62,7 +62,7 @@ TEST(vd_empty_preallocated_value, stl) {
 
     dense_vector<double> vd1(dimension1);
 
-    vd1.set(value1);
+    vd1 = value1;
 
     EXPECT_FALSE(vd1.empty());
 
@@ -98,8 +98,8 @@ TEST(vd_at, stl) {
     dense_vector<double> vd1(dimension1);
     dense_vector<double> vd2(dimension2);
 
-    vd1.set(value1);
-    vd2.set(value2);
+    vd1 = value1;
+    vd2 = value2;
 
     EXPECT_EQ(value1, vd1);
     EXPECT_EQ(value2, vd2);

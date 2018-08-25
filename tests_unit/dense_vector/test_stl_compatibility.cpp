@@ -171,7 +171,6 @@ TEST(vd_is_sorted_default, stl_compatibility) {
     EXPECT_EQ(true, std::is_sorted(vd.begin(), vd.end()));
     EXPECT_EQ(true, std::is_sorted(vd.begin(), vd.end(), sort_obj));
     EXPECT_EQ(true, std::is_sorted(vd.begin(), vd.end(), sort_fun));
-
     EXPECT_EQ(true, std::is_sorted(vd.begin(), vd.end(), sort_obj_reverse));
     EXPECT_EQ(true, std::is_sorted(vd.begin(), vd.end(), sort_fun_reverse));
 }
@@ -259,7 +258,7 @@ TEST(vd_reverse_constructor_one, stl_compatibility) {
     EXPECT_EQ(vd1, vd2);
 }
 
-TEST(vd_reverse_constructor_two, stl_compatibility) {
+TEST(vd_reverse_constructor_one_value, stl_compatibility) {
 
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
@@ -325,7 +324,7 @@ TEST(vd_reverse_copy_constructor_one, stl_compatibility) {
     EXPECT_EQ(vd1, vd2);
 }
 
-TEST(vd_reverse_copy_constructor_two, stl_compatibility) {
+TEST(vd_reverse_copy_constructor_one_value, stl_compatibility) {
 
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
@@ -356,6 +355,10 @@ TEST(vd_sort_default, stl_compatibility) {
 
     std::reverse(vd.begin(), vd.end());
 
+    for (uint64_t i = 0; i != vd.size(); i++) {
+        EXPECT_EQ(dimension - 1 - i, vd[i]);
+    }
+
     std::sort(vd.begin(), vd.end());
 
     for (uint64_t i = 0; i != vd.size(); i++) {
@@ -374,6 +377,10 @@ TEST(vd_sort_non_default, stl_compatibility) {
     }
 
     std::reverse(vd.begin(), vd.end());
+
+    for (uint64_t i = 0; i != vd.size(); i++) {
+        EXPECT_EQ(dimension - 1 - i, vd[i]);
+    }
 
     std::sort(vd.begin(), vd.end(), sort_fun);
 

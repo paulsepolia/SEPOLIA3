@@ -259,7 +259,7 @@ TEST(dcon_reverse_constructor_one, stl_compatibility) {
     EXPECT_EQ(dcon1, dcon2);
 }
 
-TEST(dcon_reverse_constructor_two, stl_compatibility) {
+TEST(dcon_reverse_constructor_value, stl_compatibility) {
 
     dense_container<double> dcon1(dimension);
     dense_container<double> dcon2(dimension);
@@ -325,7 +325,7 @@ TEST(dcon_reverse_copy_constructor_one, stl_compatibility) {
     EXPECT_EQ(dcon1, dcon2);
 }
 
-TEST(dcon_reverse_copy_constructor_two, stl_compatibility) {
+TEST(dcon_reverse_copy_constructor_one_value, stl_compatibility) {
 
     dense_container<double> dcon1(dimension);
     dense_container<double> dcon2(dimension);

@@ -362,9 +362,6 @@ int main() {
         std::cout << " --> " << (vd3 == value2 - value1) << std::endl;
         std::cout << " --> " << (vd1 == value1) << std::endl;
 
-        std::cout << " --> pgg " << vd3[1] << std::endl;
-        //== value2 - value1) << std::endl;
-
         // multiply value with vector
 
         t1 = std::chrono::high_resolution_clock::now();
