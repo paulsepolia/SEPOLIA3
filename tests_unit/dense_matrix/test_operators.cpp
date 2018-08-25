@@ -24,6 +24,38 @@ TEST(md_test_operator_curved_brackets, operators) {
     }
 }
 
+TEST(md_test_operator_curved_brackets_dual, operators) {
+
+    dense_matrix<double> md(rows, columns);
+
+    md = value1;
+
+    for (uint64_t i = 0; i < md.rows(); i++) {
+        for (uint64_t j = 0; j < md.columns(); j++) {
+            EXPECT_EQ(value1, md(i, j));
+        }
+    }
+
+    EXPECT_EQ(md, md(1, 1));
+    EXPECT_EQ(md(2, 1), md);
+}
+
+TEST(md_test_operator_curved_brackets_dual_at, operators) {
+
+    dense_matrix<double> md(rows, columns);
+
+    md = value1;
+
+    for (uint64_t i = 0; i < md.rows(); i++) {
+        for (uint64_t j = 0; j < md.columns(); j++) {
+            EXPECT_EQ(value1, md.at(i, j));
+        }
+    }
+
+    EXPECT_EQ(md, md.at(1, 1));
+    EXPECT_EQ(md.at(2, 1), md);
+}
+
 TEST(md_test_set_operator_square_brackets, operators) {
 
     dense_matrix<double> md(rows, columns);

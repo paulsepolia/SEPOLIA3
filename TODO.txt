@@ -31,6 +31,8 @@ Task 16: To fix the ambiguity of constructors (uint64_t, uint64_t, uint64_t = 0)
 
 Task 18: to make units tests to comply with the new simplified constructors
 
+Task 19: To improve unit tests for dense_matrix<T>
+
 #======#
 # TODO #
 #======#
@@ -44,5 +46,3 @@ Task 12: to make the dense container base class with protected attribute
 
 Task 17: to improve the performance of the functions 'set', '='
          to make them comparable to a element by element set and assignment
-
-Task 19: To improve unit tests for dense_matrix<T>

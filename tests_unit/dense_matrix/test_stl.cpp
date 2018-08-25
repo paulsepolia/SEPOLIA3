@@ -135,3 +135,50 @@ TEST(md_at, stl) {
         EXPECT_EQ(value1, md2.at(i));
     }
 }
+
+TEST(md_at_dual, stl) {
+
+    dense_matrix<double> md1(rows1, columns1);
+    dense_matrix<double> md2(rows2, columns2);
+
+    md1 = value1;
+    md2 = value2;
+
+    EXPECT_EQ(value1, md1);
+    EXPECT_EQ(value2, md2);
+
+    for (uint64_t i = 0; i < md1.rows(); i++) {
+        for (uint64_t j = 0; j < md1.columns(); j++) {
+            EXPECT_EQ(value1, md1.at(i, j));
+        }
+    }
+
+    for (uint64_t i = 0; i < md2.rows(); i++) {
+        for (uint64_t j = 0; j < md2.columns(); j++) {
+            EXPECT_EQ(value2, md2.at(i, j));
+        }
+    }
+
+    for (auto &el: md1) {
+        el = value2;
+    }
+
+    for (auto &el: md2) {
+        el = value1;
+    }
+
+    EXPECT_EQ(value2, md1);
+    EXPECT_EQ(value1, md2);
+
+    for (uint64_t i = 0; i < md1.rows(); i++) {
+        for (uint64_t j = 0; j < md1.columns(); j++) {
+            EXPECT_EQ(value2, md1.at(i, j));
+        }
+    }
+
+    for (uint64_t i = 0; i < md2.rows(); i++) {
+        for (uint64_t j = 0; j < md2.columns(); j++) {
+            EXPECT_EQ(value1, md2.at(i, j));
+        }
+    }
+}
