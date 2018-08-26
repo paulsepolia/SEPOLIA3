@@ -54,13 +54,7 @@ int main() {
         }
 
         // compare
-
-        for (uint64_t i = 0; i < md3.size(); i++) {
-
-            std::cout << md3._dsp.get()[i] << " -- "
-                      << md4._dsp.get()[i] << std::endl;
-        }
-
+        
         std::cout << (md3 == md4) << std::endl;
     }
 

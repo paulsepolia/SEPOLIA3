@@ -13,8 +13,8 @@ int main() {
     std::cout << std::boolalpha;
 
     dense_matrix<double> md1;
-    const auto rows = 1 * static_cast<uint64_t>(std::pow(10.0, 3.0));
-    const auto columns = 1 * static_cast<uint64_t>(std::pow(10.0, 3.0));
+    const auto rows = 1 * static_cast<uint64_t>(std::pow(10.0, 4.0));
+    const auto columns = 1 * static_cast<uint64_t>(std::pow(10.0, 4.0));
     const double value = 123.456;
 
     // allocate matrix
