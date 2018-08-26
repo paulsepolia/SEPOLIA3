@@ -1,3 +1,10 @@
+
+#==========#
+# REJECTED #
+#==========#
+
+Task 22: to remove the NT1D OpenMP parameter and to set the number of threads dynamically
+
 #======#
 # DONE #
 #======#
@@ -52,3 +59,9 @@ Task 20: To fix the DSYEVR and DSYEVX examples and wrappers
 Task 21: to parallelize the equal function of the dense_container
 
 Task 22: to remove the NT1D OpenMP parameter and to set the number of threads dynamically
+
+Task 23: to finish the implementation of Transpose for all the rest types: single precision, 
+         complex, long complex
+
+Task 24: to simplify the use of namespace and to put Eigensystem in the sepolia namespace
+ 
