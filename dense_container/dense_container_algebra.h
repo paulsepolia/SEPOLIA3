@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <complex>
 #include "dense_container_declaration.h"
 #include "dense_container_parameters.h"
 
@@ -270,29 +271,7 @@ bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
     if (dense_in.rows() != rows()) return false;
     if (dense_in.columns() != columns()) return false;
 
-    bool flg = false;
-    const uint64_t dimension = dense_in.size();
-    const auto sp_dense_in = dense_in._dsp.get();
-    const auto sp_dense_member = _dsp.get();
-    uint64_t i = 0;
-
-#pragma omp parallel default(none)\
-        num_threads(NT1D)\
-        private(i)\
-        shared(flg)
-    {
-#pragma omp for
-        for (i = 0; i < dimension; i++) {
-
-            if (!(sp_dense_member[i] < sp_dense_in[i]) &&
-                !(sp_dense_member[i] > sp_dense_in[i])) {
-#pragma omp critical
-                flg = true;
-#pragma omp cancel for
-            }
-#pragma omp cancellation point for
-        }
-    }
+    bool flg = std::equal(this->begin(), this->end(), dense_in.begin());
 
     return flg;
 }
