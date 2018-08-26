@@ -1,19 +1,16 @@
 #pragma once
 
 #include <string>
+#include <complex>
 
 namespace sepolia {
 
-    //========//
-    // LAPACK //
-    //========//
+    // LAPACK
 
     const std::string DSYEVD_LAPACKE = "dsyevd_lapacke";
     const std::string DSYEV_LAPACKE = "dsyev_lapacke";
 
-    //================//
-    // Error messages //
-    //================//
+    // Error messages
 
     // arguments
 
@@ -86,5 +83,22 @@ namespace sepolia {
 
     const std::string E_MAT_VEC_ROW_TYPE_NOT =
             "ERROR:DENSE:MATRIX:MATRIX IN NOT VECTOR-ROW-LIKE";
+
+    // double
+
+    const double ZERO_DBL = static_cast<double>(0.0);
+    const double ONE_DBL = static_cast<double>(1.0);
+    const long double ZERO_DBL_MAX = static_cast<long double>(0.0L);
+    const long double ONE_DBL_MAX = static_cast<long double>(1.0L);
+
+    // complex
+
+    const std::complex<double> ZERO_CMPLX = {0.0, 0.0};
+    const std::complex<double> ONE_CMPLX = {1.0, 0.0};
+    const std::complex<long double> ZERO_CMPLX_MAX = {0.0L, 0.0L};
+    const std::complex<long double> ONE_CMPLX_MAX = {1.0L, 0.0L};
+
+    typedef int BLAS_INT;
+    const std::string BLAS_LIB = "BLAS";
 }
 
