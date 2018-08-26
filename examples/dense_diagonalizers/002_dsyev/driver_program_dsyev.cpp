@@ -6,7 +6,7 @@
 #include "../../../dense_diagonalizers/dense_diagonalizers.h"
 #include "../../../aux_functions/aux_functions.h"
 
-using sepolia::DSYEV_LAPACKE;
+using namespace sepolia;
 
 // main program
 

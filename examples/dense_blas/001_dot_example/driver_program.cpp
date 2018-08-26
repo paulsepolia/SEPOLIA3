@@ -54,7 +54,7 @@ int main() {
         }
 
         // compare
-        
+
         std::cout << (md3 == md4) << std::endl;
     }
 
