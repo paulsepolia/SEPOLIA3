@@ -48,3 +48,7 @@ Task 17: to improve the performance of the functions 'set', '='
          to make them comparable to a element by element set and assignment
 
 Task 20: To fix the DSYEVR and DSYEVX examples and wrappers
+
+Task 21: to parallelize the equal function of the dense_container
+
+Task 22: to remove the NT1D OpenMP parameter and to set the number of threads dynamically

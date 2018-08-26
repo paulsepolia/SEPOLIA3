@@ -3,7 +3,7 @@
 #include <iostream>
 #include <complex>
 #include "dense_container_declaration.h"
-#include "dense_container_parameters.h"
+#include "../parameters/parameters.h"
 
 using sepolia::dense_container;
 using sepolia::NT1D;

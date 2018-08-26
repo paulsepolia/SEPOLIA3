@@ -5,6 +5,10 @@
 
 namespace sepolia {
 
+    // OPENMP
+
+    const uint32_t NT1D = 6;
+
     // LAPACK
 
     const std::string DSYEVD_LAPACKE = "dsyevd_lapacke";
