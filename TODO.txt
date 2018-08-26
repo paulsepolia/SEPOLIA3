@@ -46,3 +46,5 @@ Task 12: to make the dense container base class with protected attribute
 
 Task 17: to improve the performance of the functions 'set', '='
          to make them comparable to a element by element set and assignment
+
+Task 20: To fix the DSYEVR and DSYEVX examples and wrappers

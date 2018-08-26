@@ -1,15 +1,34 @@
 #pragma once
 
 #include <cstdint>
-#include "../containers/containers.h"
+#include "../parameters/parameters.h"
+#include "../dense_vector/dense_vector.h"
+#include "../dense_matrix/dense_matrix.h"
 
-decltype(containers::vector) built_a_matrix(int32_t dimension);
-
-void print_eigenvalues(const decltype(containers::vector) &eigenvalues,
-                       int32_t eigenvalue_start,
-                       int32_t eigenvalue_end);
+using sepolia::dense_vector;
+using sepolia::dense_matrix;
 
 
-void print_eigenvectors(const decltype(containers::matrix) &eigenvectors,
-                        int32_t eigenvector_start,
-                        int32_t eigenvector_end);
+dense_matrix<double> built_a_matrix(const uint64_t &rows,
+                                    const uint64_t &columns);
+
+void print_eigenvalues(const dense_vector<double> &eigenvalues,
+                       uint64_t eigenvalue_start,
+                       uint64_t eigenvalue_end);
+
+
+void print_eigenvectors(const dense_matrix<double> &eigenvectors,
+                        uint64_t eigenvector_start,
+                        uint64_t eigenvector_end);
+
+void print_error_and_exit(const std::string &message);
+
+
+template<typename T>
+void check_compatibility_for_dot(const dense_matrix<T> &matrix_a,
+                                 const dense_matrix<T> &matrix_b) {
+
+    if (matrix_a.columns() != matrix_b.rows()) {
+        print_error_and_exit(sepolia::E_MAT_MAT_COLS_ROWS_NE);
+    }
+}

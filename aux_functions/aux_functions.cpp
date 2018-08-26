@@ -5,16 +5,16 @@
 #include "aux_functions.h"
 #include "../dense_diagonalizers/dense_diagonalizers.h"
 
-decltype(containers::vector) built_a_matrix(int32_t dimension) {
+dense_matrix<double> built_a_matrix(const uint64_t &rows, const uint64_t &columns) {
 
-    decltype(containers::vector) matrix(static_cast<uint64_t>(std::pow(dimension, 2.0)));
+    dense_matrix<double> matrix(rows, columns);
 
-    for (int32_t i = 0; i != dimension; i++) {
-        for (int32_t j = 0; j != dimension; j++) {
-            if (std::abs(i - j) < 5) {
-                matrix[i * dimension + j] = static_cast<double>(i + j);
-            } else if (std::abs(i - j) >= 5) {
-                matrix[i * dimension + j] = 0.0;
+    for (uint64_t i = 0; i < rows; i++) {
+        for (uint64_t j = 0; j < columns; j++) {
+            if (i + j < 5) {
+                matrix[i * columns + j] = static_cast<double>(i + j);
+            } else if (i + j >= 5) {
+                matrix[i * columns + j] = 0.0;
             }
         }
     }
@@ -22,44 +22,44 @@ decltype(containers::vector) built_a_matrix(int32_t dimension) {
     return matrix;
 }
 
-void print_eigenvalues(const decltype(containers::vector) &eigenvalues,
-                       int32_t eigenvalue_start,
-                       int32_t eigenvalue_end) {
+void print_eigenvalues(const dense_vector<double> &eigenvalues,
+                       uint64_t eigenvalue_start,
+                       uint64_t eigenvalue_end) {
 
     std::cout << std::setprecision(10);
 
-    int32_t counter = eigenvalue_start;
+    uint64_t counter = eigenvalue_start;
 
-    for (int32_t i = eigenvalue_start - 1; i < eigenvalue_end; i++) {
+    for (uint64_t i = eigenvalue_start; i <= eigenvalue_end; i++) {
 
         std::cout << std::right << std::fixed << std::setw(10) << counter
-                  << std::right << std::fixed << std::setw(30) << eigenvalues[i] << std::endl;
+                  << std::right << std::fixed << std::setw(30)
+                  << eigenvalues[i] << std::endl;
         counter++;
     }
 
     std::cout << std::endl;
 }
 
-void print_eigenvectors(const decltype(containers::matrix) &eigenvectors,
-                        int32_t eigenvector_start,
-                        int32_t eigenvector_end) {
+void print_eigenvectors(const dense_matrix<double> &eigenvectors,
+                        uint64_t eigenvector_start,
+                        uint64_t eigenvector_end) {
 
     std::cout << std::setprecision(10);
 
-    const auto dimension = static_cast<int32_t>(eigenvectors.size());
-
-    int32_t counter = eigenvector_start;
+    uint64_t counter = eigenvector_start;
     uint64_t line_loc = 0;
 
-    for (int32_t i = eigenvector_start - 1; i < eigenvector_end; i++) {
+    for (uint64_t i = eigenvector_start; i <= eigenvector_end; i++) {
 
-        for (int32_t j = 0; j < dimension; j++) {
+        for (uint64_t j = 0; j < eigenvectors.columns(); j++) {
 
             line_loc++;
 
             std::cout << std::right << std::fixed << std::setw(10) << line_loc
                       << std::right << std::fixed << std::setw(20) << counter
-                      << std::right << std::fixed << std::setw(30) << eigenvectors[i][j] << std::endl;
+                      << std::right << std::fixed << std::setw(30)
+                      << eigenvectors.at(i, j) << std::endl;
         }
 
         counter++;
@@ -67,4 +67,10 @@ void print_eigenvectors(const decltype(containers::matrix) &eigenvectors,
     }
 
     std::cout << std::endl;
+}
+
+void print_error_and_exit(const std::string &message) {
+
+    std::cout << message << std::endl;
+    exit(-1);
 }

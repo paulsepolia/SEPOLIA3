@@ -4,20 +4,22 @@
 #include <iostream>
 #include "dense_diagonalizers.h"
 #include "../headers/sepolia_headers.h"
-#include "../containers/containers.h"
 
-eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,
-                              std::string diagonalizer) {
+using sepolia::dense_vector;
+using sepolia::dense_matrix;
+using sepolia::DSYEV_LAPACKE;
+using sepolia::DSYEVD_LAPACKE;
+using sepolia::dense_eigensystem;
 
-    // local parameters
+dense_eigensystem<double> Eigensystem(const dense_matrix<double> &matrix,
+                                      std::string diagonalizer) {
+
+    // local parameters and variables
 
     const auto dimension = static_cast<int32_t>(std::sqrt(matrix.size()));
-
-    // local variables
-
     int32_t info = 0;
-    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
-    decltype(containers::vector) eigenvectors(matrix);
+    dense_vector<double> eigenvalues(static_cast<uint64_t>(dimension));
+    dense_matrix<double> eigenvectors(matrix);
 
     // diagonalize here
 
@@ -50,42 +52,24 @@ eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,
         exit(1);
     }
 
-    // make space for the the eigensystem
+    // get the eigensystem
 
-    eigensystem_dense eig_system;
-
+    dense_eigensystem<double> eig_system;
     eig_system.eigenvalues = std::move(eigenvalues);
-
-    eig_system.eigenvectors.resize(static_cast<uint64_t>(dimension));
-
-    for (auto &el: eig_system.eigenvectors) {
-        el.resize(static_cast<uint64_t>(dimension));
-    }
-
-    // build the eigensystem
-
-    for (int32_t i = 0; i < dimension; i++) {
-        for (int32_t j = 0; j < dimension; j++) {
-
-            eig_system.eigenvectors[i][j] = eigenvectors[i + dimension * j];
-        }
-    }
+    eig_system.eigenvectors = std::move(eigenvectors);
 
     return eig_system;
 }
 
-decltype(eigensystem_dense::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
-                                                     std::string diagonalizer) {
+dense_vector<double> Eigenvalues(const dense_matrix<double> &matrix,
+                                 std::string diagonalizer) {
 
     // local parameters
 
     const auto dimension = static_cast<int32_t>(std::sqrt(matrix.size()));
-
-    // local variables
-
     int32_t info = 0;
-    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
-    decltype(containers::vector) eigenvectors(matrix);
+    dense_vector<double> eigenvalues(static_cast<uint64_t>(dimension));
+    dense_matrix<double> eigenvectors(matrix);
 
     // diagonalize here
 
@@ -118,15 +102,11 @@ decltype(eigensystem_dense::eigenvalues) Eigenvalues(const decltype(containers::
         exit(1);
     }
 
-    eigensystem_dense eig_system;
-
-    eig_system.eigenvalues = std::move(eigenvalues);
-
-    return eig_system.eigenvalues;
+    return eigenvalues;
 }
 
-decltype(eigensystem_dense::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
-                                                       std::string diagonalizer) {
+dense_matrix<double> Eigenvectors(const dense_matrix<double> &matrix,
+                                  std::string diagonalizer) {
 
     // local parameters
 
@@ -135,8 +115,8 @@ decltype(eigensystem_dense::eigenvectors) Eigenvectors(const decltype(containers
     // local variables
 
     int32_t info = 0;
-    decltype(containers::vector) eigenvalues(static_cast<uint64_t>(dimension));
-    decltype(containers::vector) eigenvectors(matrix);
+    dense_vector<double> eigenvalues(static_cast<uint64_t>(dimension));
+    dense_matrix<double> eigenvectors(matrix);
 
     // diagonalize here
 
@@ -169,24 +149,5 @@ decltype(eigensystem_dense::eigenvectors) Eigenvectors(const decltype(containers
         exit(1);
     }
 
-    // make space for the the eigensystem
-
-    eigensystem_dense eig_system;
-
-    eig_system.eigenvectors.resize(static_cast<uint64_t>(dimension));
-
-    for (auto &el: eig_system.eigenvectors) {
-        el.resize(static_cast<uint64_t>(dimension));
-    }
-
-    // build the eigensystem
-
-    for (int32_t i = 0; i < dimension; i++) {
-        for (int32_t j = 0; j < dimension; j++) {
-
-            eig_system.eigenvectors[i][j] = eigenvectors[i + dimension * j];
-        }
-    }
-
-    return eig_system.eigenvectors;
+    return eigenvectors;
 }

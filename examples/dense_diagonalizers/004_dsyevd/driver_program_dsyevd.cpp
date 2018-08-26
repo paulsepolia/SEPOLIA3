@@ -2,11 +2,10 @@
 #include <iomanip>
 #include <cmath>
 #include <chrono>
-#include <vector>
 #include "../../../dense_diagonalizers/dense_diagonalizers.h"
 #include "../../../aux_functions/aux_functions.h"
 
-// main program
+using sepolia::DSYEVX_LAPACKE;
 
 int main() {
 
@@ -16,13 +15,14 @@ int main() {
         std::cout << std::endl;
         std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
-        const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto rows = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto columns = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
         // build a matrix
 
         auto t1 = std::chrono::high_resolution_clock::now();
 
-        auto matrix(built_a_matrix(dimension));
+        auto matrix(built_a_matrix(rows, columns));
 
         auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -47,12 +47,12 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigensystem.eigenvalues, 1, 20);
+        print_eigenvalues(eigensystem.eigenvalues, 0, 19);
 
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigensystem.eigenvectors, 1, 2);
+        print_eigenvectors(eigensystem.eigenvectors, 0, 19);
     }
 
     {
@@ -61,13 +61,14 @@ int main() {
         std::cout << std::endl;
         std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
-        const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto rows = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto columns = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
         // build a matrix
 
         auto t1 = std::chrono::high_resolution_clock::now();
 
-        auto matrix(built_a_matrix(dimension));
+        auto matrix(built_a_matrix(rows, columns));
 
         auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -92,7 +93,7 @@ int main() {
         // print eigenvectors
 
         std::cout << std::endl;
-        print_eigenvectors(eigenvectors, 1, 2);
+        print_eigenvectors(eigenvectors, 0, 1);
     }
 
     {
@@ -101,13 +102,14 @@ int main() {
         std::cout << std::endl;
         std::cout << DSYEVD_LAPACKE << " --> (row-major, high-level)" << std::endl;
 
-        const auto dimension = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto rows = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
+        const auto columns = static_cast<int32_t>(2 * std::pow(10.0, 1.0));
 
         // build a matrix
 
         auto t1 = std::chrono::high_resolution_clock::now();
 
-        auto matrix(built_a_matrix(dimension));
+        auto matrix(built_a_matrix(rows, columns));
 
         auto t2 = std::chrono::high_resolution_clock::now();
 
@@ -132,6 +134,6 @@ int main() {
         // print eigenvalues
 
         std::cout << std::endl;
-        print_eigenvalues(eigenvalues, 1, 20);
+        print_eigenvalues(eigenvalues, 0, 19);
     }
 }

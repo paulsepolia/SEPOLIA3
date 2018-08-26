@@ -4,7 +4,6 @@
              -Wall \
              -O3 \
              -fopenmp \
-             ../../../dense_diagonalizers/eigensystem_dense.cpp \
              ../../../aux_functions/aux_functions.cpp \
              ../../../dense_diagonalizers/dense_diagonalizers.cpp \
              driver_program_dsyev.cpp \

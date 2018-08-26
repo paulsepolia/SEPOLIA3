@@ -1,16 +1,21 @@
 #pragma once
 
 #include <string>
-#include "eigensystem_dense.h"
-#include "parameters.h"
-#include "../containers/containers.h"
+#include "../parameters/parameters.h"
+#include "../dense_matrix/dense_matrix.h"
+#include "../dense_vector/dense_vector.h"
+#include "dense_eigensystem.h"
 
+using sepolia::dense_vector;
+using sepolia::dense_matrix;
+using sepolia::DSYEVD_LAPACKE;
+using sepolia::dense_eigensystem;
 
-eigensystem_dense Eigensystem(const decltype(containers::vector) &matrix,
-                        std::string diagonalizer = DSYEVD_LAPACKE);
+dense_eigensystem<double> Eigensystem(const dense_matrix<double> &matrix,
+                                      std::string diagonalizer = DSYEVD_LAPACKE);
 
-decltype(eigensystem_dense::eigenvalues) Eigenvalues(const decltype(containers::vector) &matrix,
-                                               std::string diagonalizer = DSYEVD_LAPACKE);
+dense_vector<double> Eigenvalues(const dense_matrix<double> &matrix,
+                                 std::string diagonalizer = DSYEVD_LAPACKE);
 
-decltype(eigensystem_dense::eigenvectors) Eigenvectors(const decltype(containers::vector) &matrix,
-                                                 std::string diagonalizer = DSYEVD_LAPACKE);
+dense_matrix<double> Eigenvectors(const dense_matrix<double> &matrix,
+                                  std::string diagonalizer = DSYEVD_LAPACKE);

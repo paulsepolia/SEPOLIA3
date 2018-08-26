@@ -3,4 +3,4 @@ project(sepolia3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(sepolia3 fake_main.cpp tests_unit/dense_vector/test_algebra.cpp tests_unit/dense_vector/test_stl_compatibility.cpp)
+add_executable(sepolia3 fake_main.cpp tests_unit/dense_vector/test_algebra.cpp tests_unit/dense_vector/test_stl_compatibility.cpp parameters/parameters.h wrappers/blas_lapack_gsl.h dense_diagonalizers/dense_eigensystem.h)
