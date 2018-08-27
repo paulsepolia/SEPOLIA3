@@ -44,7 +44,7 @@ int main() {
 
     {
         const auto rows = static_cast<uint64_t>(std::pow(10.0, 2.0));
-        const auto columns = static_cast<uint64_t>(std::pow(10.0, 2.0));
+        const auto columns = static_cast<uint64_t>(std::pow(10.0, 3.0));
 
         dense_matrix<double> md1(rows, columns);
         dense_matrix<double> md2(columns, rows);
@@ -64,7 +64,7 @@ int main() {
 
         // build the matrix to compare
 
-        dense_matrix<double> md_res(rows, columns);
+        dense_matrix<double> md_res(columns, rows);
 
         for (uint64_t i = 0; i < md_res.rows(); i++) {
             for (uint64_t j = 0; j < md_res.columns(); j++) {

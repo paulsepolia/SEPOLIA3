@@ -2,6 +2,7 @@
 
 #include <string>
 #include <complex>
+#include "../../../../../../../opt/_intel/mkl/include/mkl_types.h"
 
 namespace sepolia {
 
@@ -88,21 +89,28 @@ namespace sepolia {
     const std::string E_MAT_VEC_ROW_TYPE_NOT =
             "ERROR:DENSE:MATRIX:MATRIX IN NOT VECTOR-ROW-LIKE";
 
-    // double
+    // float precision parameters
 
-    const double ZERO_DBL = static_cast<double>(0.0);
-    const double ONE_DBL = static_cast<double>(1.0);
-    const long double ZERO_DBL_MAX = static_cast<long double>(0.0L);
-    const long double ONE_DBL_MAX = static_cast<long double>(1.0L);
+    const auto ZERO_FLT = static_cast<float>(0.0);
+    const auto ONE_FLT = static_cast<float>(1.0);
+    const auto ZERO_DBL = static_cast<double>(0.0);
+    const auto ONE_DBL = static_cast<double>(1.0);
+    const auto ZERO_LDBL = static_cast<long double>(0.0L);
+    const auto ONE_LDBL = static_cast<long double>(1.0L);
 
-    // complex
+    // complex float precision parameters
 
-    const std::complex<double> ZERO_CMPLX = {0.0, 0.0};
-    const std::complex<double> ONE_CMPLX = {1.0, 0.0};
-    const std::complex<long double> ZERO_CMPLX_MAX = {0.0L, 0.0L};
-    const std::complex<long double> ONE_CMPLX_MAX = {1.0L, 0.0L};
+    const std::complex<float> ZERO_FLT_C = {0.0, 0.0};
+    const std::complex<float> ONE_FLT_C = {1.0, 0.0};
+    const std::complex<double> ZERO_DBL_C = {0.0, 0.0};
+    const std::complex<double> ONE_DBL_C = {1.0, 0.0};
 
-    typedef int BLAS_INT;
+    const MKL_Complex8 MKL_ZERO_FLT_C = {0.0, 0.0};
+    const MKL_Complex8 MKL_ONE_FLT_C = {1.0, 0.0};
+    const MKL_Complex16 MKL_ZERO_DBL_C = {0.0, 0.0};
+    const MKL_Complex16 MKL_ONE_DBL_C = {1.0, 0.0};
+
+    typedef int32_t BLAS_INT;
     const std::string BLAS_LIB = "BLAS";
 }
 
