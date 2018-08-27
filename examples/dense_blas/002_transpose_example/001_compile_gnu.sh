@@ -6,6 +6,7 @@
                 -fopenmp            \
                 -pthread            \
                 ../../../functions_aux/functions_aux.cpp \
+                ././../../../dense_container/dense_container_declaration.cpp \
                 ../../../algebra/transpose.cpp \
                 driver_program.cpp  \
                 -L/opt/_intel/mkl/lib/intel64 \

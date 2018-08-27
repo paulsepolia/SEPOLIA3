@@ -270,9 +270,9 @@ int main() {
         std::cout << (md2 == md_res) << std::endl;
     }
 
-    //================================//
-    // inplace transpose MKL_Complex8 //
-    //================================//
+    //=================================//
+    // inplace transpose MKL_Complex16 //
+    //=================================//
 
     {
         const auto rows = static_cast<uint64_t>(std::pow(10.0, 2.0));

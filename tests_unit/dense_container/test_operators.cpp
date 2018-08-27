@@ -3,7 +3,7 @@
 #include <cstdint>
 #include "../../dense_container/dense_container.h"
 
-using sepolia::dense_container;
+using namespace sepolia;
 
 const auto dimension = static_cast<const uint64_t>(std::pow(10.0, 4.0));
 const double value1 = 765.432;
@@ -11,6 +11,7 @@ const double value2 = 234.567;
 const double ERROR_M10 = std::pow(10.0, -10.0);
 const double ERROR_M11 = std::pow(10.0, -11.0);
 const double ERROR_M12 = std::pow(10.0, -12.0);
+
 
 TEST(dcon_test_operator_curved_brackets, operators) {
 
@@ -417,6 +418,32 @@ TEST(dcon_test_operator_equal, operators) {
 
 }
 
+TEST(dcon_test_operator_equal_complex, operators) {
+
+    dense_container<MKL_Complex16> dcon1(dimension);
+    dense_container<MKL_Complex16> dcon2(dimension);
+
+    const MKL_Complex16 value1 = {1.0, 2.0};
+    const MKL_Complex16 value2 = {1.0, 2.0};
+
+    dcon1 = value1;
+    dcon2 = value2;
+
+    EXPECT_EQ(dcon1, dcon2);
+    EXPECT_EQ(dcon1, value1);
+    EXPECT_EQ(value1, dcon1);
+    EXPECT_EQ(dcon2, value2);
+    EXPECT_EQ(value2, dcon2);
+
+    for (auto &el1: dcon1) {
+        EXPECT_EQ(value1, el1);
+    }
+
+    for (auto &el2: dcon2) {
+        EXPECT_EQ(value2, el2);
+    }
+}
+
 TEST(dcon_test_operator_not_equal, operators) {
 
     dense_container<double> dcon1(dimension);
@@ -436,4 +463,27 @@ TEST(dcon_test_operator_not_equal, operators) {
 
     EXPECT_NE(value1, dcon2);
     EXPECT_NE(value2, dcon1);
+}
+
+TEST(dcon_test_operator_not_equal_complex, operators) {
+
+    dense_container<MKL_Complex16> dcon1(dimension);
+    dense_container<MKL_Complex16> dcon2(dimension);
+
+    const MKL_Complex16 value1 = {1.0, 2.0};
+    const MKL_Complex16 value2 = {1.0, 4.0};
+
+    dcon1 = value1;
+    dcon2 = value2;
+
+    EXPECT_NE(dcon1, dcon2);
+    EXPECT_NE(dcon1, value2);
+    EXPECT_NE(value2, dcon1);
+    EXPECT_NE(dcon2, value1);
+    EXPECT_NE(value1, dcon2);
+
+    EXPECT_EQ(dcon1, value1);
+    EXPECT_EQ(value1, dcon1);
+    EXPECT_EQ(dcon2, value2);
+    EXPECT_EQ(value2, dcon2);
 }

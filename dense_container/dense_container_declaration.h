@@ -3,7 +3,15 @@
 #include <memory>
 #include <vector>
 #include <complex>
-#include "../../../../../../../opt/_intel/mkl/include/mkl_types.h"
+#include "/opt/_intel/mkl/include/mkl_types.h"
+
+bool operator==(const MKL_Complex8 &value1, const MKL_Complex8 &value2);
+
+bool operator==(const MKL_Complex16 &value1, const MKL_Complex16 &value2);
+
+bool operator!=(const MKL_Complex8 &value1, const MKL_Complex8 &value2);
+
+bool operator!=(const MKL_Complex16 &value1, const MKL_Complex16 &value2);
 
 namespace sepolia {
 
@@ -120,21 +128,6 @@ namespace sepolia {
 
         template<typename T2>
         friend bool operator==(const T2 &, const dense_container<T2> &);
-
-//        template<>
-//        bool operator==(const dense_container<MKL_Complex8> &) const;
-//
-//        template<>
-//        bool operator==(const dense_container<MKL_Complex16> &) const;
-//
-//        template<>
-//        bool operator==(const MKL_Complex8 &) const;
-//
-//        template<>
-//        bool operator==(const MKL_Complex16 &) const;
-
-//        template<typename T2>
-//        friend bool operator==(const T2 &, const dense_container<T2> &);
 
         bool operator!=(const dense_container<T> &) const;
 

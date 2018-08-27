@@ -271,9 +271,13 @@ bool dense_container<T>::equal(const dense_container<T> &dense_in) const {
     if (dense_in.rows() != rows()) return false;
     if (dense_in.columns() != columns()) return false;
 
-    bool flg = std::equal(this->begin(), this->end(), dense_in.begin());
+    for (uint64_t i = 0; i < dense_in.size(); i++) {
+        if (this->_dsp.get()[i] != dense_in._dsp.get()[i]) {
+            return false;
+        }
+    }
 
-    return flg;
+    return true;
 }
 
 template<typename T>

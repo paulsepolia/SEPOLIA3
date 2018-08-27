@@ -25,6 +25,7 @@ do
                 /opt/gtest/1.7.0/include        \
                 -pthread                        \
                 test_${var}.cpp                 \
+                ././../../dense_container/dense_container_declaration.cpp \
                 driver_program.cpp              \
                 /opt/gtest/1.7.0/lib/libgtest.a \
                 -o x_gnu_${var}
