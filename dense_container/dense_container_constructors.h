@@ -28,7 +28,6 @@ dense_container<T>::dense_container(const uint64_t &dimension):
     }
 
     allocate(_rows, _columns);
-    set(static_cast<T>(0.0));
 }
 
 template<typename T>
@@ -45,7 +44,6 @@ dense_container<T>::dense_container(const uint64_t &rows, const uint64_t &column
     }
 
     allocate(_rows, _columns);
-    set(static_cast<T>(0.0));
 }
 
 template<typename T>

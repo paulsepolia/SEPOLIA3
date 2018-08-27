@@ -16,19 +16,6 @@ TEST(constructor_with_no_arguments, constructors) {
     EXPECT_EQ(true, dcon.deallocated());
 }
 
-TEST(constructor_with_one_argument_zero_value, constructors) {
-
-    dense_container<double> dcon(dimension);
-
-    EXPECT_EQ(true, dcon.allocated());
-    EXPECT_EQ(false, dcon.deallocated());
-    EXPECT_EQ(dimension, dcon.size());
-    EXPECT_EQ(dcon, 0.0);
-    EXPECT_EQ(0.0, dcon);
-    EXPECT_EQ(dense_container<double>(dimension), dcon);
-    EXPECT_EQ(dcon, dense_container<double>(dimension));
-}
-
 TEST(constructor_with_one_argument_value, constructors) {
 
     dense_container<double> dcon(dimension);
@@ -64,34 +51,6 @@ TEST(constructor_all_in_one, constructors) {
 
         EXPECT_EQ(dimension1, dcon1.size());
         EXPECT_EQ(dimension2, dcon2.size());
-
-        EXPECT_EQ(dcon1, 0.0);
-        EXPECT_EQ(dcon2, 0.0);
-
-        EXPECT_EQ(0.0, dcon1);
-        EXPECT_EQ(0.0, dcon2);
-
-        EXPECT_EQ(dense_container<double>(dimension1), dcon1);
-        EXPECT_EQ(dense_container<double>(dimension2), dcon2);
-
-        EXPECT_EQ(dcon1, dense_container<double>(dimension1));
-        EXPECT_EQ(dcon2, dense_container<double>(dimension2));
-
-        for (const auto &el: dcon1) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        for (const auto &el: dcon2) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        EXPECT_NE(dcon1, dcon2);
-        EXPECT_NE(dcon2, dcon1);
-
-        EXPECT_NE(dense_container<double>(dimension1), dcon2);
-        EXPECT_NE(dense_container<double>(dimension2), dcon1);
-        EXPECT_NE(dcon1, dense_container<double>(dimension2));
-        EXPECT_NE(dcon2, dense_container<double>(dimension1));
     }
 
     {
@@ -150,29 +109,9 @@ TEST(constructor_all_in_one, constructors) {
         EXPECT_EQ(dimension, dcon1.size());
         EXPECT_EQ(dimension, dcon2.size());
 
-        EXPECT_EQ(dcon1, 0.0);
-        EXPECT_EQ(dcon2, value);
-
-        EXPECT_EQ(0.0, dcon1);
-        EXPECT_EQ(value, dcon2);
-
-        EXPECT_EQ(dense_container<double>(dimension), 0.0);
-
-        EXPECT_EQ(0.0, dense_container<double>(dimension));
-
-        for (const auto &el: dcon1) {
-            EXPECT_EQ(0.0, el);
-        }
-
         for (const auto &el: dcon2) {
             EXPECT_EQ(value, el);
         }
-
-        EXPECT_NE(dcon1, value);
-        EXPECT_NE(dcon2, 0.0);
-
-        EXPECT_NE(value, dcon1);
-        EXPECT_NE(0.0, dcon2);
 
         EXPECT_NE(dcon1, dcon2);
         EXPECT_NE(dcon2, dcon1);

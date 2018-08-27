@@ -17,19 +17,6 @@ TEST(constructor_no_arguments, constructors) {
     EXPECT_EQ(true, md.deallocated());
 }
 
-TEST(constructor_one_argument_zero_value, constructors) {
-
-    dense_matrix<double> md(rows, columns);
-
-    EXPECT_EQ(true, md.allocated());
-    EXPECT_EQ(false, md.deallocated());
-    EXPECT_EQ(rows * columns, md.size());
-    EXPECT_EQ(md, 0.0);
-    EXPECT_EQ(0.0, md);
-    EXPECT_EQ(dense_matrix<double>(rows, columns), md);
-    EXPECT_EQ(md, dense_matrix<double>(rows, columns));
-}
-
 TEST(constructor_one_arguments_value, constructors) {
 
     dense_matrix<double> md(rows, columns);
@@ -68,28 +55,6 @@ TEST(constructor_all_in_one, constructors) {
 
         EXPECT_EQ(rows1 * columns1, md1.size());
         EXPECT_EQ(rows2 * columns2, md2.size());
-
-        EXPECT_EQ(md1, 0.0);
-        EXPECT_EQ(md2, 0.0);
-
-        EXPECT_EQ(0.0, md1);
-        EXPECT_EQ(0.0, md2);
-
-        for (const auto &el: md1) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        for (const auto &el: md2) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        EXPECT_NE(md1, md2);
-        EXPECT_NE(md2, md1);
-
-        EXPECT_NE(dense_matrix<double>(rows1, columns1), md2);
-        EXPECT_NE(dense_matrix<double>(rows2, columns2), md1);
-        EXPECT_NE(md1, dense_matrix<double>(rows2, columns2));
-        EXPECT_NE(md2, dense_matrix<double>(rows1, columns1));
     }
 
     {
@@ -149,28 +114,17 @@ TEST(constructor_all_in_one, constructors) {
         EXPECT_EQ(rows * columns, md1.size());
         EXPECT_EQ(rows * columns, md2.size());
 
-        EXPECT_EQ(md1, 0.0);
         EXPECT_EQ(md2, value);
 
-        EXPECT_EQ(0.0, md1);
         EXPECT_EQ(value, md2);
-
-        for (const auto &el: md1) {
-            EXPECT_EQ(0.0, el);
-        }
 
         for (const auto &el: md2) {
             EXPECT_EQ(value, el);
         }
 
         EXPECT_NE(md1, value);
-        EXPECT_NE(md2, 0.0);
 
         EXPECT_NE(value, md1);
-        EXPECT_NE(0.0, md2);
-
-        EXPECT_NE(md1, md2);
-        EXPECT_NE(md2, md1);
     }
 
     {

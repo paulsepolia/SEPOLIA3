@@ -16,19 +16,6 @@ TEST(constructor_no_arguments, constructors) {
     EXPECT_EQ(true, vd.deallocated());
 }
 
-TEST(constructor_one_argument_zero_value, constructors) {
-
-    dense_vector<double> vd(dimension);
-
-    EXPECT_EQ(true, vd.allocated());
-    EXPECT_EQ(false, vd.deallocated());
-    EXPECT_EQ(dimension, vd.size());
-    EXPECT_EQ(vd, 0.0);
-    EXPECT_EQ(0.0, vd);
-    EXPECT_EQ(dense_vector<double>(dimension), vd);
-    EXPECT_EQ(vd, dense_vector<double>(dimension));
-}
-
 TEST(constructor_one_arguments_value, constructors) {
 
     dense_vector<double> vd(dimension);
@@ -64,28 +51,6 @@ TEST(constructor_all_in_one, constructors) {
 
         EXPECT_EQ(dimension1, vd1.size());
         EXPECT_EQ(dimension2, vd2.size());
-
-        EXPECT_EQ(vd1, 0.0);
-        EXPECT_EQ(vd2, 0.0);
-
-        EXPECT_EQ(0.0, vd1);
-        EXPECT_EQ(0.0, vd2);
-
-        for (const auto &el: vd1) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        for (const auto &el: vd2) {
-            EXPECT_EQ(0.0, el);
-        }
-
-        EXPECT_NE(vd1, vd2);
-        EXPECT_NE(vd2, vd1);
-
-        EXPECT_NE(dense_vector<double>(dimension1), vd2);
-        EXPECT_NE(dense_vector<double>(dimension2), vd1);
-        EXPECT_NE(vd1, dense_vector<double>(dimension2));
-        EXPECT_NE(vd2, dense_vector<double>(dimension1));
     }
 
     {
@@ -142,25 +107,17 @@ TEST(constructor_all_in_one, constructors) {
         EXPECT_EQ(dimension, vd1.size());
         EXPECT_EQ(dimension, vd2.size());
 
-        EXPECT_EQ(vd1, 0.0);
         EXPECT_EQ(vd2, value);
 
-        EXPECT_EQ(0.0, vd1);
         EXPECT_EQ(value, vd2);
-
-        for (const auto &el: vd1) {
-            EXPECT_EQ(0.0, el);
-        }
 
         for (const auto &el: vd2) {
             EXPECT_EQ(value, el);
         }
 
         EXPECT_NE(vd1, value);
-        EXPECT_NE(vd2, 0.0);
 
         EXPECT_NE(value, vd1);
-        EXPECT_NE(0.0, vd2);
 
         EXPECT_NE(vd1, vd2);
         EXPECT_NE(vd2, vd1);

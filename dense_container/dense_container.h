@@ -6,3 +6,12 @@
 #include "dense_container_operators.h"
 #include "dense_container_algebra.h"
 #include "dense_container_stl.h"
+
+//bool operator==(const MKL_Complex8 &lhs, const MKL_Complex8 &rhs)
+//{
+//    return true;
+//}
+//
+//bool operator==(const MKL_Complex16 &lhs, const MKL_Complex16 &rhs){
+//    return true;
+//}
