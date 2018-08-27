@@ -1,7 +1,6 @@
 #pragma once
 
 #include "dense_container_declaration.h"
-#include <iostream>
 
 using sepolia::dense_container;
 

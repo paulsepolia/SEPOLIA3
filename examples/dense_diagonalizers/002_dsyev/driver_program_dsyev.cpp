@@ -3,8 +3,7 @@
 #include <cmath>
 #include <chrono>
 #include <vector>
-#include "../../../dense_diagonalizers/dense_diagonalizers.h"
-#include "../../../aux_functions/aux_functions.h"
+#include "../../../sepolia/sepolia.h"
 
 using namespace sepolia;
 

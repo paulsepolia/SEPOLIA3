@@ -1,10 +1,9 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
+#include "../../../sepolia/sepolia.h"
 
-#include "../../../dense_vector/dense_vector.h"
-
-using sepolia::dense_vector;
+using namespace sepolia;
 
 int main() {
 

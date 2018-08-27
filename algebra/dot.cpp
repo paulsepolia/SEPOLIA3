@@ -1,19 +1,8 @@
-#pragma once
+#include "../sepolia/sepolia.h"
 
-#include "../dense_matrix/dense_matrix.h"
-#include "../aux_functions/aux_functions.h"
-#include "../headers/sepolia_headers.h"
-
-using sepolia::dense_matrix;
-using sepolia::BLAS_INT;
-using sepolia::ONE_DBL;
-using sepolia::ZERO_DBL;
+using namespace sepolia;
 
 namespace sepolia {
-
-    //=============//
-    // dot product //
-    //=============//
 
     dense_matrix<double> Dot(const dense_matrix<double> &matrix_a,
                              const dense_matrix<double> &matrix_b) {
@@ -73,46 +62,5 @@ namespace sepolia {
                     static_cast<BLAS_INT>(COLS_B)); // 14 --> ldc
 
         return matrix_tmp;
-    }
-
-    //===========//
-    // transpose //
-    //===========//
-
-    dense_matrix<double> Transpose(const dense_matrix<double> & matrix_in) {
-
-            const auto rows = matrix_in.rows();
-            const auto columns = matrix_in.columns();
-
-            dense_matrix<double> dense_matrix_tmp(columns, rows);
-
-            mkl_domatcopy('R',
-                          'T',
-                          rows,
-                          columns,
-                          ONE_DBL,
-                          &matrix_in[0],
-                          columns,
-                          &dense_matrix_tmp[0],
-                          rows);
-
-            return dense_matrix_tmp;
-    }
-
-    void Transpose(dense_matrix<double> & matrix_in_out) {
-
-        check_square_matrix(matrix_in_out);
-
-        const auto rows = matrix_in_out.rows();
-        const auto columns = matrix_in_out.columns();
-
-        mkl_dimatcopy('R',
-                      'T',
-                      rows,
-                      columns,
-                      ONE_DBL,
-                      &matrix_in_out[0],
-                      rows,
-                      columns);
     }
 }

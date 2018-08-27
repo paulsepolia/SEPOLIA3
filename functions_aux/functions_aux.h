@@ -1,12 +1,11 @@
 #pragma once
 
 #include <cstdint>
-#include "../parameters/parameters.h"
 #include "../dense_vector/dense_vector.h"
 #include "../dense_matrix/dense_matrix.h"
+#include "../parameters/parameters.h"
 
-using sepolia::dense_vector;
-using sepolia::dense_matrix;
+using namespace sepolia;
 
 namespace sepolia {
 
@@ -30,7 +29,7 @@ namespace sepolia {
                                      const dense_matrix<T> &matrix_b) {
 
         if (matrix_a.columns() != matrix_b.rows()) {
-            print_error_and_exit(sepolia::E_MAT_MAT_COLS_ROWS_NE);
+            print_error_and_exit(E_MAT_MAT_COLS_ROWS_NE);
         }
     }
 
@@ -38,7 +37,7 @@ namespace sepolia {
     void check_square_matrix(const dense_matrix<T> &matrix) {
 
         if (matrix.columns() != matrix.rows()) {
-            print_error_and_exit(sepolia::E_MAT_SQUARE_NOT);
+            print_error_and_exit(E_MAT_SQUARE_NOT);
         }
     }
 }

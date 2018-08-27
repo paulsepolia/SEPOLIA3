@@ -2,9 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
-#include "../../../dense_matrix/dense_matrix.h"
+#include "../../../sepolia/sepolia.h"
 
-using sepolia::dense_matrix;
+using namespace sepolia;
 
 int main() {
 

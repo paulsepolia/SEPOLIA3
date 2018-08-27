@@ -6,16 +6,17 @@
 #include "../dense_vector/dense_vector.h"
 #include "dense_eigensystem.h"
 
-using sepolia::dense_vector;
-using sepolia::dense_matrix;
-using sepolia::DSYEVD_LAPACKE;
-using sepolia::dense_eigensystem;
+using namespace sepolia;
 
-dense_eigensystem<double> Eigensystem(const dense_matrix<double> &matrix,
+namespace sepolia {
+
+    dense_eigensystem<double> Eigensystem(const dense_matrix<double> &matrix,
+                                          std::string diagonalizer = DSYEVD_LAPACKE);
+
+    dense_vector<double> Eigenvalues(const dense_matrix<double> &matrix,
+                                     std::string diagonalizer = DSYEVD_LAPACKE);
+
+    dense_matrix<double> Eigenvectors(const dense_matrix<double> &matrix,
                                       std::string diagonalizer = DSYEVD_LAPACKE);
 
-dense_vector<double> Eigenvalues(const dense_matrix<double> &matrix,
-                                 std::string diagonalizer = DSYEVD_LAPACKE);
-
-dense_matrix<double> Eigenvectors(const dense_matrix<double> &matrix,
-                                  std::string diagonalizer = DSYEVD_LAPACKE);
+}

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include "../dense_container/dense_container.h"
 
 namespace sepolia {

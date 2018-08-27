@@ -2,8 +2,8 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
-#include "aux_functions.h"
-#include "../dense_diagonalizers/dense_diagonalizers.h"
+
+#include "../sepolia/sepolia.h"
 
 namespace sepolia {
 

@@ -1,10 +1,9 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
-#include "../../../dense_matrix/dense_matrix.h"
-#include "../../../algebra/wrapper_blas.h"
+#include "../../../sepolia/sepolia.h"
 
-using sepolia::dense_matrix;
+using namespace sepolia;
 
 int main() {
 
@@ -112,5 +111,4 @@ int main() {
 
         std::cout << (md3 == md4) << std::endl;
     }
-
 }

@@ -5,7 +5,8 @@
                 -std=gnu++17        \
                 -fopenmp            \
                 -pthread            \
-                ../../../aux_functions/aux_functions.cpp \
+                ../../../functions_aux/functions_aux.cpp \
+                ../../../algebra/dot.cpp \
                 driver_program.cpp  \
                 -L/opt/_intel/mkl/lib/intel64 \
                 -Wl,-R/opt/_intel/mkl/lib/intel64  -lmkl_lapack95_lp64 \

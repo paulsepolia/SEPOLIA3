@@ -2,9 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
-#include "../../../dense_vector/dense_vector.h"
+#include "../../../sepolia/sepolia.h"
 
-using sepolia::dense_vector;
+using namespace sepolia;
 
 int main() {
 

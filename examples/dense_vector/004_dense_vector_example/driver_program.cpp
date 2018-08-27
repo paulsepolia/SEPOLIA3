@@ -1,9 +1,9 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
-#include "../../../dense_vector/dense_vector.h"
+#include "../../../sepolia/sepolia.h"
 
-using sepolia::dense_vector;
+using namespace sepolia;
 
 int main() {
 
@@ -39,6 +39,5 @@ int main() {
         std::cout << !(value == vd1) << std::endl;
         std::cout << !(vd2 == value) << std::endl;
         std::cout << !(value == vd2) << std::endl;
-
     }
 }

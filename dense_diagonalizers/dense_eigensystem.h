@@ -3,8 +3,7 @@
 #include "../dense_vector/dense_vector.h"
 #include "../dense_matrix/dense_matrix.h"
 
-using sepolia::dense_vector;
-using sepolia::dense_matrix;
+using namespace sepolia;
 
 namespace sepolia {
 

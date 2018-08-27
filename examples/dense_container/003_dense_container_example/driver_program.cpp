@@ -1,9 +1,9 @@
 #include <cmath>
 #include <iostream>
 #include <iomanip>
-#include "../../../dense_container/dense_container.h"
+#include "../../../sepolia/sepolia.h"
 
-using sepolia::dense_container;
+using namespace sepolia;
 
 int main() {
 
@@ -42,5 +42,4 @@ int main() {
         std::cout << !dcon.allocated() << std::endl;
         std::cout << dcon.deallocated() << std::endl;
     }
-
 }
