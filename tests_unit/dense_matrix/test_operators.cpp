@@ -470,3 +470,53 @@ TEST(md_test_operator_not_equal, operators) {
     EXPECT_NE(value1, md2);
     EXPECT_NE(value2, md1);
 }
+
+TEST(dcon_test_operator_equal_complex, operators) {
+
+    dense_container<MKL_Complex16> dcon1(rows, columns);
+    dense_container<MKL_Complex16> dcon2(rows, columns);
+
+    const MKL_Complex16 value1 = {1.0, 2.0};
+    const MKL_Complex16 value2 = {1.0, 2.0};
+
+    dcon1 = value1;
+    dcon2 = value2;
+
+    EXPECT_EQ(dcon1, dcon2);
+    EXPECT_EQ(dcon1, value1);
+    EXPECT_EQ(value1, dcon1);
+    EXPECT_EQ(dcon2, value2);
+    EXPECT_EQ(value2, dcon2);
+
+    for (auto &el1: dcon1) {
+        EXPECT_EQ(value1, el1);
+    }
+
+    for (auto &el2: dcon2) {
+        EXPECT_EQ(value2, el2);
+    }
+}
+
+
+TEST(dcon_test_operator_not_equal_complex, operators) {
+
+    dense_container<MKL_Complex16> dcon1(rows, columns);
+    dense_container<MKL_Complex16> dcon2(rows, columns);
+
+    const MKL_Complex16 value1 = {1.0, 2.0};
+    const MKL_Complex16 value2 = {1.0, 4.0};
+
+    dcon1 = value1;
+    dcon2 = value2;
+
+    EXPECT_NE(dcon1, dcon2);
+    EXPECT_NE(dcon1, value2);
+    EXPECT_NE(value2, dcon1);
+    EXPECT_NE(dcon2, value1);
+    EXPECT_NE(value1, dcon2);
+
+    EXPECT_EQ(dcon1, value1);
+    EXPECT_EQ(value1, dcon1);
+    EXPECT_EQ(dcon2, value2);
+    EXPECT_EQ(value2, dcon2);
+}
