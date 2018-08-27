@@ -35,6 +35,9 @@ Task 18: to make units tests to comply with the new simplified constructors
 
 Task 19: To improve unit tests for dense_matrix<T>
 
+Task 23: to finish the implementation of Dot for all the rest types: single precision, 
+         complex 8, complex 16
+
 Task 24: to simplify the use of namespace and to put Eigensystem in the sepolia namespace
  
 #======#
@@ -53,13 +56,14 @@ Task 20: To fix the DSYEVR and DSYEVX examples and wrappers
 
 Task 21: to parallelize the equal function of the dense_container
 
-Task 23: to finish the implementation of Transpose/Dot for all the rest types: single precision, 
-         complex, long complex
-
 Task 25: to build the sepolia3 library and to install + the headers in a visible location
 
 Task 26: to simplify the use of examples/unit_tests/benchmarks
          by running them using a make command
+
+Task 27: to finish the implementation of Transpose for all the rest types:  
+         complex 8,  complex 16.
+         Need to see how can I use blas interfaces instead of MKL
 
 #==========#
 # REJECTED #
