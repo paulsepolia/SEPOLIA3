@@ -873,11 +873,11 @@ TEST(md_test_multiply_many_times_matrix, algebra) {
     md2 = value2;
     md3 = md1 * md1 * md2 * md2 * md2 * md2;
 
-    EXPECT_EQ(md3, 2 * value1 + 4 * value2);
-    EXPECT_EQ(2 * value1 + 4 * value2, md3);
+    EXPECT_EQ(md3, value1 * value1 * value2 * value2 * value2 * value2);
+    EXPECT_EQ(value1 * value1 * value2 * value2 * value2 * value2, md3);
     EXPECT_EQ(md1(0, 0), value1);
     EXPECT_EQ(md2(0, 0), value2);
-    EXPECT_EQ(md3(0, 0), 2 * value1 + 4 * value2);
+    EXPECT_EQ(md3(0, 0), value1 * value1 * value2 * value2 * value2 * value2);
     EXPECT_TRUE(md3.allocated());
 }
 
