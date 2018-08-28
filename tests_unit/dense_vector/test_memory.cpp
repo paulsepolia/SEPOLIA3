@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_vector/dense_vector.h"
+#include "../../sepolia/sepolia.h"
 
-using sepolia::dense_vector;
+using namespace sepolia;
 
 const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;

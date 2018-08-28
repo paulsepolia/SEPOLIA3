@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_container/dense_container.h"
+#include "../../sepolia/sepolia.h"
 
 using namespace sepolia;
 

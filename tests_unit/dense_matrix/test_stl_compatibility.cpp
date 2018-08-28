@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdlib>
-#include "../../dense_matrix/dense_matrix.h"
+#include "../../sepolia/sepolia.h"
+
+using namespace sepolia;
 
 const auto rows = static_cast<uint64_t>(std::pow(10.0, 1.0));
 const auto columns = static_cast<uint64_t>(std::pow(10.0, 1.0));

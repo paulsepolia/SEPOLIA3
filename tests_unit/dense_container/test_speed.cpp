@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <chrono>
-#include "../../dense_container/dense_container.h"
+#include "../../sepolia/sepolia.h"
 
-using sepolia::dense_container;
+using namespace sepolia;
 
 const auto dimension = static_cast<uint64_t>(std::pow(10.0, 4.0));
 const double value = 123.456;

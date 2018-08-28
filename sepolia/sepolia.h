@@ -12,6 +12,7 @@
 // auxiliary function
 
 #include "../functions_aux/functions_aux.h"
+#include "../functions_aux/overloaded_operators.h"
 
 // dense containers
 

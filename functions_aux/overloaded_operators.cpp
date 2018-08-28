@@ -1,9 +1,4 @@
-#include <memory>
-#include <vector>
-#include <complex>
-#include "dense_container_declaration.h"
 #include "/opt/_intel/mkl/include/mkl_types.h"
-
 
 bool operator==(const MKL_Complex8 &value1, const MKL_Complex8 &value2) {
 

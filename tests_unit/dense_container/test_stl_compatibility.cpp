@@ -1,14 +1,14 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdlib>
-#include "../../dense_container/dense_container.h"
+#include "../../sepolia/sepolia.h"
+
+using namespace sepolia;
 
 const uint64_t dimension = static_cast<uint64_t>(std::pow(10.0, 1.0));
 const uint64_t dim2 = static_cast<uint64_t>(std::pow(10.0, 3.0));
 const double value1 = 123.456;
 const uint64_t value2 = 123456;
-
-using sepolia::dense_container;
 
 // help functions and classes
 

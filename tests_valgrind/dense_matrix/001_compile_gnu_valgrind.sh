@@ -5,7 +5,6 @@
                 -Wall               \
                 -std=gnu++17        \
                 -fopenmp            \
-                ../../dense_container/dense_container_declaration.cpp \
                 driver_program.cpp  \
                 -o x_gnu_valgrind
 

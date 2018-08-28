@@ -5,7 +5,7 @@
                 -std=gnu++17        \
                 -fopenmp            \
                 -pthread            \
-                ../../../functions_aux/functions_aux.cpp \
+                ../../../functions_aux/*.cpp \
                 ../../../algebra/dot.cpp \
                 driver_program.cpp  \
                 -L/opt/_intel/mkl/lib/intel64 \

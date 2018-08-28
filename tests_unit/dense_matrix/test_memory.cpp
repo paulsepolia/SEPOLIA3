@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <cstdint>
-#include "../../dense_matrix/dense_matrix.h"
+#include "../../sepolia/sepolia.h"
 
-using sepolia::dense_matrix;
+using namespace sepolia;
 
 const uint64_t rows = static_cast<uint64_t>(std::pow(10.0, 2.0));
 const uint64_t columns = static_cast<uint64_t>(std::pow(10.0, 2.0));

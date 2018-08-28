@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include "dense_container_declaration.h"
+#include "../functions_aux/overloaded_operators.h"
 
 using sepolia::dense_container;
 
