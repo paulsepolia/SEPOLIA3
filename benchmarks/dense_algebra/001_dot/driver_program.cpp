@@ -10,10 +10,10 @@ using namespace sepolia;
 int main() {
 
     const uint32_t SPACE2 = 50;
-    const uint32_t TRY = 20;
+    const uint32_t TRY = 10;
     std::cout << std::boolalpha;
-    const auto rows = static_cast<uint64_t>(std::pow(10.0, 3.0));
-    const auto columns = static_cast<uint64_t>(std::pow(10.0, 3.0));
+    const auto rows = static_cast<uint64_t>(std::pow(10.0, 4.0));
+    const auto columns = static_cast<uint64_t>(std::pow(10.0, 4.0));
 
     // dot double matrix - same value
 
@@ -80,5 +80,4 @@ int main() {
 
         std::cout << " --> " << (md3 == v2) << std::endl;
     }
-
 }

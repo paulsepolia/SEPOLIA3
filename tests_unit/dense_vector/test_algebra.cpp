@@ -42,7 +42,6 @@ TEST(vd_test_add_with_number_uint64t, algebra) {
     dense_vector<uint64_t> vd2;
 
     vd1 = value3;
-
     vd2 = vd1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -67,7 +66,6 @@ TEST(vd_test_add_with_vector_double, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     v3 = vd1 + vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -90,7 +88,6 @@ TEST(vd_test_add_with_vector_uint64t, algebra) {
 
     vd1 = value3;
     vd2 = value4;
-
     v3 = vd1 + vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -111,7 +108,6 @@ TEST(vd_test_add_with_number_return_to_same_double, algebra) {
     dense_vector<double> vd1(dimension);
 
     vd1 = value;
-
     vd1 = vd1 + value1;
     vd1 = value1 + vd1;
 
@@ -130,7 +126,6 @@ TEST(vd_test_add_with_number_return_to_same_uint64_t, algebra) {
     dense_vector<uint64_t> vd1(dimension);
 
     vd1 = value3;
-
     vd1 = vd1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -152,7 +147,6 @@ TEST(vd_test_add_with_vector_return_to_same_double, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     vd1 = vd1 + vd2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -173,7 +167,6 @@ TEST(vd_test_add_with_vector_return_to_same_double, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     vd2 = vd1 + vd2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -198,7 +191,6 @@ TEST(vd_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
     vd1 = value3;
     vd2 = value4;
-
     vd1 = vd1 + vd2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -219,7 +211,6 @@ TEST(vd_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
     vd1 = value3;
     vd2 = value4;
-
     vd2 = vd1 + vd2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -245,7 +236,6 @@ TEST(vd_test_subtract_a_number, algebra) {
     dense_vector<double> vd2;
 
     vd1 = value;
-
     vd2 = vd1 - value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] - value1);
@@ -264,7 +254,6 @@ TEST(vd_test_subtract_with_vector, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     v3 = vd1 - vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -278,7 +267,6 @@ TEST(vd_test_subtract_a_number_to_same, algebra) {
     dense_vector<double> vd1(dimension);
 
     vd1 = value;
-
     vd1 = vd1 - value1;
 
     EXPECT_EQ(vd1[index1], value - value1);
@@ -296,7 +284,6 @@ TEST(vd_test_subtract_with_vector_return_to_same, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     vd1 = vd1 - vd2;
 
     EXPECT_EQ(vd1[index1], value1 - value2);
@@ -339,7 +326,6 @@ TEST(vd_test_times_a_number, algebra) {
     dense_vector<double> vd2;
 
     vd1 = value;
-
     vd2 = vd1 * value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] * value1);
@@ -355,7 +341,6 @@ TEST(vd_test_times_with_vector, algebra) {
 
     vd1 = value1;
     vd2 = value2;
-
     v3 = vd1 * vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -369,7 +354,6 @@ TEST(vd_test_times_a_number_to_same, algebra) {
     dense_vector<double> vd1(dimension);
 
     vd1 = value;
-
     vd1 = vd1 * value1;
 
     EXPECT_EQ(vd1[index1], value * value1);
@@ -422,13 +406,11 @@ TEST(vd_test_divide_a_number, algebra) {
     dense_vector<double> vd2;
 
     vd1 = value;
-
     vd2 = vd1 / value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] / value1);
     EXPECT_EQ(vd2, vd1 / value1);
     EXPECT_EQ(vd1 / value1, vd2);
-
 }
 
 TEST(vd_test_divide_with_vector, algebra) {
@@ -437,8 +419,8 @@ TEST(vd_test_divide_with_vector, algebra) {
     dense_vector<double> vd2(dimension);
     dense_vector<double> v3;
 
-    vd1= value1;
-    vd2= value2;
+    vd1 = value1;
+    vd2 = value2;
 
     v3 = vd1 / vd2;
 
@@ -452,8 +434,7 @@ TEST(vd_test_divide_a_number_to_same, algebra) {
 
     dense_vector<double> vd1(dimension);
 
-    vd1= value;
-
+    vd1 = value;
     vd1 = vd1 / value1;
 
     EXPECT_EQ(vd1[index1], value / value1);
@@ -467,9 +448,8 @@ TEST(vd_test_divide_a_vector_return_to_same, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     vd1 = vd1 / vd2;
 
     EXPECT_EQ(vd1[index1], value1 / value2);
@@ -508,8 +488,7 @@ TEST(vd_test_add_with_number_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2;
 
-    vd1= value;
-
+    vd1 = value;
     vd2 = vd1 + value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] + value1);
@@ -524,9 +503,8 @@ TEST(vd_test_add_with_vector_operator, algebra) {
     dense_vector<double> vd2(dimension);
     dense_vector<double> v3;
 
-    vd1= value1;
-    vd1= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     v3 = vd1 + vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -539,8 +517,7 @@ TEST(vd_test_add_with_number_return_to_same_operator, algebra) {
 
     dense_vector<double> vd1(dimension);
 
-    vd1= value;
-
+    vd1 = value;
     vd1 = vd1 + value1;
 
     EXPECT_EQ(vd1[index1], value + value1);
@@ -555,9 +532,8 @@ TEST(vd_test_add_with_vector_return_to_same_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     vd1 = vd1 + vd2;
 
     EXPECT_EQ(vd1[index1], value1 + value2);
@@ -596,14 +572,12 @@ TEST(vd_test_subtract_a_number_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2;
 
-    vd1= value;
-
+    vd1 = value;
     vd2 = vd1 - value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] - value1);
     EXPECT_EQ(vd2, vd1 - value1);
 }
-
 
 TEST(vd_test_subtract_with_vector_operator, algebra) {
 
@@ -611,9 +585,8 @@ TEST(vd_test_subtract_with_vector_operator, algebra) {
     dense_vector<double> vd2(dimension);
     dense_vector<double> v3;
 
-    vd1= value1;
-    vd1= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     v3 = vd1 - vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -626,7 +599,7 @@ TEST(vd_test_subtract_a_number_to_same_operator, algebra) {
 
     dense_vector<double> vd1(dimension);
 
-    vd1= value;
+    vd1 = value;
     vd1 = vd1 - value1;
 
     EXPECT_EQ(vd1[index1], value - value1);
@@ -642,9 +615,8 @@ TEST(vd_test_subtract_with_vector_return_to_same_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     vd1 = vd1 - vd2;
 
     EXPECT_EQ(vd1[index1], value1 - value2);
@@ -675,8 +647,7 @@ TEST(vd_test_times_a_number_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2;
 
-    vd1= value;
-
+    vd1 = value;
     vd2 = vd1 * value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] * value1);
@@ -691,9 +662,8 @@ TEST(vd_test_times_with_vector_operator, algebra) {
     dense_vector<double> vd2(dimension);
     dense_vector<double> v3;
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     v3 = vd1 * vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -708,8 +678,7 @@ TEST(vd_test_times_a_number_to_same_operator, algebra) {
 
     dense_vector<double> vd1(dimension);
 
-    vd1= value;
-
+    vd1 = value;
     vd1 = vd1 * value1;
 
     EXPECT_EQ(vd1[index1], value * value1);
@@ -722,9 +691,8 @@ TEST(vd_test_times_a_vector_return_to_same_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     vd1 = vd1 * vd2;
 
     EXPECT_EQ(vd1[index1], value1 * value2);
@@ -755,8 +723,7 @@ TEST(vd_test_divide_a_number_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2;
 
-    vd1= value;
-
+    vd1 = value;
     vd2 = vd1 / value1;
 
     EXPECT_EQ(vd2[index1], vd1[index1] / value1);
@@ -770,9 +737,8 @@ TEST(vd_test_divide_with_vector_operator, algebra) {
     dense_vector<double> vd2(dimension);
     dense_vector<double> v3;
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     v3 = vd1 / vd2;
 
     EXPECT_TRUE(v3.allocated());
@@ -793,8 +759,7 @@ TEST(vd_test_divide_with_number_to_same_operator, algebra) {
 
     dense_vector<double> vd1(dimension);
 
-    vd1= value;
-
+    vd1 = value;
     vd1 = vd1 / value1;
 
     EXPECT_EQ(vd1[index1], value / value1);
@@ -807,9 +772,8 @@ TEST(vd_test_divide_a_vector_return_to_same_operator, algebra) {
     dense_vector<double> vd1(dimension);
     dense_vector<double> vd2(dimension);
 
-    vd1= value1;
-    vd2= value2;
-
+    vd1 = value1;
+    vd2 = value2;
     vd1 = vd1 / vd2;
 
     EXPECT_EQ(vd1[index1], value1 / value2);

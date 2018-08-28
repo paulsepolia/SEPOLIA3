@@ -20,7 +20,6 @@ TEST(dcon_test_add_with_number_double, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 + value1;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -43,7 +42,6 @@ TEST(dcon_test_add_with_number_uint64t, algebra) {
     dense_container<uint64_t> dcon2;
 
     dcon1.set(value3);
-
     dcon2 = dcon1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -68,7 +66,6 @@ TEST(dcon_test_add_with_vector_double, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 + dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -91,7 +88,6 @@ TEST(dcon_test_add_with_vector_uint64t, algebra) {
 
     dcon1.set(value3);
     dcon2.set(value4);
-
     v3 = dcon1 + dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -112,7 +108,6 @@ TEST(dcon_test_add_with_number_return_to_same_double, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 + value1;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -129,7 +124,6 @@ TEST(dcon_test_add_with_number_return_to_same_uint64_t, algebra) {
     dense_container<uint64_t> dcon1(dimension);
 
     dcon1.set(value3);
-
     dcon1 = dcon1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -147,7 +141,6 @@ TEST(dcon_test_add_with_number_return_to_same_in_parallel_double, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 + value1;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -190,7 +183,6 @@ TEST(dcon_test_add_with_vector_return_to_same_double, algebra) {
 
     dcon1 = value1;
     dcon2 = value2;
-
     dcon2 = dcon1 + dcon2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -215,7 +207,6 @@ TEST(dcon_test_add_with_vector_return_to_same_uint64_t, algebra) {
 
     dcon1.set(value3);
     dcon2.set(value4);
-
     dcon1 = dcon1 + dcon2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -261,7 +252,6 @@ TEST(dcon_test_add_with_vector_return_to_same_parallel_double, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 + dcon2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -308,13 +298,11 @@ TEST(dcon_test_subtract_a_number, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 - value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] - value1);
     EXPECT_EQ(dcon2, dcon1 - value1);
     EXPECT_EQ(dcon1 - value1, dcon2);
-
 }
 
 // test subtract a vector from another vector
@@ -327,7 +315,6 @@ TEST(dcon_test_subtract_with_vector, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 - dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -341,13 +328,11 @@ TEST(dcon_test_subtract_a_number_to_same, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 - value1;
 
     EXPECT_EQ(dcon1[index1], value - value1);
     EXPECT_EQ(dcon1[index2], value - value1);
     EXPECT_EQ(dcon1, value - value1);
-
 }
 
 // test subtract a vector from another vector and return to it
@@ -359,7 +344,6 @@ TEST(dcon_test_subtract_with_vector_return_to_same, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 - dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 - value2);
@@ -402,7 +386,6 @@ TEST(dcon_test_times_a_number, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 * value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] * value1);
@@ -418,7 +401,6 @@ TEST(dcon_test_times_with_vector, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 * dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -432,7 +414,6 @@ TEST(dcon_test_times_a_number_to_same, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 * value1;
 
     EXPECT_EQ(dcon1[index1], value * value1);
@@ -446,7 +427,6 @@ TEST(dcon_test_times_a_number_to_same_in_parallel, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 * value1;
 
     EXPECT_EQ(dcon1[index1], value * value1);
@@ -462,7 +442,6 @@ TEST(dcon_test_times_a_vector_return_to_same, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 * dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 * value2);
@@ -497,7 +476,6 @@ TEST(dcon_test_divide_a_number, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 / value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] / value1);
@@ -514,7 +492,6 @@ TEST(dcon_test_divide_with_vector, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 / dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -528,7 +505,6 @@ TEST(dcon_test_divide_a_number_to_same, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 / value1;
 
     EXPECT_EQ(dcon1[index1], value / value1);
@@ -544,7 +520,6 @@ TEST(dcon_test_divide_a_vector_return_to_same, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 / dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 / value2);
@@ -584,7 +559,6 @@ TEST(dcon_test_add_with_number_operator, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 + value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] + value1);
@@ -601,7 +575,6 @@ TEST(dcon_test_add_with_vector_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 + dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -615,7 +588,6 @@ TEST(dcon_test_add_with_number_return_to_same_operator, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 + value1;
 
     EXPECT_EQ(dcon1[index1], value + value1);
@@ -632,7 +604,6 @@ TEST(dcon_test_add_with_vector_return_to_same_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 + dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 + value2);
@@ -672,7 +643,6 @@ TEST(dcon_test_subtract_a_number_operator, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 - value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] - value1);
@@ -688,7 +658,6 @@ TEST(dcon_test_subtract_with_vector_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 - dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -702,7 +671,6 @@ TEST(dcon_test_subtract_a_number_to_same_operator, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 - value1;
 
     EXPECT_EQ(dcon1[index1], value - value1);
@@ -720,7 +688,6 @@ TEST(dcon_test_subtract_with_vector_return_to_same_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 - dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 - value2);
@@ -752,7 +719,6 @@ TEST(dcon_test_times_a_number_operator, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 * value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] * value1);
@@ -786,7 +752,6 @@ TEST(dcon_test_times_a_number_to_same_operator, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 * value1;
 
     EXPECT_EQ(dcon1[index1], value * value1);
@@ -801,7 +766,6 @@ TEST(dcon_test_times_a_vector_return_to_same_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 * dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 * value2);
@@ -833,7 +797,6 @@ TEST(dcon_test_divide_a_number_operator, algebra) {
     dense_container<double> dcon2;
 
     dcon1.set(value);
-
     dcon2 = dcon1 / value1;
 
     EXPECT_EQ(dcon2[index1], dcon1[index1] / value1);
@@ -849,7 +812,6 @@ TEST(dcon_test_divide_with_vector_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     v3 = dcon1 / dcon2;
 
     EXPECT_TRUE(v3.allocated());
@@ -871,7 +833,6 @@ TEST(dcon_test_divide_with_number_to_same_operator, algebra) {
     dense_container<double> dcon1(dimension);
 
     dcon1.set(value);
-
     dcon1 = dcon1 / value1;
 
     EXPECT_EQ(dcon1[index1], value / value1);
@@ -886,7 +847,6 @@ TEST(dcon_test_divide_a_vector_return_to_same_operator, algebra) {
 
     dcon1.set(value1);
     dcon2.set(value2);
-
     dcon1 = dcon1 / dcon2;
 
     EXPECT_EQ(dcon1[index1], value1 / value2);

@@ -194,7 +194,6 @@ TEST(dcon_set_vector_to_another_using_assignment_operator_double, set_get) {
     }
 
     EXPECT_EQ(dcon1, dcon2);
-
 }
 
 TEST(dcon_set_vector_via_copy_constructor_double, set_get) {

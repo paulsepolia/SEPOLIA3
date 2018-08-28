@@ -5,7 +5,7 @@
 using namespace sepolia;
 
 const uint64_t rows = static_cast<const uint64_t>(std::pow(10.0, 1.0));
-const uint64_t columns = static_cast<const uint64_t>(std::pow(10.0, 3.0));
+const uint64_t columns = static_cast<const uint64_t>(std::pow(10.0, 2.0));
 const uint64_t dimension = rows * columns;
 
 const double value = 123.456;
@@ -45,7 +45,6 @@ TEST(md_test_add_with_number_uint64t, algebra) {
     dense_matrix<uint64_t> md2;
 
     md1 = value3;
-
     md2 = md1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -70,7 +69,6 @@ TEST(md_test_add_with_matrix_double, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md3 = md1 + md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -93,7 +91,6 @@ TEST(md_test_add_with_matrix_uint64t, algebra) {
 
     md1 = value3;
     md2 = value4;
-
     md3 = md1 + md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -108,13 +105,11 @@ TEST(md_test_add_with_matrix_uint64t, algebra) {
     EXPECT_EQ(md1 + md2, md3);
 }
 
-
 TEST(md_test_add_with_number_return_to_same_double, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
     md1 = value;
-
     md1 = md1 + value1;
     md1 = value1 + md1;
 
@@ -133,7 +128,6 @@ TEST(md_test_add_with_number_return_to_same_uint64_t, algebra) {
     dense_matrix<uint64_t> md1(rows, columns);
 
     md1 = value3;
-
     md1 = md1 + value4;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -155,7 +149,6 @@ TEST(md_test_add_with_matrix_return_to_same_double, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md1 = md1 + md2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -176,7 +169,6 @@ TEST(md_test_add_with_matrix_return_to_same_double, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md2 = md1 + md2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -201,7 +193,6 @@ TEST(md_test_add_with_matrix_return_to_same_uint64_t, algebra) {
 
     md1 = value3;
     md2 = value4;
-
     md1 = md1 + md2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -222,7 +213,6 @@ TEST(md_test_add_with_matrix_return_to_same_uint64_t, algebra) {
 
     md1 = value3;
     md2 = value4;
-
     md2 = md1 + md2;
 
     for (uint64_t i = 0; i < dimension; i++) {
@@ -248,7 +238,6 @@ TEST(md_test_subtract_a_number, algebra) {
     dense_matrix<double> md2;
 
     md1 = value;
-
     md2 = md1 - value1;
 
     EXPECT_EQ(md2[index1], md1[index1] - value1);
@@ -267,7 +256,6 @@ TEST(md_test_subtract_with_matrix, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md3 = md1 - md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -281,7 +269,6 @@ TEST(md_test_subtract_a_number_to_same, algebra) {
     dense_matrix<double> md1(rows, columns);
 
     md1 = value;
-
     md1 = md1 - value1;
 
     EXPECT_EQ(md1[index1], value - value1);
@@ -299,7 +286,6 @@ TEST(md_test_subtract_with_matrix_return_to_same, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md1 = md1 - md2;
 
     EXPECT_EQ(md1[index1], value1 - value2);
@@ -342,7 +328,6 @@ TEST(md_test_times_a_number, algebra) {
     dense_matrix<double> md2;
 
     md1 = value;
-
     md2 = md1 * value1;
 
     EXPECT_EQ(md2[index1], md1[index1] * value1);
@@ -358,7 +343,6 @@ TEST(md_test_times_with_matrix, algebra) {
 
     md1 = value1;
     md2 = value2;
-
     md3 = md1 * md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -372,7 +356,6 @@ TEST(md_test_times_a_number_to_same, algebra) {
     dense_matrix<double> md1(rows, columns);
 
     md1 = value;
-
     md1 = md1 * value1;
 
     EXPECT_EQ(md1[index1], value * value1);
@@ -425,13 +408,11 @@ TEST(md_test_divide_a_number, algebra) {
     dense_matrix<double> md2;
 
     md1 = value;
-
     md2 = md1 / value1;
 
     EXPECT_EQ(md2[index1], md1[index1] / value1);
     EXPECT_EQ(md2, md1 / value1);
     EXPECT_EQ(md1 / value1, md2);
-
 }
 
 TEST(md_test_divide_with_matrix, algebra) {
@@ -440,9 +421,8 @@ TEST(md_test_divide_with_matrix, algebra) {
     dense_matrix<double> md2(rows, columns);
     dense_matrix<double> md3;
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md3 = md1 / md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -455,8 +435,7 @@ TEST(md_test_divide_a_number_to_same, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
-    md1= value;
-
+    md1 = value;
     md1 = md1 / value1;
 
     EXPECT_EQ(md1[index1], value / value1);
@@ -470,9 +449,8 @@ TEST(md_test_divide_a_matrix_return_to_same, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2(rows, columns);
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md1 = md1 / md2;
 
     EXPECT_EQ(md1[index1], value1 / value2);
@@ -511,8 +489,7 @@ TEST(md_test_add_with_number_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2;
 
-    md1= value;
-
+    md1 = value;
     md2 = md1 + value1;
 
     EXPECT_EQ(md2[index1], md1[index1] + value1);
@@ -527,9 +504,8 @@ TEST(md_test_add_with_matrix_operator, algebra) {
     dense_matrix<double> md2(rows, columns);
     dense_matrix<double> md3;
 
-    md1= value1;
-    md1= value2;
-
+    md1 = value1;
+    md2 = value2;
     md3 = md1 + md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -542,8 +518,7 @@ TEST(md_test_add_with_number_return_to_same_operator, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
-    md1= value;
-
+    md1 = value;
     md1 = md1 + value1;
 
     EXPECT_EQ(md1[index1], value + value1);
@@ -558,9 +533,8 @@ TEST(md_test_add_with_matrix_return_to_same_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2(rows, columns);
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md1 = md1 + md2;
 
     EXPECT_EQ(md1[index1], value1 + value2);
@@ -599,8 +573,7 @@ TEST(md_test_subtract_a_number_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2;
 
-    md1= value;
-
+    md1 = value;
     md2 = md1 - value1;
 
     EXPECT_EQ(md2[index1], md1[index1] - value1);
@@ -614,9 +587,8 @@ TEST(md_test_subtract_with_matrix_operator, algebra) {
     dense_matrix<double> md2(rows, columns);
     dense_matrix<double> md3;
 
-    md1= value1;
-    md1= value2;
-
+    md1 = value1;
+    md2 = value2;
     md3 = md1 - md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -629,7 +601,7 @@ TEST(md_test_subtract_a_number_to_same_operator, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
-    md1= value;
+    md1 = value;
     md1 = md1 - value1;
 
     EXPECT_EQ(md1[index1], value - value1);
@@ -645,9 +617,8 @@ TEST(md_test_subtract_with_matrix_return_to_same_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2(rows, columns);
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md1 = md1 - md2;
 
     EXPECT_EQ(md1[index1], value1 - value2);
@@ -678,8 +649,7 @@ TEST(md_test_times_a_number_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2;
 
-    md1= value;
-
+    md1 = value;
     md2 = md1 * value1;
 
     EXPECT_EQ(md2[index1], md1[index1] * value1);
@@ -694,8 +664,8 @@ TEST(md_test_times_with_matrix_operator, algebra) {
     dense_matrix<double> md2(rows, columns);
     dense_matrix<double> md3;
 
-    md1= value1;
-    md2= value2;
+    md1 = value1;
+    md2 = value2;
 
     md3 = md1 * md2;
 
@@ -711,8 +681,7 @@ TEST(md_test_times_a_number_to_same_operator, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
-    md1= value;
-
+    md1 = value;
     md1 = md1 * value1;
 
     EXPECT_EQ(md1[index1], value * value1);
@@ -725,8 +694,8 @@ TEST(md_test_times_a_matrix_return_to_same_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2(rows, columns);
 
-    md1= value1;
-    md2= value2;
+    md1 = value1;
+    md2 = value2;
 
     md1 = md1 * md2;
 
@@ -758,7 +727,7 @@ TEST(md_test_divide_a_number_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2;
 
-    md1= value;
+    md1 = value;
 
     md2 = md1 / value1;
 
@@ -773,9 +742,8 @@ TEST(md_test_divide_with_matrix_operator, algebra) {
     dense_matrix<double> md2(rows, columns);
     dense_matrix<double> md3;
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md3 = md1 / md2;
 
     EXPECT_TRUE(md3.allocated());
@@ -796,7 +764,7 @@ TEST(md_test_divide_with_number_to_same_operator, algebra) {
 
     dense_matrix<double> md1(rows, columns);
 
-    md1= value;
+    md1 = value;
 
     md1 = md1 / value1;
 
@@ -810,9 +778,8 @@ TEST(md_test_divide_a_matrix_return_to_same_operator, algebra) {
     dense_matrix<double> md1(rows, columns);
     dense_matrix<double> md2(rows, columns);
 
-    md1= value1;
-    md2= value2;
-
+    md1 = value1;
+    md2 = value2;
     md1 = md1 / md2;
 
     EXPECT_EQ(md1[index1], value1 / value2);
@@ -839,4 +806,107 @@ TEST(md_test_divide_a_matrix_return_to_same_operator, algebra) {
 
     EXPECT_EQ(md2, value1 / value2);
     EXPECT_EQ(md1, value1);
+}
+
+TEST(md_test_add_many_times_matrix, algebra) {
+
+    dense_matrix<double> md1(rows, columns);
+    dense_matrix<double> md2(rows, columns);
+    dense_matrix<double> md3;
+
+    md1 = value1;
+    md2 = value2;
+
+    md3 = md1 + md1 + md1 + md2 + md2 + md2 + md2;
+
+    EXPECT_EQ(md3, 3 * value1 + 4 * value2);
+    EXPECT_EQ(3 * value1 + 4 * value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), 3 * value1 + 4 * value2);
+    EXPECT_TRUE(md3.allocated());
+
+    md3 = 3.0 * md1 + 4.0 * md2;
+
+    EXPECT_EQ(md3, 3 * value1 + 4 * value2);
+    EXPECT_EQ(3 * value1 + 4 * value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), 3 * value1 + 4 * value2);
+    EXPECT_TRUE(md3.allocated());
+}
+
+TEST(md_test_subtract_many_times_matrix, algebra) {
+
+    dense_matrix<double> md1(rows, columns);
+    dense_matrix<double> md2(rows, columns);
+    dense_matrix<double> md3;
+
+    md1 = value1;
+    md2 = value2;
+    md3 = md1 - md2 - md2 - md2;
+
+    EXPECT_EQ(md3, value1 - 3 * value2);
+    EXPECT_EQ(value1 - 3 * value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), value1 - 3 * value2);
+    EXPECT_TRUE(md3.allocated());
+
+    md3 = -3.0 * md1 - 4.0 * md2;
+
+    EXPECT_EQ(md3, -3 * value1 - 4 * value2);
+    EXPECT_EQ(-3 * value1 - 4 * value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), -3 * value1 - 4 * value2);
+    EXPECT_TRUE(md3.allocated());
+}
+
+TEST(md_test_multiply_many_times_matrix, algebra) {
+
+    dense_matrix<double> md1(rows, columns);
+    dense_matrix<double> md2(rows, columns);
+    dense_matrix<double> md3;
+
+    md1 = value1;
+    md2 = value2;
+    md3 = md1 * md1 * md2 * md2 * md2 * md2;
+
+    EXPECT_EQ(md3, 2 * value1 + 4 * value2);
+    EXPECT_EQ(2 * value1 + 4 * value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), 2 * value1 + 4 * value2);
+    EXPECT_TRUE(md3.allocated());
+}
+
+TEST(md_test_divide_many_times_matrix, algebra) {
+
+    dense_matrix<double> md1(rows, columns);
+    dense_matrix<double> md2(rows, columns);
+    dense_matrix<double> md3;
+
+    md1 = value1;
+    md2 = value2;
+    md3 = md1 / md2 / md2 / md2;
+
+    EXPECT_EQ(md3, value1 / value2 / value2 / value2);
+    EXPECT_EQ(value1 / value2 / value2 / value2, md3);
+    EXPECT_EQ(md1(0, 0), value1);
+    EXPECT_EQ(md2(0, 0), value2);
+    EXPECT_EQ(md3(0, 0), value1 / value2 / value2 / value2);
+    EXPECT_TRUE(md3.allocated());
+}
+
+TEST(md_test_divide_many_times_matrix_same, algebra) {
+
+    dense_matrix<double> md1(rows, columns);
+
+    md1 = value1;
+    md1 = md1 / md1 / md1 / md1;
+
+    EXPECT_EQ(md1, value1 / value1 / value1 / value1);
+    EXPECT_EQ(value1 / value1 / value1 / value1, md1);
+    EXPECT_TRUE(md1.allocated());
 }
