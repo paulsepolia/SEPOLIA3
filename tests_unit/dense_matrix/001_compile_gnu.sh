@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tests_all="constructors memory operators speed set_get algebra stl_compatibility stl"
+tests_all="constructors memory operators speed set_get algebra stl_compatibility stl general"
 
 if [ $1 = 'all' ]; then
     tests=${tests_all}
