@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm out_all
+rm out_*
 
