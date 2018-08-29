@@ -26,8 +26,6 @@ TEST(gen_2, general) {
     EXPECT_TRUE(md1.rows() == rows);
     EXPECT_TRUE(md1.columns() == columns);
     EXPECT_TRUE(!md1.deallocated());
-    EXPECT_TRUE(md1 == static_cast<double>(0));
-    EXPECT_TRUE(static_cast<double>(0) == md1);
 
     md1.deallocate();
 
