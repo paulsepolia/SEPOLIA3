@@ -66,7 +66,7 @@ Task 26: to simplify the use of examples/unit_tests/benchmarks
          by running them using a make command
 
 Task 28: To make std::complex<double> and std::complex<float> compatible 
-         with MKL_Complex16 and MKL_Complex8 for any BLAS operation and primite algebraic operation
+         with MKL_Complex16 and MKL_Complex8 for any BLAS operation and primitive algebraic operation
 
 #==========#
 # REJECTED #

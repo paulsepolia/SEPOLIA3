@@ -37,7 +37,7 @@ int main() {
 
         t1 = std::chrono::high_resolution_clock::now();
 
-        auto eigensystem = Eigensystem(matrix, DSYEV_LAPACKE);
+        auto eigensystem = sepolia::Eigensystem(matrix, DSYEV_LAPACKE);
 
         t2 = std::chrono::high_resolution_clock::now();
 

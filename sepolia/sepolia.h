@@ -19,11 +19,6 @@
 #include "../dense_vector/dense_vector.h"
 #include "../dense_matrix/dense_matrix.h"
 
-// dense diagonalizers
-
-#include "../dense_diagonalizers/dense_diagonalizers.h"
-#include "../dense_diagonalizers/dense_eigensystem.h"
-
 // algebra
 
 #include "../algebra/algrebra.h"
